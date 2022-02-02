@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact Us!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cfe9c920ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <div class="main-wrapper contact-wrapper">
+            <div class="social-bar">
+                <i class="fas fa-phone-alt"> 000-000-0000</i>
+                <div class="social-icons">
+                    <i class="fab fa-twitter social"></i>
+                    <i class="fab fa-facebook-f social"></i>
+                    <i class="fab fa-instagram social"></i>
+                </div>
+            </div>
+            <div class="header" id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                    <nav class="top-nav" id="nav-bar">
+                        <a href="index.html">Home</a>
+                        <div class="nav-dropdown">
+                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="drop-content">
+                                <a href="lawns.html">Green Lawns</a>
+                                <a href="solar.html">Solar</a>
+                                <a href="rain.html">Rain Collection</a>
+                                <a href="shop.html">DIY Supples</a>
+                            </div> 
+                        </div>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="hero-img">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.01758469066!2d-81.69019848457599!3d41.33023097926949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830e878fbe51e2d%3A0x5e8230dd8f15d8d9!2s391%20Village%20Dr%2C%20Broadview%20Heights%2C%20OH%2044147!5e0!3m2!1sen!2sus!4v1636826633348!5m2!1sen!2sus"></iframe>
+                    <span class="slideshow-text">Get in Touch</span>
+                </div>
+            <div class="content-wrapper">
+                <div class="row flex-test">
+                    <div class="col-8 col-m-8 social-contact">
+                        <h1>Need to get in Touch?</h1>
+                        <h3>You can write us here</h3>
+                        <fieldset class="contact-page">
+                            <form>
+                                <div>
+                                    <label for="name" class="required">Name</label> <br />
+                                    <input id="name" type="text"/>
+                                </div>
+                                <div>
+                                    <label for="email" class="required">Email</label> <br />
+                                    <input id="email" type="email"/>
+                                </div>
+                                <div>
+                                    <label for="number">Phone Number</label> <br />
+                                    <input id="number" type="text"/>
+                                </div>
+                                <div>
+                                    <label>Whats on your mind?</label><br />
+                                    <textarea rows="8" cols="90"></textarea>
+                                </div>
+                            </form>
+                            <button type="submit">Submit</button>
+                        </fieldset>
+                    </div>
+                    <div class="col-4 col-m-4 social-contact">
+                        <h1>Contact details</h1>
+                        <i class="fas fa-envelope-square"><span> placeholder@placeholder.com</span></i> <br />
+                        <i class="fas fa-phone-square-alt"><span> 000-000-0000</span></i> <br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col- social-contact social-media page-push">
+                        <h1>You can also get in touch on these sites</h1>
+                        <i class="fab fa-twitter social"></i>
+                        <i class="fab fa-facebook-f social"></i>
+                        <i class="fab fa-instagram social"></i>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2021</p>
+            </footer>
+        </div>
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>

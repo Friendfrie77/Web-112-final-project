@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Green Lawns</title>
+        <meta name="description" content="Turn your yard into a nature oasis">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cfe9c920ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="social-bar">
+                <i class="fas fa-phone-alt"> 000-000-0000</i>
+                <div class="social-icons">
+                    <i class="fab fa-twitter social"></i>
+                    <i class="fab fa-facebook-f social"></i>
+                    <i class="fab fa-instagram social"></i>
+                </div>
+            </div>
+            <div class="header" id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                    <nav class="top-nav" id="nav-bar">
+                        <a href="index.html" class="active">Home</a>
+                        <div class="nav-dropdown">
+                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="drop-content">
+                                <a href="lawns.html">Green Lawns</a>
+                                <a href="solar.html">Solar</a>
+                                <a href="rain.html">Rain Collection</a>
+                                <a href="shop.html">DIY Supples</a>
+                            </div>
+                        </div>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+            </div>
+            <div class="hero-img">
+                <div class="slideshow">
+                    <img src="images/before.jpg" width="100%" height="500px" alt="lawn before flowers planted" class="slide-img">
+                    <span class="slideshow-text">Turn your dull yard..</span>
+                </div>
+                <div class="slideshow">
+                    <img src="images/after.jpg" height="500px" width="100%" alt="lawn after flowers planted" class="slide-img">
+                    <span class="slideshow-text">into something great</span>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col- main">
+                        <h1>Turn your yard into a nature oasis</h1>
+                        <p>As issues like droughts become more and more common, and the bee population becomes threatened, green lawns become a great way to help the plant. A green lawn is great for cutting down on the amount of water your yard uses. They also can be a lot less maintenance that a grass yard as a green yard doesn’t need cut and doesn’t require watering as often. We offer two different options, hardscaping, or a full wildflower meadow.  For both options we can either come in and do it for you or guide you through the steps needed to complete either option. </p>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class="col-6 col-m-6 img-float-left content-left">
+                        <h2>Hardscaping</h2>
+                        <img src="images/hardscape.png" width="250px" height="188px" alt="rocks in a path" class="circle-img">
+                        <p>	If you live in an area with little rain fall, hardscaping is a great option for you. We replace your grass with decorative stone. We then plant local plants that do not require lots of watering or care. This is a great option for those places like Arizona where watering the grass is needed. It is also a great option if you live somewhere that might disallow a full meadow.</p>
+                    </div>
+                    <div class="col-6 col-m-6 img-float-left content-right lawns">
+                        <h2>Wildflower Medows</h2>
+                        <img src="images/butterfly.png" width="250px" height="156px" alt="butterfly on flower" class="circle-img" />
+                        <p>	A meadow is a great option if you have a lot of land that you don’t mind having wildflowers in. It provides a great place for bees and other pollinators to live, helping protect the number that are alive in the wild. While this option might take a little to grow in and look appealing, once it does, it requires little work, only needed cut about once a year.</p>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class="col- col-6 col-m-6 lawns-lower">
+                        <h2>How we can help</h2>
+                        <p>If you make the choice to do any yard renovations yourself, we can offer guidance to help you get through it. For meadows we offer soil analyze services, where you can send in a sample of your soil and we will tell you what needs to be done before you plant. We offer a selection of seeds in our store, depending on the season, but if you contact us we can make you a custom blend for your yard. For hardscaping, we recommend trying to find a local suppler for rocks, as shipping would be expensive, but we do offer a small selection of rocks that make good pathing stones.</p>
+                    </div>
+                    <div class="col col-6 col-m-6 page-contact">
+                        <h2>Contact us below</h2>
+                        <p>Feel free to contact us if you want an estimate, or if you need guidance on making your lawn green yourself.</p>
+                        <fieldset>
+                            <form>
+                                <div>
+                                    <label for="name" class="required">Name:</label>
+                                    <input id="name" type="text"/>
+                                </div>
+                                <div>
+                                    <label for="email" class="required">Email:</label>
+                                    <input id="email" type="email"/>
+                                </div>
+                                <div>
+                                    <label>Whats can we help you with?</label><br />
+                                    <textarea rows="8" cols="90"></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class= "col- col-4 col-m-6 news">
+                        <h2>News</h2>
+                        <ul>
+                            <li><a href="https://greencitizen.com/offshore-wind-farms-get-the-green-light-from-the-white-house/" target="_blank">"Wind farms get a green light from the White House"</a></li>
+                            <li><a href="https://insideclimatenews.org/news/18112021/inside-clean-energy-offshore-wind-cost/" target="_blank">"Inside Clean Energy: For Offshore Wind Energy, Bigger is Much Cheaper"</a></li>
+                            <li><a href="https://www.cnbc.com/2021/11/04/seo-cop26-165-countries-pledge-to-phase-out-coal.html" target="_blank">"Countries pledge to quit coal — but the U.S., China and India are missing"</a></li>
+                        </ul>
+                    </div>
+                    <div class= "col- col-4 contact">
+                        <h2>We would love to hear from you!</h2>
+                        <a href="contact.html"><button class="contact-button">Get in Touch!</button></a>
+                        <h2>You can find us on these social media platforms too!</h2>
+                        <div class="social">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class=" col- col-4 col-m-6 newsletter">
+                        <h2>Get the latest updates sent right to your email</h2>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <footer>
+                <p>&copy; 2021 Green Home Living</p>
+            </footer>
+        </div>
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>

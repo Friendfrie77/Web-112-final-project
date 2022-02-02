@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cfe9c920ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="social-bar">
+                <i class="fas fa-phone-alt"> 000-000-0000</i>
+                <div class="social-icons">
+                    <i class="fab fa-twitter social"></i>
+                    <i class="fab fa-facebook-f social"></i>
+                    <i class="fab fa-instagram social"></i>
+                </div>
+            </div>
+            <div class="header" id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                    <nav class="top-nav" id="nav-bar">
+                        <a href="index.html" class="active">Home</a>
+                        <div class="nav-dropdown">
+                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="drop-content">
+                                <a href="lawns.html">Green Lawns</a>
+                                <a href="solar.html">Solar</a>
+                                <a href="rain.html">Rain Collection</a>
+                                <a href="shop.html">DIY Supples</a>
+                            </div>
+                        </div>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+            </div>
+            <div class="hero-img">
+                <div class="slideshow">
+                    <img class="slide-img" src="images/blog.jpg" width="100%" height="500px" alt="a picture of a laptop">
+                    <span class="slideshow-text">Learn something new</span>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col- blog">
+                        <div class="blog-item">
+                            <h1>Rain barrels</h1>
+                            <iframe width="560px" height="315px" title="Installing a Rain barrel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/K8D6leyW47U"></iframe>
+                            </iframe>
+                            <p>This great guide by the youtuber Alberta Urban Garden explains the ins and outs of how to install a rain barrel system to your house. He covers everything from picking the spot, to how to hook up two barrels together.</p>
+                        </div>
+                        <div class="blog-item">
+                            <h1>Connected to the grid solar</h1>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ToxFObjnlF0" title="I Installed a Power Plant Myself" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>This guide by FrugalRepair goes over the basics of how to install solar panels. It gives a primer on everything that you will need to know to install your own solar system. He also has a written guide if the video is not your cup of tea. He covers the permits that you need to get for your install. </p>
+                        </div>
+                        <div class="blog-item">
+                            <h1>Hybrid solar system</h1>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/m5wv4HcRNKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>This great video series by FarmCraft101 shows how you can add batteries to your grid connected solar system, allowing you to run your house even if the power is out. You should check your local regulations before doing this as in some places it might be against the rules to do this. It will walk you through everything that you need to know about setting up a hybrid solar system.  </p>
+                        </div>
+                        <div class="blog-item">
+                            <h1>Wildflower Garden</h1>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2eWfSJS1EFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>This video series by Lee Burkhill will walk you through the steps that it takes to plant your own wildlife garden. He explains the benefits that having a wildflower garden can have on the environment. The video series goes over everything from planning out the garden, to how to cut back the meadow and when the to do that. It is a great watch if you want to see what it takes to plant you own wildlife garden.</p>
+                        </div>
+                        <div class="blog-item">
+                            <h1>Why lawns are bad</h1>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JvtDG6Tm1Mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>This video by The Good Stuff explains how the US became obsessed with lawns. The video also does a good job of explaining why lawns are bad for the environment. If you are on the fence about getting rid of your lawn, you should watch this video.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class= "col- col-4 col-m-6 news">
+                        <h2>News</h2>
+                        <ul>
+                            <li><a href="https://greencitizen.com/offshore-wind-farms-get-the-green-light-from-the-white-house/" target="_blank">"Wind farms get a green light from the White House"</a></li>
+                            <li><a href="https://insideclimatenews.org/news/18112021/inside-clean-energy-offshore-wind-cost/" target="_blank">"Inside Clean Energy: For Offshore Wind Energy, Bigger is Much Cheaper"</a></li>
+                            <li><a href="https://www.cnbc.com/2021/11/04/seo-cop26-165-countries-pledge-to-phase-out-coal.html" target="_blank">"Countries pledge to quit coal — but the U.S., China and India are missing"</a></li>
+                        </ul>
+                    </div>
+                    <div class= "col- col-4 contact">
+                        <h2>We would love to hear from you!</h2>
+                        <a href="contact.html"><button class="contact-button">Get in Touch!</button></a>
+                        <h2>You can find us on these social media platforms too!</h2>
+                        <div class="social">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class=" col- col-4 col-m-6 newsletter">
+                        <h2>Get the latest updates sent right to your email</h2>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2021 Green Home Living</p>
+            </footer>
+        </div>
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>
