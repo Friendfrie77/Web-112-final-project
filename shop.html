@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cfe9c920ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="social-bar">
+                <i class="fas fa-phone-alt"> 000-000-0000</i>
+                <div class="social-icons">
+                    <i class="fab fa-twitter social"></i>
+                    <i class="fab fa-facebook-f social"></i>
+                    <i class="fab fa-instagram social"></i>
+                </div>
+            </div>
+            <div class="header" id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                    <nav class="top-nav" id="nav-bar">
+                        <a href="index.html" class="active">Home</a>
+                        <div class="nav-dropdown">
+                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="drop-content">
+                                <a href="lawns.html">Green Lawns</a>
+                                <a href="solar.html">Solar</a>
+                                <a href="rain.html">Rain Collection</a>
+                                <a href="shop.html">DIY Supples</a>
+                            </div>
+                        </div>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+            </div>
+            <div class="hero-img">
+                <div class="slideshow">
+                    <img src="images/shop-header1.jpg" width="100%" height="500px" alt="pickers of tools" class="slide-img">
+                    <span class="slideshow-text">Tools of the trade</span>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="row store-box">
+                    <h1 class="store-header">Tools</h1>
+                    <p class="store-p">Below are the tools and supplies we have at hand at the monument to help with projects. If you need any other tools or supplies feel free to contact us, and we will try our best to try to help you find them. All our power tools are Dewalt brand, so all the batteries can be interchanged.</p>
+                    <div class="col- store">
+                        <div class="store-item img-float-left">
+                            <h1>Drill</h1>
+                            <img class="store-img" src="images/drill.jpg" width="250px" height="250px" alt="picture of a drill">
+                            <p>This 20v cordless drill comes complete with one battery and charge. It is light weight at 3 ½ pounds without the battery. The drill features 3 modes, including a standard drilling mode, one for working on masonry, and the last mode for screwing in screws with a torque limiter. It is a essential tool to have for any project, and will come in handy for doing small jobs around the house.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$100</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Impact Driver</h1>
+                            <img class="store-img" src="images/impact-drill.jpg" width="250px" height="250px" alt="picture of a impact driver">
+                            <p>Are you looking for a little more power to drive home nuts or loosen bolt that have rusted from being outside for a long time? An impact drill is perfect your you. With more power than your standard drill, it can really get that nut or bolt where you want it. The impact drill comes with a battery and charger to get you started. It is the perfect tool for any project that you need to be sure is going to hold together. </p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$100</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Cordless saw</h1>
+                            <img class="store-img" src="images/saw.jpg" width="250px" height="250px" alt="picture of a cordless saw">
+                            <p>Do you find yourself constantly working outside and needing a cordless saw to make cuts for your projects? This lightweight saw is perfect for you. It shares batteries with the rest of the tools that we sell, making it the perfect tool to add to your collection. While it might not have the power of the larger corded tools, it is a lot more convenient when you are working on a project. </p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$140</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Spare battery</h1>
+                            <img class="store-img" src="images/battery.jpg" width="250px" height="250px" alt="picture of a battery">
+                            <p>Looking to get more run time out of your tools? Picking up a spare battery can help extend the amount of time that you can use your tools before you need to take a break. Having at least one spare battery allows you to have a battery charging while you use the tool, allowing almost no down time in your work. </p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$50</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Battery Charger</h1>
+                            <img class="store-img" src="images/battery-charger.png" width="250px" height="250px" alt="Battey charger">
+                            <p>Having another charger can come in handy as you can have one packed away with the drill while having one set up to charge batteries. It also allows charging more than one battery at a time. We offer models that support more than one battery at a time, just select that option at checkout.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$30</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Battery Charger</h1>
+                            <img class="store-img" src="images/allen-keys.png" width="250px" height="250px" alt="A set of allen keys">
+                            <p>Having a nice set of metric allene keys is a great set of tools to have around. As more products come from overseas where metric is much more popular than it is in the United States, having the right size key will help you not strip out the screw that that you are working on.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row store-box">
+                    <h1 class="store-header">Supplies</h1>
+                    <p class="store-p">We offer a range of supplies for that can help you along with your project needs. If you don’t see something you want, contact us and we can help you find it.</p>
+                    <div class="col- store">
+                        <div class="store-item img-float-left">
+                            <h1>Squash Seeds</h1>
+                            <img class="store-img" src="images/squash-seeds.png" width="250px" height="250px" alt="squash seeds">
+                            <p>These seeds are a great first step for starting your own home garden. They came from an organic squash that was grown with no chemicals. They are sold in packs of 10 and should be started when the chance of frost is over, as they are summer squash.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$0.70</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Marigold Seeds</h1>
+                            <img class="store-img" src="images/margold-seeds.png" width="250px" height="250px" alt="Marigold seeds">
+                            <p>These seeds can be great for starting a garden, or just planting in a window box if you live in the city. Bees and other pollinators also love the flower and can be used to help draw back in some of these insects into your yard. They are sold in packs of 10 seed and need to be started 50 to 60 days before the last frost.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$0.50</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Solar Pannel</h1>
+                            <img class="store-img" src="images/solar-store.png" width="250px" height="250px" alt="Solar pannels">
+                            <p>Solar panels are a great addition to any house. You can use these to reduce the amount of energy that your house uses. Depending on how many that are set up, you might be able to have to spend no money a month on your power bill, or even be able to sell some of that energy back. Price is per solar panel</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$150</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Screws</h1>
+                            <img class="store-img" src="images/screws.jpg" width="250px" height="250px" alt="Screw">
+                            <p>These high-quality screws are perfect for all your project needs. These screws will hold in any type of marital and will not rust. The screws have both Philips head and a hex head, giving you more than one option to torque down the screw.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$1/screw</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Flat rocks</h1>
+                            <img class="store-img" src="images/rock.jpg" width="250px" height="250px" alt="Screw">
+                            <p>If you really are having a hard time finding the perfect flat rock for your hardscaping needs, we offer them for sale. A word of warning, shipping on these rocks will not be cheap as they are heavy. We recommend trying to find the rocks from a local supplier or if it is legal in your area, find them for free.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$20</p>
+                            </div>
+                        </div>
+                        <div class="store-item img-float-left">
+                            <h1>Pipe</h1>
+                            <img class="store-img" src="images/pipe.jpg" width="250px" height="250px" alt="Screw">
+                            <p>We offer lengths of pipes that might come in handy for pluming your rain barrels together. We will cut them and ship them for free. These are perfect for connecting the barrel to your downspout or connecting two or more barrels together.</p>
+                            <div class="store-price">
+                                <span class="store-popup" id="store">Item added to cart!</span>
+                                <button onclick="store()"><i class="fas fa-cart-plus"></i></button>
+                                <p class="item-price">$5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class= "col- col-4 col-m-6 news">
+                        <h2>News</h2>
+                        <ul>
+                            <li><a href="https://greencitizen.com/offshore-wind-farms-get-the-green-light-from-the-white-house/" target="_blank">"Wind farms get a green light from the White House"</a></li>
+                            <li><a href="https://insideclimatenews.org/news/18112021/inside-clean-energy-offshore-wind-cost/" target="_blank">"Inside Clean Energy: For Offshore Wind Energy, Bigger is Much Cheaper"</a></li>
+                            <li><a href="https://www.cnbc.com/2021/11/04/seo-cop26-165-countries-pledge-to-phase-out-coal.html" target="_blank">"Countries pledge to quit coal — but the U.S., China and India are missing"</a></li>
+                        </ul>
+                    </div>
+                    <div class= "col- col-4 contact">
+                        <h2>We would love to hear from you!</h2>
+                        <a href="contact.html"><button class="contact-button">Get in Touch!</button></a>
+                        <h2>You can find us on these social media platforms too!</h2>
+                        <div class="social">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class=" col- col-4 col-m-6 newsletter">
+                        <h2>Get the latest updates sent right to your email</h2>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2021 Green Home Living</p>
+            </footer>
+        </div>
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>

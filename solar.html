@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Solar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cfe9c920ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="social-bar">
+                <i class="fas fa-phone-alt"> 000-000-0000</i>
+                <div class="social-icons">
+                    <i class="fab fa-twitter social"></i>
+                    <i class="fab fa-facebook-f social"></i>
+                    <i class="fab fa-instagram social"></i>
+                </div>
+            </div>
+            <div class="header" id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                    <nav class="top-nav" id="nav-bar">
+                        <a href="index.html" class="active">Home</a>
+                        <div class="nav-dropdown">
+                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
+                            <div class="drop-content">
+                                <a href="lawns.html">Green Lawns</a>
+                                <a href="solar.html">Solar</a>
+                                <a href="rain.html">Rain Collection</a>
+                                <a href="shop.html">DIY Supples</a>
+                            </div>
+                        </div>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+            </div>
+            <div class="hero-img">
+                <div class="slideshow">
+                    <img src="images/solar_1.jpg" width="100%" height="500px" alt="lawn before flowers planted" class="slide-img">
+                    <span class="slideshow-text">Power your house..</span>
+                </div>
+                <div class="slideshow">
+                    <img src="images/solar_2.jpg" width="100%" height="500px" alt="picture of a solar pannel" class="slide-img">
+                    <span class="slideshow-text">with the power of the sun</span>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col- main">
+                        <h1>Free power from the sun!</h1>
+                        <p>	Solar is a great way to start really making your house green. It will allow you to save money on your energy bill, and in some places, get you money from your power company. You don’t have to worry about those pesky power outages anymore, as with a battery back-up system, you have all the extra power you need. If you pair a solar system with lawn tools or even an electric car, you can get all the power that you need for free.</p>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class="col-6 col-m-6 content-left">
+                        <h1>Solar advantages</h1>
+                        <ul class="solar-list">
+                            <li>Energy intendance with larger systems</li>
+                            <li>The ability to keep your house powered even when the power is out.</li>
+                            <li>Free power or a reduced power bill</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-m-6 solar-right">
+                        <h1>Solar Disadvantages</h1>
+                        <ul class="solar-list">
+                            <li>High upfront cost</li>
+                            <li>Maintenance needed to clean the panel</li>
+                            <li>Needs battery system if you want to use it while the grid is down.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col- page-contact">
+                        <h1>Interested in solar? Contact us below for more information</h1>
+                        <fieldset>
+                            <form>
+                                <div>
+                                    <label for="name" class="required">Name:</label>
+                                    <input id="name" type="text"/>
+                                </div>
+                                <div>
+                                    <label for="email" class="required">Email:</label>
+                                    <input id="email" type="email"/>
+                                </div>
+                                <div>
+                                    <textarea rows="8" cols="90"></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col- text-content">
+                        <h1>Enhance your solar with a battery bank</h1>
+                        <p>If you are interested in having your house be able to work off the grid, then a battery system is for you. While this is an added cost to a solar system, it will make sure that your house is able to have power while grid is down. It is the ultimate peace of mind, that even if the power is out everywhere else, you will still have power thanks to the sun. We offer two battery systems, a fully off grid, where you will not be connected to the power grid, and a hybrid, where after your batteries are full you can sell back power to the power company. The off gird system is great for buildings like cabins, where the hybrid system is perfect for a home.</p>
+                    </div>
+                </div>
+                <div class="row flex-test">
+                    <div class= "col- col-4 col-m-6 news">
+                        <h2>News</h2>
+                        <ul>
+                            <li><a href="https://greencitizen.com/offshore-wind-farms-get-the-green-light-from-the-white-house/" target="_blank">"Wind farms get a green light from the White House"</a></li>
+                            <li><a href="https://insideclimatenews.org/news/18112021/inside-clean-energy-offshore-wind-cost/" target="_blank">"Inside Clean Energy: For Offshore Wind Energy, Bigger is Much Cheaper"</a></li>
+                            <li><a href="https://www.cnbc.com/2021/11/04/seo-cop26-165-countries-pledge-to-phase-out-coal.html" target="_blank">"Countries pledge to quit coal — but the U.S., China and India are missing"</a></li>
+                        </ul>
+                    </div>
+                    <div class= "col- col-4 contact">
+                        <h2>We would love to hear from you!</h2>
+                        <a href="contact.html"><button class="contact-button">Get in Touch!</button></a>
+                        <h2>You can find us on these social media platforms too!</h2>
+                        <div class="social">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class=" col- col-4 col-m-6 newsletter">
+                        <h2>Get the latest updates sent right to your email</h2>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2021 Green Home Living</p>
+            </footer>
+        </div>
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>
