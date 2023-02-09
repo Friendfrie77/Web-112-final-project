@@ -8,6 +8,9 @@ $button-color: #5B8266;
 $light-green: #56B356;
 $mid-green: #3F8D3F;
 $h1-font:'Ubuntu', sans-serif;
+
+@import './footer';
+
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -125,7 +128,7 @@ h2{
     max-width: 1400px;
     margin: 0px auto;
     height: auto;
-    background-color: $content-color;
+    background-color: $mid-green;
     overflow: auto;
     box-shadow: 0px 0px 10px #000;
 }
@@ -327,7 +330,7 @@ h2{
 }
 
 .main{
-    background-color: $mid-green;
+    // background-color: $mid-green;
     padding: 15px;
     margin: none;
     font-size: 1.3rem;
@@ -457,67 +460,7 @@ h2{
       }
     }
   }
-  .newsletter{
-    position: relative;
-    background-color:$light-green;
-    fieldset{
-      margin: 5px;
-      padding: 30px;
-      border-color: green;
-      border: none;
-    }
-    button{
-      background-color: $button-color;
-      border-color: $mid-green;
-      border-width: 3px;
-      padding: 5px;
-      width: 100px;
-      height: 50px;
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-      font-size: 1.1rem;
-      &:hover{
-        background-color: #fff;
-      }
-    }
-    input{
-      height: 50px;
-      width: 50%;
-      border: #fff solid 1px;
-      background-color: transparent;
-      &::placeholder{
-        padding: 5px;
-        color: #fff;
-        font-size: 1.2rem;
-      }
-    }
-    .newsletter-popup{
-      visibility: hidden;
-      position: absolute;
-      z-index: 100;
-      top: 30%;
-      color: #fff;
-      background-color:green;
-      padding: 0px 5px 5px 5px;
-      border-radius: 5px;
-      &::after{
-        content: "";
-        width: 0px;
-        height: 0px;
-        border-width: 8px;
-        border-style: solid;
-        border-color: green transparent transparent;
-        position: absolute;
-        top: 100%;
-        left: 85%;
-      }
-    }
-    .show{
-      visibility: visible;
-      animation: fadeIn 1s;
-    }
-  }
+
   .contact{
     background-color: $header-footer-color;
     button{
@@ -746,15 +689,7 @@ h2{
       padding:0px 0px 10px;
     }
   }
-  /* footer */
-  footer{
-      background-color: $header-footer-color;
-      position: sticky;
-      top: 100%;
-      font-size: 1.3rem;
-      color:$text-color;
-      text-align: center;
-  }
+
   /* animations */
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }

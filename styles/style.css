@@ -1,4 +1,112 @@
-/* scss var */
+/* scss var */ /* footer */
+footer {
+  background-color: #31572C;
+  position: sticky;
+  top: 100%;
+  font-size: 1.3rem;
+  color: #ECF39E;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+.footer-social h4 {
+  font-size: 2rem;
+}
+.footer-social .social-links {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-social i {
+  font-size: 2.5rem;
+}
+
+.newsletter {
+  position: relative;
+  background-color: #31572C;
+}
+.newsletter h4 {
+  font-size: 2rem;
+}
+.newsletter fieldset {
+  margin: 5px;
+  padding: 15px;
+  border-color: green;
+  border: none;
+}
+.newsletter button {
+  background-color: #5B8266;
+  border-color: #3F8D3F;
+  border-width: 3px;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.newsletter button:hover {
+  background-color: #fff;
+}
+.newsletter input {
+  height: 50px;
+  width: 50%;
+  border: #fff solid 1px;
+  background-color: transparent;
+}
+.newsletter input::-moz-placeholder {
+  padding: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.newsletter input::placeholder {
+  padding: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.newsletter .newsletter-popup {
+  visibility: hidden;
+  position: absolute;
+  z-index: 100;
+  top: 30%;
+  color: #fff;
+  background-color: green;
+  padding: 0px 5px 5px 5px;
+  border-radius: 5px;
+}
+.newsletter .newsletter-popup::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: green transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 85%;
+}
+.newsletter .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+.sitemap h4 {
+  font-size: 2rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -127,7 +235,7 @@ h2 {
   max-width: 1400px;
   margin: 0px auto;
   height: auto;
-  background-color: #68DE82;
+  background-color: #3F8D3F;
   overflow: auto;
   box-shadow: 0px 0px 10px #000;
 }
@@ -283,8 +391,7 @@ h2 {
 .next:hover {
   color: #fff;
   transform: scale(1.2);
-  -webkit-animation: shake 0.5s;
-          animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 .prev {
@@ -298,8 +405,7 @@ h2 {
 .prev:hover {
   color: #fff;
   transform: scale(1.2);
-  -webkit-animation: shake 0.5s;
-          animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 .slide-img {
@@ -339,7 +445,6 @@ h2 {
 }
 
 .main {
-  background-color: #3F8D3F;
   padding: 15px;
   margin: none;
   font-size: 1.3rem;
@@ -477,79 +582,6 @@ h2 {
 }
 .news li a:visited {
   color: blue;
-}
-
-.newsletter {
-  position: relative;
-  background-color: #56B356;
-}
-.newsletter fieldset {
-  margin: 5px;
-  padding: 30px;
-  border-color: green;
-  border: none;
-}
-.newsletter button {
-  background-color: #5B8266;
-  border-color: #3F8D3F;
-  border-width: 3px;
-  padding: 5px;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.1rem;
-}
-.newsletter button:hover {
-  background-color: #fff;
-}
-.newsletter input {
-  height: 50px;
-  width: 50%;
-  border: #fff solid 1px;
-  background-color: transparent;
-}
-.newsletter input::-moz-placeholder {
-  padding: 5px;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.newsletter input:-ms-input-placeholder {
-  padding: 5px;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.newsletter input::placeholder {
-  padding: 5px;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.newsletter .newsletter-popup {
-  visibility: hidden;
-  position: absolute;
-  z-index: 100;
-  top: 30%;
-  color: #fff;
-  background-color: green;
-  padding: 0px 5px 5px 5px;
-  border-radius: 5px;
-}
-.newsletter .newsletter-popup::after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: green transparent transparent;
-  position: absolute;
-  top: 100%;
-  left: 85%;
-}
-.newsletter .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
 }
 
 .contact {
@@ -732,8 +764,7 @@ h2 {
 }
 .store .show {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 .store p {
   padding: 10px;
@@ -799,53 +830,7 @@ h2 {
   padding: 0px 0px 10px;
 }
 
-/* footer */
-footer {
-  background-color: #31572C;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 100%;
-  font-size: 1.3rem;
-  color: #ECF39E;
-  text-align: center;
-}
-
 /* animations */
-@-webkit-keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -879,14 +864,6 @@ footer {
   }
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes fadeIn {
