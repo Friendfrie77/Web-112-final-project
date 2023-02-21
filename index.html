@@ -24,27 +24,21 @@
                     <i class="fab fa-instagram social"></i>
                 </div>
             </div>
-            <div class="header" id="nav">
-                    <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
-                    <nav class="top-nav" id="nav-bar">
-                        <a href="index.html" class="active">Home</a>
-                        <div class="nav-dropdown">
-                            <button class="drop-button">Services <i class="fas fa-caret-down"></i></button>
-                            <div class="drop-content">
-                                <a href="lawns.html">Green Lawns</a>
-                                <a href="solar.html">Solar</a>
-                                <a href="rain.html">Rain Collection</a>
-                                <a href="shop.html">DIY Supples</a>
-                            </div>
-                        </div>
-                        <a href="about.html">About</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="javascript:void(0);" class="icon" onclick="responsivenav()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </nav>
-            </div>
+            <nav id="nav">
+                <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
+                <input id='mobile-nav-toggle' type='checkbox' />
+                <label class ='mobile-nav-container' for='mobile-nav-toggle'>
+                    <div class='mobile-nav' id = 'mobile-nav'></div>
+                </label>
+                <ul class="navlinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="shop.html">Store</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <div class="hero-img">
                 <div class="slideshow">
                     <img class="slide-img" src="images/solar_1.jpg" width="100%" height="500px" alt="solar pannels on a roof">
@@ -72,75 +66,23 @@
                         <div class='service-info'>
                             <h1>Green Lawns</h1>
                             <img class="card-img" src="images/butterfly1.webp" alt="A butterfly on a flower">
-                            <p>A green yard is a great way for a homeowner to be more eco-friendly. We offer a wide array of help in making your lawn green, from just giving pointers to doing everything for you. You can find out more information about it here.</p>
+                            <p>We offer a wide array of help in making your lawn green, from just giving pointers to doing everything for you. You can find out more information about it here.</p>
                         </div>
                         <div class='service-info'>
-                            <h1>Green Lawns</h1>
-                            <img class="card-img" src="images/butterfly1.webp" height="auto" width="500px" alt="A butterfly on a flower">
-                            <p>A green yard is a great way for a homeowner to be more eco-friendly. We offer a wide array of help in making your lawn green, from just giving pointers to doing everything for you. You can find out more information about it here.</p>
+                            <h1>DIY</h1>
+                            <img class="card-img" src="images/diy.png" alt="A person building a deck">
+                            <p>If you are the more adventurous type we offer a range of DIY guides and tips and a full store, which can be found here.</p>
                         </div>
                         <div class='service-info'>
-                            <h1>Green Lawns</h1>
-                            <img class="card-img" src="images/butterfly1.webp" height="auto" width="500px" alt="A butterfly on a flower">
-                            <p>A green yard is a great way for a homeowner to be more eco-friendly. We offer a wide array of help in making your lawn green, from just giving pointers to doing everything for you. You can find out more information about it here.</p>
+                            <h1>Solar</h1>
+                            <img class="card-img" src="images/solar-flipcard.png" alt="Solar on a roof">
+                            <p>Solar is an excellent way to start a green home while saving money on power bills. To find out more click here.</p>
                         </div>
                         <div class='service-info'>
-                            <h1>Green Lawns</h1>
-                            <img class="card-img" src="images/butterfly1.webp" height="auto" width="500px" alt="A butterfly on a flower">
-                            <p>A green yard is a great way for a homeowner to be more eco-friendly. We offer a wide array of help in making your lawn green, from just giving pointers to doing everything for you. You can find out more information about it here.</p>
+                            <h1>Rain collection</h1>
+                            <img class="card-img" src="images/rain.png" height="auto" width="500px" alt="A butterfly on a flower">
+                            <p>Rain collection is an excellent way to save on water while watering your garden. It can be as simple as an old barrel or a complex system. You can find out more here.</p>
                         </div>
-                        <!-- <div class="card">
-                            <div class="card-inner">
-                                <div class="flip-card-front">
-                                    <h1 class="card-title">Lawns</h1>
-                                    <img class="card-img" src="images/butterfly1.webp" height="375px" width="600px" alt="A butterfly on a flower">
-                                </div>
-                                <div class="flip-card-back">
-                                    <h1 class="center">Green lawns</h1>
-                                    <p>A lovely green lawn is an excellent example of something a homeowner can change to help their home be more eco-friendly. Grass, in some areas, requires watering to be healthy. By replacing a yard with wildflowers or similar, your yard will need less care and help will promote bees and other pollinators.</p>
-                                    <button><a href="lawns.html">Find out more here</a></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="flip-card-front">
-                                    <h1 class="card-title">Solar</h1>
-                                    <img src="images/solar-flipcard.png" height="250px" width="400px" alt="solar pannels on roof">
-                                </div>
-                                <div class="flip-card-back">
-                                    <h1>The benfits of green energy</h1>
-                                    <p>Solar is a great way to start really making your house green. By installing a solar system, you can start saving money on your power. In some places you can also sell your extra power back to the power company. It’s a great way to set your house up for being off the grid.</p>
-                                    <button><a href="solar.html">Find out more here</a></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="flip-card-front">
-                                    <h1 class="card-title">Rain Collection</h1>
-                                    <img src="images/rain.png" height="250px" width="400px" alt="rain barrel">
-                                </div>
-                                <div class="flip-card-back">
-                                    <h1>Rain collection</h1>
-                                    <p>Collecting the rain that falls is a great way to recapture some of the lost water, saving it for when you need it. It can be helpful for anything from watering plants, all the way to cleaning around your yard. Rain collection can be as simple as a barrel under your downspout to something more advance.</p>
-                                    <button><a href="rain.html">Find out more here</a></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="flip-card-front">
-                                    <img src="images/diy.png" width="600px" height="200px" alt="diy deck building" />
-                                    <h1 class="card-title">DYI</h1>
-                                </div>
-                                <div class="flip-card-back">
-                                    <h1>DIY</h1>
-                                    <p>If you are more adventurous type and want to do these projects yourself, we offer an array of guides for you to follow. We also sell all the tools and supplies that you might need for your projects. </p>
-                                    <button><a href="blog.html">Find out more here</a></button>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
