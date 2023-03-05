@@ -9,22 +9,17 @@ $light-green: #56B356;
 $mid-green: #2c6b2c;
 $h1-font:'Ubuntu', sans-serif;
 $navbar-fontsize: clamp(1rem, 1.5rem, 3rem);
-
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Lato', sans-serif;
-  }
+$box-padding: 16px; 
+:root{
+  --fs-hero-text: clamp(2rem, (4vw+1rem), 5rem);
+  --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
+}
 html, body{
   height: 100%;
   background-color: $header-footer-color;
+  font-family: 'Lato', sans-serif;
 }
-h1{
-  font-family: $h1-font;
-  color: $h1-colors;
-}
-h2{
+h1, h2, h3, h4, h5{
   font-family: $h1-font;
   color: $h1-colors;
 }
@@ -140,21 +135,15 @@ h2{
       @media (min-width: 1300px) {@content;}
   }
 }
-
+@import './reset';
 @import './wrappers';
 @import './nav';
 @import './heroimg';
 @import './footer';
 @import './index';
+@import './lawns';
+@import './shared-classes';
 
-
-/* content */
-.text-content{
-  font-size: 1.3rem;
-  color: $text-color;
-  background-color: $header-footer-color;
-  padding: 15px;
-}
 .about{
   h1{
     text-align: center;
