@@ -190,7 +190,7 @@ select {
 /* wrapper setup */
 .main-wrapper {
   min-height: 100%;
-  background-color: #2c6b2c;
+  background-color: blue;
 }
 
 .index-wrapper {
@@ -616,6 +616,16 @@ footer {
 
 #lawns-bottom-hero {
   background-image: url("../images/lawns/hero_bottom_xl.webp");
+  min-height: 500px;
+}
+
+#solar-middle-hero {
+  background-image: url("../images/solar/solar-middle-hero-xl.webp");
+  min-height: 500px;
+}
+
+#solar-bottom-hero {
+  background-image: url("../images/solar/solor-bottom-hero-xl.webp");
   min-height: 500px;
 }
 
