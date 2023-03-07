@@ -10,12 +10,44 @@ $mid-green: #2c6b2c;
 $h1-font:'Ubuntu', sans-serif;
 $navbar-fontsize: clamp(1rem, 1.5rem, 3rem);
 $box-padding: 16px; 
-:root{
-  --fs-hero-text: clamp(2rem, (4vw+1rem), 5rem);
-  --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
+$animation-timing: .5s;
+
+@mixin for-size($size){
+  @if $size == tablet-only{
+      @media (max-width: 768px){ @content;}
+  }
+  @if $size == small-tablet-only{
+      @media (max-width: 720px){ @content;}
+  }
+  @if $size == large-phone-only{
+      @media (max-width: 535px) {@content;}
+  }
+  @if $size == phone-only{
+      @media (max-width: 425px){ @content;}
+  }
+  @if $size == small-desktop{
+      @media (max-width: 1300px){@content;}
+  }
+  @if $size == Desktop{
+      @media (min-width: 1300px) {@content;}
+  }
+  @if $size == large-desktop{
+    @media (min-width: 1920px) {@content;}
+  }
 }
+
+:root{
+  --fs-hero-text: clamp(2rem, (5vw+1rem), 5.5rem);
+  --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
+  --fs-body-text: 1.5rem;
+  --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
+  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem)
+  @include for-size(large-phone-only){
+    --fs-body-text: 1.2rem;
+  }
+}
+
 html, body{
-  height: 100%;
   background-color: $header-footer-color;
   font-family: 'Lato', sans-serif;
 }
@@ -134,8 +166,12 @@ h1, h2, h3, h4, h5{
   @if $size == Desktop{
       @media (min-width: 1300px) {@content;}
   }
+  @if $size == large-desktop{
+    @media (min-width: 1920px) {@content;}
+  }
 }
 @import './reset';
+@import './animations';
 @import './wrappers';
 @import './nav';
 @import './heroimg';
@@ -417,18 +453,7 @@ h1, h2, h3, h4, h5{
       padding:0px 0px 0px 10px;
     }
   }
-  /* solar */
-  .solar-list{
-    list-style-image: url('images/bullet.png');
-    padding: 15px;
-    li{
-      font-size: 1.3rem;
-      color:$text-color;
-    }
-  }
-  .solar-right{
-    background-color:$header-footer-color
-  }
+
   /* blog */
   .blog{
     display:grid;
@@ -502,16 +527,5 @@ h1, h2, h3, h4, h5{
   }
   .prev, .next{
     font-size: 50px;
-  }
-}
-@media screen and (max-width: 768px ) {
-  .flex-test{
-    flex-direction: column;
-  }
-  .newsletter{
-    background-color:$mid-green;
-  }
-  .news{
-    background-color:$header-footer-color;
   }
 }

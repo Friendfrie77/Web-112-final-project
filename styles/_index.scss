@@ -12,6 +12,7 @@
 
 .call-to-action{
     padding: 20px;
+    animation: call-to-action $animation-timing ease-in;
     h1{
         font-size: 3rem;
     }

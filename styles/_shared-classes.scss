@@ -1,15 +1,30 @@
+hr{
+    width: 100%;
+    border-radius: 5px;
+    height: 7px;
+    margin: 25px 0px;
+    border-color: transparent;
+}
 .text-content{
     background-color: white;
     padding: $box-padding;
     max-width: 1400px;
     margin: auto;
+    animation: call-to-action $animation-timing ease-in;
+    h1,h2,h3{
+        font-size: var(--fs-header-text);
+    }
+    p{
+        font-size: var(--fs-body-text);
+    }
   }
-  
+
   .background-img{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    animation: hero $animation-timing ease-in;
     h1{
       font-size: var(--fs-hero-text);
       opacity: .9;

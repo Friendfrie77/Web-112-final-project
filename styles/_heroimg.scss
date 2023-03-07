@@ -20,7 +20,7 @@
    bottom: 10px;
    left: 50%;
    transform: translateX(-50%);
-   font-size: 4rem;
+   font-size: var(--fs-hero-text);
    font-family: 'Neucha', cursive;
    text-shadow: 0px 0px 5px #000;
   }

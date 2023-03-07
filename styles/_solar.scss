@@ -1,9 +1,55 @@
+#solar-hero{
+    background-image: url('../images/solar/solar-hero-top.webp');
+    min-height: 800px;
+    @include for-size(large-desktop){
+        background-image: url('../images/solar/solar-hero-top-xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/solar/solar-hero-top-mobile.webp');
+        min-height: 450px;
+        background-position: 50%;
+    }
+}
 #solar-middle-hero{
-    background-image: url('../images/solar/solar-middle-hero-xl.webp');
+    background-image: url('../images/solar/solar-middle-hero.webp');
     min-height: 500px;
+    @include for-size(large-desktop){
+        background-image: url('../images/solar/solar-middle-hero-xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/solar/solar-middle-hero-mobile.webp');
+        min-height: 450px;
+        background-position: 50%;
+    }
 }
 
 #solar-bottom-hero{
-    background-image: url('../images/solar/solor-bottom-hero-xl.webp');
+    background-image: url('../images/solar/solor-bottom-hero.webp');
     min-height: 500px;
+    @include for-size(large-desktop){
+        background-image: url('../images/solar/solor-bottom-hero-xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/solar/solor-bottom-hero-mobile.webp');
+        min-height: 450px;
+        background-position: 50%;
+    }
+}
+
+.solar-hr{
+    background: linear-gradient(-45deg,#FFAF7B, #D76D77, #3A1C71) !important;
+    background-size: 400% 400%;
+    animation: gradient 1s ease infinite;
+}
+.solar-list-container{
+    display: flex;
+    justify-content: space-between;
+    li{
+        list-style: url('../images/bullet.png');
+        font-size: var(--fs-body-text);
+        padding-bottom: $box-padding;
+    }
+    @include for-size(tablet-only){
+        flex-direction: column;
+    }
 }

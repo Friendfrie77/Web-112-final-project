@@ -14,8 +14,17 @@
     margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
+    h1{
+      font-size: var(--fs-footer-header);
+    }
+    @include for-size(large-phone-only){
+      display: flex;
+      flex-direction: column;
+    }
 }
-
+.copyright{
+  text-align: center;
+}
 .footer-social{
     display: flex;
     flex-direction: column;
@@ -37,9 +46,6 @@
 .newsletter{
     position: relative;
     background-color:$header-footer-color;
-    h4{
-      font-size: 2rem;
-    }
     fieldset{
       margin: 5px;
       padding: 15px;
@@ -98,8 +104,23 @@
       animation: fadeIn 1s;
     }
   }
-.sitemap{
-    h4{
-        font-size: 2rem;
+
+.sitemap-links{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  background-color: red;
+  li{
+    margin: 0;
+  }
+  a{
+    position: relative;
+    left:-10px;
+    text-decoration: none;
+    color: $text-color;
+    :hover{
+      color: $light-green;
     }
+  }
 }

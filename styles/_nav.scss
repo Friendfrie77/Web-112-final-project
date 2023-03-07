@@ -2,6 +2,7 @@
 .social-bar{
     background-color: $header-footer-color;
     height: 35px;
+    animation: social-bar $animation-timing ease-in;
     i{
         color: $text-color;
         padding: 10px;
@@ -21,6 +22,7 @@
         }
     }
 }
+
 nav{
   display:flex;
   flex-direction: row;
@@ -31,11 +33,14 @@ nav{
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--fs-nav-bar);
+  background-color: green;
+  animation: navbar-load $animation-timing ease-in;
 }
+
 .logo{
   height: 60px;
 }
+
 .navlinks{
   display: grid;
   grid-template-columns: repeat(6, auto);
@@ -69,7 +74,43 @@ nav{
     background-color:$header-footer-color;
   }
 }
+.navlinks > li{
+  position: relative;
+}
+.dropdown button{
+  border: none;
+  background-color: transparent;
+  color: $h1-colors;
+  font-size: $navbar-fontsize;
+  span{
+    margin: auto;
+    font-size: 12px;
+  }
+}
 
+.dropdown ul{
+  position: absolute;
+  list-style: none;
+  margin-top: .6rem;
+  left: 0px;
+  padding: 5px;
+  transition-duration: .5s;
+  opacity: 0;
+  display: none;
+  z-index: 100;
+  background-color: $header-footer-color;
+  width: 200px;
+  @include for-size(tablet-only){
+      flex-direction: column;
+      position: static;
+  }
+}
+
+.dropdown:hover > ul, .dropdown:focus-within > ul, .navlinks .dropdown ul:hover, ul, .navlinks .dropdown ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
 .mobile-nav-container{
   display: none;
   height: 100%;

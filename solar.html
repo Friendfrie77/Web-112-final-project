@@ -32,40 +32,42 @@
                 </label>
                 <ul class="navlinks">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="dropdown"><button>Services<span>&#9660;</span></button>
+                        <ul class="nav-dropdown">
+                            <li><a href="solar.html">Solar</a></li>
+                            <li><a href="lawns.html">Green Lawns</a></li>
+                            <li><a href="rain.html">Rain Collection</a></li>
+                        </ul>
+                    </li>
                     <li><a href="shop.html">Store</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="hero-img">
-                <div class="slideshow">
-                    <img src="images/solar_1.jpg" width="100%" height="500px" alt="lawn before flowers planted" class="slide-img">
-                    <span class="slideshow-text">Power your house..</span>
-                </div>
-                <div class="slideshow">
-                    <img src="images/solar_2.jpg" width="100%" height="500px" alt="picture of a solar pannel" class="slide-img">
-                    <span class="slideshow-text">with the power of the sun</span>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="background-img" id="solar-hero">
+                <!-- <h1>Power your life with the sun</h1> -->
             </div>
             <div class="text-content">
                     <h1>Free power from the sun!</h1>
                     <p>	Solar is a great way to start really making your house green. It will allow you to save money on your energy bill, and in some places, get you money from your power company. You don’t have to worry about those pesky power outages anymore, as with a battery back-up system, you have all the extra power you need. If you pair a solar system with lawn tools or even an electric car, you can get all the power that you need for free.</p>
+                    <hr class="solar-hr">
+                    <p>The average cost of 6kw of panels is around $15,000, but this can be offset by federal tax breaks. On average, the panels will pay for themselves in around six to ten years, depending on the energy cost in your area. Our panels themselves will last over 20 years, short of damage to the panel themselfs via storms or other impacts.</p>
             </div>
             <div class="background-img" id="solar-middle-hero"></div>
-                <div class="row flex-test">
-                    <div class="col-6 col-m-6 content-left">
+            <div class="text-content">
+                <div class="solar-list-container">
+                    <div>
                         <h1>Solar advantages</h1>
                         <ul class="solar-list">
-                            <li>Energy intendance with larger systems</li>
+                            <li>Energy independence with larger systems</li>
                             <li>The ability to keep your house powered even when the power is out.</li>
                             <li>Free power or a reduced power bill</li>
+                            <li>Increase the value of your home</li>
+                            <li>Low maintenance cost</li>
                         </ul>
                     </div>
-                    <div class="col-6 col-m-6 solar-right">
+                    <div>
                         <h1>Solar Disadvantages</h1>
                         <ul class="solar-list">
                             <li>High upfront cost</li>
@@ -74,37 +76,51 @@
                         </ul>
                     </div>
                 </div>
-                <div class="background-img" id="solar-bottom-hero"></div>
-                <div class="text-content">
-                    <h1>Enhance your solar with a battery bank</h1>
-                    <p>If you are interested in having your house be able to work off the grid, then a battery system is for you. While this is an added cost to a solar system, it will make sure that your house is able to have power while grid is down. It is the ultimate peace of mind, that even if the power is out everywhere else, you will still have power thanks to the sun. We offer two battery systems, a fully off grid, where you will not be connected to the power grid, and a hybrid, where after your batteries are full you can sell back power to the power company. The off gird system is great for buildings like cabins, where the hybrid system is perfect for a home.</p>
-                </div>
-                <footer>
-                    <div class="footer-wrapper">
-                        <div class="footer-social">
-                            <h4>Follow us here!</h4>
-                            <div class='social-links'>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                        <div class="newsletter">
-                            <h4>Newsletter</h4>
-                            <fieldset>
-                                <form>
-                                    <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
-                                    <input type="email" placeholder="Email" />
-                                    <button type="button" onclick="popup()">Sign Up!</button>
-                                </form>
-                            </fieldset>
-                            <p>&copy; 2021 Green Home Living</p>
-                        </div>
-                        <div class="sitemap">
-                            <h4>Site map</h4>
+                <hr class="solar-hr">
+                <p>While solar might not be for everyone, there are many more advantages than we have listed. We will come to your house free of charge and survey your property to help figure out if solar will work well for you. During this survey, we will give you a price estimate based on the type of solar you are after, and how many panels will be needed to meet your needs.  Feel free to contact us if you have any questions on if solar is right for you.</p>
+            </div>
+            <div class="background-img" id="solar-bottom-hero"></div>
+            <div class="text-content">
+                <h1>Enhance your solar with a battery bank</h1>
+                <p>If you are interested in having your house be able to work off the grid, then a battery system is for you. While this is an added cost to a solar system, it will make sure that your house is able to have power while grid is down. It is the ultimate peace of mind, that even if the power is out everywhere else, you will still have power thanks to the sun. We offer two battery systems, a fully off grid, where you will not be connected to the power grid, and a hybrid, where after your batteries are full you can sell back power to the power company. The off gird system is great for buildings like cabins, where the hybrid system is perfect for a home.</p>
+                <hr class="solar-hr">
+                <p>The average cost of a whole home battery backup is around $10,000 to $20,000, depending on how long of a backup you would like and how much solar power you have. This price includes the batteries, the management system, and all the installation. All our systems come with a phone application so you can see the state of both amount of power that your system is generating, and the charge of your batteries. </p>
+            </div>
+            <footer>
+                <div class="footer-wrapper">
+                    <div class="footer-social">
+                        <h1>Follow us here!</h1>
+                        <div class='social-links'>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
-                </footer>
+                    <div class="newsletter">
+                        <h1>Newsletter</h1>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                    <div class="sitemap">
+                        <h1>Site map</h1>
+                        <ul class="sitemap-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="lawns.html">Lawns</a></li>
+                            <li><a href="solar.html">Solar</a></li>
+                            <li><a href="rain.html">Rain</a></li>
+                            <li><a href="shop.html">Store</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2021 Green Home Living</p>
+            </footer>
         </div>
         <script src="scripts.js" async defer></script>
     </body>
