@@ -1,7 +1,7 @@
 /* social bar and header/nav */
 .social-bar{
     background-color: $header-footer-color;
-    height: 35px;
+    height: 40px;
     animation: social-bar $animation-timing ease-in;
     i{
         color: $text-color;
@@ -64,12 +64,13 @@ nav{
     gap: 30px;
     translate: -100%;
     position: fixed;
-    top:110px;
+    top:90px;
     left: 0px;
     z-index: 100;
     height: 100%;
     width: 100%;
     opacity: 1;
+    padding-top: 40px;
     transition: cubic-bezier(0.23, 1, 0.32, 1) .35s;
     background-color:$header-footer-color;
   }
@@ -101,8 +102,7 @@ nav{
   background-color: $header-footer-color;
   width: 200px;
   @include for-size(tablet-only){
-      flex-direction: column;
-      position: static;
+    flex-direction: column;
   }
 }
 
@@ -110,6 +110,9 @@ nav{
   visibility: visible;
   opacity: 1;
   display: block;
+  @include for-size(tablet-only){
+    display: flex;
+  }
 }
 .mobile-nav-container{
   display: none;

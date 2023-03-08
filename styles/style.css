@@ -239,7 +239,10 @@ select {
 /* wrapper setup */
 .main-wrapper {
   min-height: 100%;
-  background-color: blue;
+  background: rgb(44, 107, 44);
+  background: linear-gradient(-45deg, rgb(44, 107, 44), #20af24, rgb(0, 156, 209));
+  background-size: 400% 400%;
+  animation: gradient 45s ease infinite;
   min-width: 100%;
 }
 
@@ -267,7 +270,7 @@ select {
 /* social bar and header/nav */
 .social-bar {
   background-color: #31572C;
-  height: 35px;
+  height: 40px;
   animation: social-bar 0.5s ease-in;
 }
 .social-bar i {
@@ -331,12 +334,13 @@ nav {
     gap: 30px;
     translate: -100%;
     position: fixed;
-    top: 110px;
+    top: 90px;
     left: 0px;
     z-index: 100;
     height: 100%;
     width: 100%;
     opacity: 1;
+    padding-top: 40px;
     transition: cubic-bezier(0.23, 1, 0.32, 1) 0.35s;
     background-color: #31572C;
   }
@@ -373,7 +377,6 @@ nav {
 @media (max-width: 768px) {
   .dropdown ul {
     flex-direction: column;
-    position: static;
   }
 }
 
@@ -381,6 +384,11 @@ nav {
   visibility: visible;
   opacity: 1;
   display: block;
+}
+@media (max-width: 768px) {
+  .dropdown:hover > ul, .dropdown:focus-within > ul, .navlinks .dropdown ul:hover, ul, .navlinks .dropdown ul:focus {
+    display: flex;
+  }
 }
 
 .mobile-nav-container {
@@ -675,6 +683,42 @@ footer {
   color: #56B356;
 }
 
+#index-hero-1 {
+  background-image: url("../images/solar/solar-hero-top.webp");
+  min-height: 800px;
+  width: 100%;
+}
+@media (min-width: 1920px) {
+  #index-hero-1 {
+    background-image: url("../images/solar/solar-hero-top-xl.webp");
+  }
+}
+@media (max-width: 768px) {
+  #index-hero-1 {
+    background-image: url("../images/solar/solar-hero-top-mobile.webp");
+    min-height: 450px;
+    background-position: 40%;
+  }
+}
+
+#index-hero-2 {
+  background-image: url("../images/index-heros/green-lawns-hero.webp");
+  min-height: 800px;
+  width: 100%;
+}
+@media (min-width: 1920px) {
+  #index-hero-2 {
+    background-image: url("../images/index-heros/green-lawns-hero-xl.webp");
+  }
+}
+@media (max-width: 768px) {
+  #index-hero-2 {
+    background-image: url("../images/index-heros/green-lawns-hero-mobile.webp");
+    min-height: 450px;
+    background-position: 50%;
+  }
+}
+
 .services h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -791,9 +835,9 @@ footer {
 }
 
 .solar-hr {
-  background: linear-gradient(-45deg, #FFAF7B, #D76D77, #3A1C71) !important;
+  background: linear-gradient(-45deg, #FFAF7B, #D76D77, #3A1C71);
   background-size: 400% 400%;
-  animation: gradient 1s ease infinite;
+  animation: gradient 30s ease infinite;
 }
 
 .solar-list-container {
@@ -808,6 +852,23 @@ footer {
 @media (max-width: 768px) {
   .solar-list-container {
     flex-direction: column;
+  }
+}
+
+#about-hero {
+  background-image: url("../images/about/about-hero.webp");
+  min-height: 800px;
+}
+@media (min-width: 1920px) {
+  #about-hero {
+    background-image: url("../images/about/about-hero-xl.webp");
+    background-position: 50%;
+  }
+}
+@media (max-width: 768px) {
+  #about-hero {
+    background-image: url("../images/about/about-hero-mobile.webp");
+    min-height: 450px;
   }
 }
 

@@ -37,9 +37,9 @@
 }
 
 .solar-hr{
-    background: linear-gradient(-45deg,#FFAF7B, #D76D77, #3A1C71) !important;
+    background: linear-gradient(-45deg,#FFAF7B, #D76D77, #3A1C71);
     background-size: 400% 400%;
-    animation: gradient 1s ease infinite;
+    animation: gradient 30s ease infinite;
 }
 .solar-list-container{
     display: flex;

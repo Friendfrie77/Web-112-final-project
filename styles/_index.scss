@@ -1,3 +1,30 @@
+#index-hero-1{
+    background-image: url('../images/solar/solar-hero-top.webp');
+    min-height: 800px;
+    width: 100%;
+    @include for-size(large-desktop){
+        background-image: url('../images/solar/solar-hero-top-xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/solar/solar-hero-top-mobile.webp');
+        min-height: 450px;
+        background-position: 40%;
+    }
+}
+#index-hero-2{
+    background-image: url('../images/index-heros/green-lawns-hero.webp');
+    min-height: 800px;
+    width: 100%;
+    @include for-size(large-desktop){
+        background-image: url('../images/index-heros/green-lawns-hero-xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/index-heros/green-lawns-hero-mobile.webp');
+        min-height: 450px;
+        background-position: 50%;
+    }
+}
+
 .services{
     h2{
         font-size: 2.5rem;

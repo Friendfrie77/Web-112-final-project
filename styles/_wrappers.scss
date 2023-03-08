@@ -1,7 +1,10 @@
 /* wrapper setup */
 .main-wrapper{
     min-height: 100%;
-    background-color:blue;
+    background: rgb(44,107,44);
+    background: linear-gradient(-45deg, rgba(44,107,44,1), #20af24, rgba(0,156,209,1));
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
     min-width: 100%;
 }
 
