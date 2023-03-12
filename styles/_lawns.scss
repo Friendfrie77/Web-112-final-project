@@ -1,3 +1,19 @@
+#lawns-hero{
+    background-image: url('../images/lawns/lawns_hero_top.webp');
+    min-height: 800px;
+    @include for-size(large-desktop){
+        background-image: url('../images/lawns/lawns_hero_top_xl.webp');
+    }
+    @include for-size(tablet-only){
+        background-image: url('../images/lawns/lawns_hero_top_mobile.webp');
+        min-height: 500px;
+        background-position: 50%;
+    }
+}
+#lawns-middle-hero{
+    background-image: url('../images/lawns/middle_hero_xl.webp');
+    min-height: 500px;
+}
 #lawns-bottom-hero{
     background-image: url("../images/lawns/hero_bottom_xl.webp");
     min-height: 500px;

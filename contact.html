@@ -69,6 +69,15 @@
                                     <input id="number" type="text"/>
                                 </div>
                                 <div>
+                                    <label for="selection">What are you contacting about?</label>
+                                    <select>
+                                        <option>Solar</option>
+                                        <option>Lawns</option>
+                                        <option>Rain Collection</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div>
                                     <label>Whats on your mind?</label><br />
                                     <textarea rows="8" cols="90"></textarea>
                                 </div>
@@ -92,7 +101,39 @@
                 </div>
             </div>
             <footer>
-                <p>&copy; 2021</p>
+                <div class="footer-wrapper">
+                    <div class="footer-social">
+                        <h4>Follow us here!</h4>
+                        <div class='social-links'>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <fieldset>
+                            <form>
+                                <span class="newsletter-popup" id="confirm">Thanks for signing up!</span>
+                                <input type="email" placeholder="Email" />
+                                <button type="button" onclick="popup()">Sign Up!</button>
+                            </form>
+                        </fieldset>
+                        <p>&copy; 2021 Green Home Living</p>
+                    </div>
+                    <div class="sitemap">
+                        <h4>Site map</h4>
+                        <ul class="sitemap-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="lawns.html">Lawns</a></li>
+                            <li><a href="solar.html">Solar</a></li>
+                            <li><a href="rain.html">Rain</a></li>
+                            <li><a href="shop.html">Store</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
             </footer>
         </div>
         <script src="scripts.js" async defer></script>

@@ -242,7 +242,7 @@ select {
   background: rgb(44, 107, 44);
   background: linear-gradient(-45deg, rgb(44, 107, 44), #20af24, rgb(0, 156, 209));
   background-size: 400% 400%;
-  animation: gradient 45s ease infinite;
+  animation: gradient 30s ease infinite;
   min-width: 100%;
 }
 
@@ -776,6 +776,28 @@ footer {
   height: auto;
   max-width: 500px;
   width: 85%;
+}
+
+#lawns-hero {
+  background-image: url("../images/lawns/lawns_hero_top.webp");
+  min-height: 800px;
+}
+@media (min-width: 1920px) {
+  #lawns-hero {
+    background-image: url("../images/lawns/lawns_hero_top_xl.webp");
+  }
+}
+@media (max-width: 768px) {
+  #lawns-hero {
+    background-image: url("../images/lawns/lawns_hero_top_mobile.webp");
+    min-height: 500px;
+    background-position: 50%;
+  }
+}
+
+#lawns-middle-hero {
+  background-image: url("../images/lawns/middle_hero_xl.webp");
+  min-height: 500px;
 }
 
 #lawns-bottom-hero {
