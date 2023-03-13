@@ -41,7 +41,8 @@ $animation-timing: .5s;
   --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
   --fs-body-text: 1.5rem;
   --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
-  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem)
+  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
+  --fs-icons: clamp(5rem, (6vw+1rem), 6rem);
   @include for-size(large-phone-only){
     --fs-body-text: 1.2rem;
   }
@@ -180,6 +181,7 @@ h1, h2, h3, h4, h5{
 @import './lawns';
 @import './solar';
 @import './about';
+@import './contact';
 @import './shared-classes';
 
 .about{
@@ -234,36 +236,6 @@ h1, h2, h3, h4, h5{
     }
 
   }
-  .flex-test{
-    display: flex;
-    flex-flow:row;
-    height: 100%;
-    div{
-      flex: 1 1 auto;
-    }
-  }
-  .content-right{
-    background-color:$mid-green;
-    font-size: 1.3rem;
-    color: $text-color;
-  }
-  .news{
-    background-color:$mid-green;
-    padding: 15px;
-    h2{
-      text-align: center;
-    }
-    ul{
-      padding-left: 15px;
-      list-style-image: url("images/testbullet.png");
-    }
-    li a{
-      color: white;
-      &:visited{
-        color:blue;
-      }
-    }
-  }
 
   .contact{
     background-color: $header-footer-color;
@@ -291,62 +263,8 @@ h1, h2, h3, h4, h5{
       color:#fff;
     }
   }
-  /* lawns */
-  .lawns-lower{
-    background-color: $header-footer-color;
-    p{
-      font-size: 1.3rem;
-      color: $text-color;
-    }
-  }
-  .lawns{
-    background-color: $header-footer-color;
-  }
-  .page-contact{
-    background-color: $mid-green;
-    margin: 0px;
-    fieldset{
-      border:none;
-    }
-    p{
-      padding: 0px 0px 10px;
-      font-size: 1.3rem;
-      color: $text-color;
-    }
-    label{
-      font-size: 1.3rem;
-      color: $text-color;
-    }
-    input{
-      height: 25px;
-    }
-    div{
-      padding: 2px;
-    }
-    button{
-      padding: 10px;
-      background-color:$button-color;
-      color: #fff;
-      font-size: 1.2rem;
-    }
-  }
+  
   /* contact page */
-  .contact-page{
-    border: ridge 5px green;
-    padding: 15px;
-    background-color: $header-footer-color;
-    label{
-      color: $text-color;
-      font-size: 1.25rem;
-    }
-  }
-  .required{
-    display: inline;
-    &:after{
-      content: "*";
-      color: red;
-    }
-  }
   .social-contact{
       background-color: $mid-green;
       h3{

@@ -4,10 +4,13 @@
   --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
   --fs-body-text: 1.5rem;
   --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
-  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem)
-  @include for-size(large-phone-only){
+  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
+  --fs-icons: clamp(5rem, (6vw+1rem), 6rem);
+}
+@media (max-width: 535px) {
+  :root {
     --fs-body-text: 1.2rem;
-  } ;
+  }
 }
 
 html, body {
@@ -265,6 +268,16 @@ select {
   box-shadow: 0px 0px 10px #000;
   display: flex;
   flex-direction: column;
+}
+
+.contact-wrapper {
+  max-width: 1400px;
+  background-color: #2c6b2c;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin: auto;
 }
 
 /* social bar and header/nav */
@@ -668,7 +681,6 @@ footer {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   list-style: none;
-  background-color: red;
 }
 .sitemap-links li {
   margin: 0;
@@ -894,6 +906,88 @@ footer {
   }
 }
 
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  padding: 16px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.social-links i {
+  color: #ECF39E;
+  font-size: var(--fs-icons);
+}
+
+.contact-form h1 {
+  font-size: var(--fs-header-text);
+}
+.contact-form h3 {
+  font-size: var(--fs-body-text);
+}
+
+.contact-page {
+  max-width: 900px;
+  border: solid 2px green;
+  padding: 15px;
+  background-color: #31572C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.contact-page textarea {
+  width: 100%;
+}
+.contact-page button {
+  background-color: #5B8266;
+  border-color: #2c6b2c;
+  border-width: 3px;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.contact-page label {
+  font-size: 1.1rem;
+}
+
+.input-container {
+  margin-bottom: 16px;
+}
+.input-container input {
+  background-color: transparent;
+  border: #fff solid 1px;
+  color: #fff;
+  font-size: var(--fs-body-text);
+}
+.input-container input::-moz-placeholder {
+  color: #fff;
+  padding: 5px;
+}
+.input-container input::placeholder {
+  color: #fff;
+  padding: 5px;
+}
+
+.required {
+  display: inline;
+}
+.required:after {
+  content: "*";
+  color: red;
+}
+
 hr {
   width: 100%;
   border-radius: 5px;
@@ -931,6 +1025,7 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 1px 3px #000;
 }
 
 .photo-border-radius {
@@ -993,39 +1088,6 @@ hr {
   margin-top: 10px;
 }
 
-.flex-test {
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-}
-.flex-test div {
-  flex: 1 1 auto;
-}
-
-.content-right {
-  background-color: #2c6b2c;
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-
-.news {
-  background-color: #2c6b2c;
-  padding: 15px;
-}
-.news h2 {
-  text-align: center;
-}
-.news ul {
-  padding-left: 15px;
-  list-style-image: url("images/testbullet.png");
-}
-.news li a {
-  color: white;
-}
-.news li a:visited {
-  color: blue;
-}
-
 .contact {
   background-color: #31572C;
 }
@@ -1053,67 +1115,7 @@ hr {
   color: #fff;
 }
 
-/* lawns */
-.lawns-lower {
-  background-color: #31572C;
-}
-.lawns-lower p {
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-
-.lawns {
-  background-color: #31572C;
-}
-
-.page-contact {
-  background-color: #2c6b2c;
-  margin: 0px;
-}
-.page-contact fieldset {
-  border: none;
-}
-.page-contact p {
-  padding: 0px 0px 10px;
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-.page-contact label {
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-.page-contact input {
-  height: 25px;
-}
-.page-contact div {
-  padding: 2px;
-}
-.page-contact button {
-  padding: 10px;
-  background-color: #5B8266;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
 /* contact page */
-.contact-page {
-  border: ridge 5px green;
-  padding: 15px;
-  background-color: #31572C;
-}
-.contact-page label {
-  color: #ECF39E;
-  font-size: 1.25rem;
-}
-
-.required {
-  display: inline;
-}
-.required:after {
-  content: "*";
-  color: red;
-}
-
 .social-contact {
   background-color: #2c6b2c;
 }

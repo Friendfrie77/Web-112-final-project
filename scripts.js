@@ -1,6 +1,6 @@
-window.addEventListener('load', () =>{
-    window.alert('Please note, this site is currently being reworked.')
-})
+// window.addEventListener('load', () =>{
+//     window.alert('Please note, this site is currently being reworked.')
+// })
 //sticky nav
 window.onscroll=function(){sticky_nav()};
 var nav = document.getElementById("nav");
