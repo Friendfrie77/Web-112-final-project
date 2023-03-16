@@ -10,3 +10,16 @@
         min-height: 450px;
     }
 }
+
+.about-page{
+    display: flex;
+    padding: 1rem;
+    img{
+        padding-right: 1rem;
+    }
+}
+
+#about-mid-page-header{
+    font-size: var(--fs-mid-page-header);
+    text-align: center;
+}

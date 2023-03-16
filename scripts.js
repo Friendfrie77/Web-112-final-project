@@ -58,7 +58,8 @@ function popup(){
 
 // store add to cart message
 function store(){
-    var popup = document.getElementsByClassNdocument("span");
+    var popup = document.getElementsByClassNamedocument("span");
     popup.classList.toggle("show");
+    console.log
 }
 

@@ -1,21 +1,22 @@
 hr{
     width: 100%;
-    border-radius: 5px;
-    height: 7px;
+    height: 5px;
     margin: 25px 0px;
     border-color: transparent;
 }
 .text-content{
-    background-color: white;
-    padding: $box-padding;
+    background-color: #fff;
+    // padding: $box-padding;
     max-width: 1400px;
     margin: auto;
     animation: call-to-action $animation-timing ease-in;
     h1,h2,h3{
         font-size: var(--fs-header-text);
+        padding: $box-padding;
     }
     p{
         font-size: var(--fs-body-text);
+        padding: $box-padding;
     }
   }
 
@@ -25,14 +26,16 @@ hr{
     background-size: cover;
     position: relative;
     animation: hero $animation-timing ease-in;
+    width: 100%;
     h1{
       font-size: var(--fs-hero-text);
+      font-family: 'Neucha', cursive;
       opacity: .9;
       position: absolute;
       z-index: 100;
-      top: 50%;
+      top: 100%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -100%);
       text-shadow: 1px 3px #000;
     }
   }
