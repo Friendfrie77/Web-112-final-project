@@ -57,97 +57,6 @@ h1, h2, h3, h4, h5{
   font-family: $h1-font;
   color: $h1-colors;
 }
-.row{
-  height: auto;
-  flex: auto;
-}
-/* grid setup */
-// .row:after {
-//   content: "";
-//   clear: both;
-//   display: block; }
-
-// [class*="col-"] {
-//   float: left;
-//   padding: 15px;
-//   /* For mobile phones: */
-//   width: 100%; }
-
-// /* For tablets: */
-// @media only screen and (min-width: 768px) {
-//   .col-m-1 {
-//     width: 8.33%; }
-
-//   .col-m-2 {
-//     width: 16.66%; }
-
-//   .col-m-3 {
-//     width: 25%; }
-
-//   .col-m-4 {
-//     width: 33.33%; }
-
-//   .col-m-5 {
-//     width: 41.66%; }
-
-//   .col-m-6 {
-//     width: 50%; }
-
-//   .col-m-7 {
-//     width: 58.33%; }
-
-//   .col-m-8 {
-//     width: 66.66%; }
-
-//   .col-m-9 {
-//     width: 75%; }
-
-//   .col-m-10 {
-//     width: 83.33%; }
-
-//   .col-m-11 {
-//     width: 91.66%; }
-
-//   .col-m-12 {
-//     width: 100%; } }
-// /* For desktop: */
-// @media only screen and (min-width: 992px) {
-//   .col-1 {
-//     width: 8.33%; }
-
-//   .col-2 {
-//     width: 16.66%; }
-
-//   .col-3 {
-//     width: 25%; }
-
-//   .col-4 {
-//     width: 33.33%; }
-
-//   .col-5 {
-//     width: 41.66%; }
-
-//   .col-6 {
-//     width: 50%; }
-
-//   .col-7 {
-//     width: 58.33%; }
-
-//   .col-8 {
-//     width: 66.66%; }
-
-//   .col-9 {
-//     width: 75%; }
-
-//   .col-10 {
-//     width: 83.33%; }
-
-//   .col-11 {
-//     width: 91.66%; }
-
-//   .col-12 {
-//     width: 100%; } 
-// }
 
 @mixin for-size($size){
   @if $size == tablet-only{
@@ -185,6 +94,7 @@ h1, h2, h3, h4, h5{
 @import './contact';
 @import './shared-classes';
 @import './rain';
+@import './store';
 
 .about{
   h1{
@@ -217,26 +127,6 @@ h1, h2, h3, h4, h5{
       color:$text-color;
       margin-top: 20px;
     }
-  }
-
-  .lower-content{
-    background-color: #3F8D3F;
-  }
-  .content-left{
-    background-color: #56B356;
-    font-size: 1.3rem;
-    color: $text-color;
-    a{
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.2rem;
-    }
-    button{
-      background-color: $button-color;
-      padding: 15px;
-      margin-top:10px;
-    }
-
   }
 
   .contact{
@@ -298,83 +188,6 @@ h1, h2, h3, h4, h5{
       padding: 40px 40px 40px 40px;
     }
   }
-  /* dyi store */
-  .store-img{
-    padding: 10px;
-    height: auto;
-    max-width: 250px;
-  }
-  .store-header{
-      text-align: center;
-  }
-  .store-p{
-    padding: 15px;
-    font-size: 1.3rem;
-    color: $text-color
-  }
-  .store-box{
-    background-color:$header-footer-color;
-  }
-  .store{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1rem;
-    background-color: $header-footer-color;
-    padding: 1rem;
-    p{
-      color: $text-color;
-    }
-    .store-item{
-      position: relative;
-      background-color: $mid-green;
-      border: $content-color 2px solid;
-      padding: 10px;
-    }
-    .store-popup{
-      visibility: hidden;
-      position: relative;
-      z-index: 100;
-      top: 30%;
-      color: #fff;
-      background-color:green;
-      padding: 0px 5px 5px 5px;
-      border-radius: 5px;
-      &::after{
-        content: "";
-        width: 0px;
-        height: 0px;
-        border-width: 8px;
-        border-style: solid;
-        border-color: green transparent transparent;
-        position: absolute;
-        top: 100%;
-        left: 85%;
-      }
-    }
-    .show{
-      visibility: visible;
-      animation: fadeIn 1s;
-    }
-    p{
-      padding:10px;
-    }
-  }
-  .store-price{
-    position: relative;
-    button{
-      border:none;
-      background-color: transparent;
-      float: left;
-      i{
-        font-size: 1.5rem;
-        color: $h1-colors;
-      }
-    }
-    .item-price{
-      float: left;
-      padding:0px 0px 0px 10px;
-    }
-  }
 
   /* blog */
   .blog{
@@ -404,21 +217,3 @@ h1, h2, h3, h4, h5{
     }
   }
 
-  /* media query */
-
-// @media screen and (max-width:730px){
-//   .store{
-//     grid-template-columns: auto;
-//   }
-//   .blog{
-//     grid-template-columns: auto;
-//   }
-  
-//   .slide-img{
-//     width: 100%;
-//     height: auto;
-//   }
-//   .prev, .next{
-//     font-size: 50px;
-//   }
-// }

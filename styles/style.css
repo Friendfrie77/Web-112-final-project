@@ -24,12 +24,6 @@ h1, h2, h3, h4, h5 {
   color: #FCEADE;
 }
 
-.row {
-  height: auto;
-  flex: auto;
-}
-
-/* grid setup */
 /* CSS Reset */
 /* Box sizing rules */
 *,
@@ -217,6 +211,7 @@ select {
   margin: 0px auto;
   height: 100%;
   background-color: #2c6b2c;
+  background-color: #fff;
   overflow: auto;
   box-shadow: 0px 0px 10px #000;
   display: flex;
@@ -304,11 +299,11 @@ nav {
     align-items: center;
     gap: 30px;
     translate: -100%;
-    position: fixed;
-    top: 90px;
-    left: 0px;
+    position: absolute;
+    top: 55px;
+    left: -10px;
     z-index: 100;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     opacity: 1;
     padding-top: 40px;
@@ -965,6 +960,7 @@ hr {
 }
 
 .text-content {
+  background-color: #31572C;
   background-color: #fff;
   max-width: 1400px;
   margin: auto;
@@ -1020,7 +1016,7 @@ hr {
 }
 
 .rain-hr {
-  background: linear-gradient(-45deg, #FFAF7B, #D76D77, #3A1C71);
+  background: linear-gradient(-45deg, #C5E2F7, #92BAD2, #53789E);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
 }
@@ -1039,6 +1035,87 @@ hr {
 .rain-types div img {
   width: 90%;
   height: 90%;
+}
+
+.store-img {
+  padding: 10px;
+  height: auto;
+  max-width: 250px;
+}
+
+.store-header {
+  text-align: center;
+}
+
+.store-p {
+  padding: 15px;
+  font-size: 1.3rem;
+  color: #ECF39E;
+}
+
+.store-box {
+  background-color: #31572C;
+}
+
+.store {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+.store p {
+  color: #ECF39E;
+}
+.store .store-item {
+  position: relative;
+  background-color: #2c6b2c;
+  border: #68DE82 2px solid;
+  padding: 10px;
+}
+.store .store-popup {
+  visibility: hidden;
+  position: relative;
+  z-index: 100;
+  top: 30%;
+  color: #fff;
+  background-color: green;
+  padding: 0px 5px 5px 5px;
+  border-radius: 5px;
+}
+.store .store-popup::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: green transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 85%;
+}
+.store .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+.store p {
+  padding: 10px;
+}
+
+.store-price {
+  position: relative;
+}
+.store-price button {
+  border: none;
+  background-color: transparent;
+  float: left;
+}
+.store-price button i {
+  font-size: 1.5rem;
+  color: #FCEADE;
+}
+.store-price .item-price {
+  float: left;
+  padding: 0px 0px 0px 10px;
 }
 
 .about h1 {
@@ -1069,26 +1146,6 @@ hr {
 .main p {
   color: #ECF39E;
   margin-top: 20px;
-}
-
-.lower-content {
-  background-color: #3F8D3F;
-}
-
-.content-left {
-  background-color: #56B356;
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-.content-left a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.content-left button {
-  background-color: #5B8266;
-  padding: 15px;
-  margin-top: 10px;
 }
 
 .contact {
@@ -1152,89 +1209,6 @@ hr {
   padding: 40px 40px 40px 40px;
 }
 
-/* dyi store */
-.store-img {
-  padding: 10px;
-  height: auto;
-  max-width: 250px;
-}
-
-.store-header {
-  text-align: center;
-}
-
-.store-p {
-  padding: 15px;
-  font-size: 1.3rem;
-  color: #ECF39E;
-}
-
-.store-box {
-  background-color: #31572C;
-}
-
-.store {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  background-color: #31572C;
-  padding: 1rem;
-}
-.store p {
-  color: #ECF39E;
-}
-.store .store-item {
-  position: relative;
-  background-color: #2c6b2c;
-  border: #68DE82 2px solid;
-  padding: 10px;
-}
-.store .store-popup {
-  visibility: hidden;
-  position: relative;
-  z-index: 100;
-  top: 30%;
-  color: #fff;
-  background-color: green;
-  padding: 0px 5px 5px 5px;
-  border-radius: 5px;
-}
-.store .store-popup::after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: green transparent transparent;
-  position: absolute;
-  top: 100%;
-  left: 85%;
-}
-.store .show {
-  visibility: visible;
-  animation: fadeIn 1s;
-}
-.store p {
-  padding: 10px;
-}
-
-.store-price {
-  position: relative;
-}
-.store-price button {
-  border: none;
-  background-color: transparent;
-  float: left;
-}
-.store-price button i {
-  font-size: 1.5rem;
-  color: #FCEADE;
-}
-.store-price .item-price {
-  float: left;
-  padding: 0px 0px 0px 10px;
-}
-
 /* blog */
 .blog {
   display: grid;
@@ -1262,6 +1236,4 @@ hr {
 }
 .blog-item h1 {
   padding: 0px 0px 10px;
-}
-
-/* media query *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

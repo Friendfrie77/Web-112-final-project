@@ -5,6 +5,7 @@ hr{
     border-color: transparent;
 }
 .text-content{
+    background-color: $header-footer-color;
     background-color: #fff;
     // padding: $box-padding;
     max-width: 1400px;
@@ -17,6 +18,7 @@ hr{
     p{
         font-size: var(--fs-body-text);
         padding: $box-padding;
+        // color: $text-color;
     }
   }
 
