@@ -33,13 +33,12 @@
     }
     .social-links{
         padding-top: 10px;
-
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
     i{
-        font-size: 2.5rem;
+        color: $text-color !important;
     }
 }
 

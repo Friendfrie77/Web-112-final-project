@@ -6,7 +6,7 @@
   --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
   --fs-mid-page-header: clamp(1rem, calc(3vw+1rem), 3rem);
   --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-  --fs-icons: clamp(5rem, (6vw+1rem), 6rem);
+  --fs-icons: clamp(4rem, (6vw+1rem), 5.8rem);
 }
 @media (max-width: 535px) {
   :root {
@@ -202,16 +202,16 @@ select {
   flex-direction: column;
   margin: 0px auto;
   height: 100%;
-  background-color: #fff;
+  background-color: #FFFEEC;
   overflow: auto;
+  box-shadow: 0px 0px 5px #000;
 }
 
 .content-wrapper {
   max-width: 1400px;
   margin: 0px auto;
   height: 100%;
-  background-color: #2c6b2c;
-  background-color: #fff;
+  background-color: #FFFEEC;
   overflow: auto;
   box-shadow: 0px 0px 10px #000;
   display: flex;
@@ -220,7 +220,7 @@ select {
 
 .contact-wrapper {
   max-width: 1400px;
-  background-color: #2c6b2c;
+  background-color: #FFFEEC;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -557,7 +557,7 @@ footer {
   justify-content: space-evenly;
 }
 .footer-social i {
-  font-size: 2.5rem;
+  color: #ECF39E !important;
 }
 
 .newsletter {
@@ -682,12 +682,15 @@ footer {
   }
 }
 
+.services {
+  background-color: #FFFEEC;
+}
 .services h2 {
   font-size: 2.5rem;
   text-align: center;
+  color: #31572C;
 }
 .services p {
-  color: #ECF39E;
   padding: 20px;
   font-size: 1.7rem;
 }
@@ -695,13 +698,14 @@ footer {
 .call-to-action {
   padding: 20px;
   animation: call-to-action 0.5s ease-in;
+  background-color: #FFFEEC;
 }
 .call-to-action h1 {
   font-size: 3rem;
+  color: #31572C;
 }
 .call-to-action p {
   font-size: 1.5rem;
-  color: #ECF39E;
   margin-top: 20px;
 }
 
@@ -734,6 +738,7 @@ footer {
 }
 .service-info p {
   font-size: 1.3rem;
+  color: #FFFEEC;
 }
 .service-info img {
   height: auto;
@@ -885,19 +890,21 @@ footer {
   width: 100%;
 }
 .social-links i {
-  color: #ECF39E;
+  color: #31572C;
   font-size: var(--fs-icons);
 }
 
 .contact-form h1 {
+  color: #31572C;
   font-size: var(--fs-header-text);
 }
 .contact-form h3 {
   font-size: var(--fs-body-text);
+  color: #31572C;
 }
 
 .contact-page {
-  max-width: 900px;
+  max-width: 1000px;
   border: solid 2px green;
   padding: 15px;
   background-color: #31572C;
@@ -961,7 +968,7 @@ hr {
 
 .text-content {
   background-color: #31572C;
-  background-color: #fff;
+  background-color: #FFFEEC;
   max-width: 1400px;
   margin: auto;
   animation: call-to-action 0.5s ease-in;
@@ -969,6 +976,7 @@ hr {
 .text-content h1, .text-content h2, .text-content h3 {
   font-size: var(--fs-header-text);
   padding: 1rem;
+  color: #31572C;
 }
 .text-content p {
   font-size: var(--fs-body-text);
@@ -985,6 +993,7 @@ hr {
 }
 .background-img h1 {
   font-size: var(--fs-hero-text);
+  color: #fff;
   font-family: "Neucha", cursive;
   opacity: 0.9;
   position: absolute;
@@ -992,7 +1001,7 @@ hr {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -100%);
-  text-shadow: 1px 3px #000;
+  text-shadow: 1px 5px #000;
 }
 
 .photo-border-radius {
@@ -1044,17 +1053,18 @@ hr {
 }
 
 .store-header {
+  color: #31572C;
   text-align: center;
 }
 
 .store-p {
   padding: 15px;
   font-size: 1.3rem;
-  color: #ECF39E;
+  color: #000;
 }
 
 .store-box {
-  background-color: #31572C;
+  background-color: #FFFEEC;
 }
 
 .store {
@@ -1069,8 +1079,8 @@ hr {
 .store .store-item {
   position: relative;
   background-color: #2c6b2c;
-  border: #68DE82 2px solid;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
 }
 .store .store-popup {
   visibility: hidden;
@@ -1213,14 +1223,16 @@ hr {
 .blog {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #31572C;
+  gap: 20px;
+  background-color: #FFFEEC;
+  padding: 1rem;
 }
 
 .blog-item {
   padding: 15px;
-  border: green solid 3px;
   margin: 5px;
   background-color: #2c6b2c;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
 }
 .blog-item iframe {
   display: block;
@@ -1235,5 +1247,5 @@ hr {
   color: #ECF39E;
 }
 .blog-item h1 {
-  padding: 0px 0px 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

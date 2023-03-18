@@ -43,7 +43,7 @@ $animation-timing: .5s;
   --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
   --fs-mid-page-header: clamp(1rem, calc(3vw+1rem), 3rem);
   --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-  --fs-icons: clamp(5rem, (6vw+1rem), 6rem);
+  --fs-icons: clamp(4rem, (6vw+1rem), 5.8rem);
   @include for-size(large-phone-only){
     --fs-body-text: 1.2rem;
   }
@@ -119,7 +119,6 @@ h1, h2, h3, h4, h5{
 }
 
 .main{
-    // background-color: $mid-green;
     padding: 15px;
     margin: none;
     font-size: 1.7rem;
@@ -193,13 +192,15 @@ h1, h2, h3, h4, h5{
   .blog{
     display:grid;
     grid-template-columns: auto auto;
-    background-color: $header-footer-color;
+    gap: 20px;
+    background-color: #FFFEEC;
+    padding: 1rem;
   }
   .blog-item{
     padding: 15px;
-    border: green solid 3px;
     margin: 5px;
     background-color: $mid-green;
+    box-shadow: (rgba(0,0,0,.4) 0px 5px 10px);
     iframe{
       display: block;
       margin: 0 auto;
@@ -213,7 +214,7 @@ h1, h2, h3, h4, h5{
       color: $text-color;
     }
     h1{
-      padding:0px 0px 10px;
+      text-align: center;
     }
   }
 

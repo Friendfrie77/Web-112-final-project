@@ -4,21 +4,21 @@
     max-width: 250px;
   }
   .store-header{
+      color: $header-footer-color;
       text-align: center;
   }
   .store-p{
     padding: 15px;
     font-size: 1.3rem;
-    color: $text-color
+    color: #000;
   }
   .store-box{
-    background-color:$header-footer-color;
+    background-color: #FFFEEC;
   }
   .store{
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
-    // background-color: $header-footer-color;
     padding: 1rem;
     p{
       color: $text-color;
@@ -26,8 +26,8 @@
     .store-item{
       position: relative;
       background-color: $mid-green;
-      border: $content-color 2px solid;
       padding: 10px;
+      box-shadow: (rgba(0,0,0,.4) 0px 5px 10px);
     }
     .store-popup{
       visibility: hidden;

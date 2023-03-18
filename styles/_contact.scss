@@ -11,20 +11,22 @@
     justify-content: space-evenly;
     width: 100%;
     i{
-        color: $text-color;
+        color: $header-footer-color;
         font-size: var(--fs-icons);
     }
 }
 .contact-form{
     h1{
+        color: $header-footer-color;
         font-size: var(--fs-header-text);
     }
     h3{
         font-size: var(--fs-body-text);
+        color: $header-footer-color;
     }
 }
 .contact-page{
-max-width: 900px;
+max-width: 1000px;
 border: solid 2px green;
 padding: 15px;
 background-color: $header-footer-color;
