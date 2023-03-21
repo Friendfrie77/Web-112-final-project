@@ -37,11 +37,11 @@ $animation-timing: .5s;
 }
 
 :root{
-  --fs-hero-text: clamp(2rem, (5vw+1rem), 5.5rem);
+  --fs-hero-text: clamp(3rem, (5vw+1rem), 5.5rem);
   --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
   --fs-body-text: 1.5rem;
-  --fs-header-text: clamp(1.5rem, (3vw+1rem), 4rem);
-  --fs-mid-page-header: clamp(1rem, calc(3vw+1rem), 3rem);
+  --fs-header-text: clamp(2rem, (3vw+1rem), 4rem);
+  --fs-mid-page-header: clamp(2rem, calc(3vw+1rem), 3rem);
   --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
   --fs-icons: clamp(4rem, (6vw+1rem), 5.8rem);
   @include for-size(large-phone-only){
@@ -195,6 +195,10 @@ h1, h2, h3, h4, h5{
     gap: 20px;
     background-color: #FFFEEC;
     padding: 1rem;
+    @include for-size(tablet-only){
+      display: flex;
+      flex-direction: column;
+    }
   }
   .blog-item{
     padding: 15px;

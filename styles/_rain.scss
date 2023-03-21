@@ -1,11 +1,27 @@
 #rain-hero{
-    background-image: url(../images/rain/rain-hero-xl.webp);
+    background-image: url(../images/rain/rain-hero.webp);
     min-height: 800px;
+    @include for-size(large-desktop){
+        background-image: url(../images/rain/rain-hero-xl.webp);
+    }
+    @include for-size(tablet-only){
+        background-image: url(../images/rain/rain-hero-mobile.webp);
+        min-height: 450px;
+        background-position: 90%;
+    }
 }
 
 #rain-lower{
-    background-image: url(../images/rain/rain-lower-hero-xl.webp);
+    background-image: url(../images/rain/rain-lower-hero.webp);
     min-height: 500px;
+    @include for-size(large-desktop){
+        background-image: url(../images/rain/rain-lower-hero-xl.webp);
+    }
+    @include for-size(tablet-only){
+        background-image: url(../images/rain/rain-lower-hero-mobile.webp);
+        min-height: 450px;
+        background-position: 50%;
+    }
 }
 .rain-hr{
     background: linear-gradient(-45deg,#C5E2F7, #92BAD2, #53789E);

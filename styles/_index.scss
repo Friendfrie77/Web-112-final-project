@@ -1,7 +1,6 @@
 #index-hero-1{
     background-image: url('../images/solar/solar-hero-top.webp');
     min-height: 800px;
-    width: 100%;
     @include for-size(large-desktop){
         background-image: url('../images/solar/solar-hero-top-xl.webp');
     }
@@ -14,7 +13,6 @@
 #index-hero-2{
     background-image: url('../images/index-heros/green-lawns-hero.webp');
     min-height: 800px;
-    width: 100%;
     @include for-size(large-desktop){
         background-image: url('../images/index-heros/green-lawns-hero-xl.webp');
     }
@@ -22,6 +20,20 @@
         background-image: url('../images/index-heros/green-lawns-hero-mobile.webp');
         min-height: 450px;
         background-position: 50%;
+    }
+}
+
+#index-hero-3{
+    background-image: url(../images/rain/rain-hero.webp);
+    min-height: 800px;
+    background-position: 50%;
+    @include for-size(large-desktop){
+        background-image: url(../images/rain/rain-hero.webp);
+    }
+    @include for-size(tablet-only){
+        background-image: url(../images/rain/rain-hero-mobile.webp);
+        min-height: 450px;
+        background-position: 90%;
     }
 }
 

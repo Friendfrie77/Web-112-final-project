@@ -8,6 +8,7 @@
     @include for-size(tablet-only){
         background-image: url('../images/about/about-hero-mobile.webp');
         min-height: 450px;
+        background-position: 50%;
     }
 }
 
@@ -16,6 +17,9 @@
     padding: 1rem;
     img{
         padding-right: 1rem;
+    }
+    @include for-size(tablet-only){
+        flex-direction: column;
     }
 }
 

@@ -57,6 +57,10 @@
     p{
       padding:10px;
     }
+    @include for-size(tablet-only){
+      display: flex;
+      flex-direction: column;
+    }
   }
   .store-price{
     position: relative;
