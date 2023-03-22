@@ -1,13 +1,13 @@
 #about-hero{
     background-image: url('../images/about/about-hero.webp');
-    min-height: 800px;
+    min-height: $hero-img-large;
     @include for-size(large-desktop){
         background-image: url('../images/about/about-hero-xl.webp');
         background-position: 50%;
     }
     @include for-size(tablet-only){
-        background-image: url('../images/about/about-hero-mobile.webp');
-        min-height: 450px;
+        background-image: url('../images/about/about-hero-xl.webp');
+        min-height: $hero-img-small;
         background-position: 50%;
     }
 }

@@ -1,3 +1,15 @@
+#store-hero{
+  background-image: url('../images/store/shop-hero.webp');
+  min-height: $hero-img-large;
+  @include for-size(large-desktop){
+    background-image: url('../images/store/shop-hero-xl.webp');
+  }
+  @include for-size(tablet-only){
+    background-image: url('../images/store/shop-hero.webp');
+    min-height: $hero-img-small;
+    background-position: 80%;
+  }
+}
 .store-img{
     padding: 10px;
     height: auto;

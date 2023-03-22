@@ -276,15 +276,15 @@ nav {
 .navlinks {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin: 10px;
 }
 .navlinks li {
   list-style: none;
   align-self: left;
 }
-.navlinks li :last-child {
+.navlinks li:last-child {
   margin-right: 15px;
 }
 .navlinks li a {
@@ -314,6 +314,14 @@ nav {
 
 .navlinks > li {
   position: relative;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
 }
 
 .dropdown button {
@@ -331,7 +339,8 @@ nav {
   position: absolute;
   list-style: none;
   margin-top: 0.6rem;
-  left: 0px;
+  left: -40px;
+  top: 40px;
   padding: 5px;
   transition-duration: 0.5s;
   opacity: 0;
@@ -343,6 +352,7 @@ nav {
 @media (max-width: 768px) {
   .dropdown ul {
     flex-direction: column;
+    position: static;
   }
 }
 
@@ -353,7 +363,7 @@ nav {
 }
 @media (max-width: 768px) {
   .dropdown:hover > ul, .dropdown:focus-within > ul, .navlinks .dropdown ul:hover, ul, .navlinks .dropdown ul:focus {
-    display: flex;
+    display: block;
   }
 }
 
@@ -652,7 +662,7 @@ footer {
 }
 @media (max-width: 768px) {
   #index-hero-1 {
-    background-image: url("../images/solar/solar-hero-top-mobile.webp");
+    background-image: url("../images/solar/solar-hero-top.webp");
     min-height: 450px;
     background-position: 40%;
   }
@@ -669,9 +679,9 @@ footer {
 }
 @media (max-width: 768px) {
   #index-hero-2 {
-    background-image: url("../images/index-heros/green-lawns-hero-mobile.webp");
+    background-image: url("../images/index-heros/green-lawns-hero.webp");
     min-height: 450px;
-    background-position: 50%;
+    background-position: 60%;
   }
 }
 
@@ -687,8 +697,8 @@ footer {
 }
 @media (max-width: 768px) {
   #index-hero-3 {
-    background-image: url(../images/rain/rain-hero-mobile.webp);
-    min-height: 450px;
+    background-image: url(../images/rain/rain-hero.webp);
+    min-height: 500px;
     background-position: 90%;
   }
 }
@@ -768,7 +778,7 @@ footer {
 }
 @media (max-width: 768px) {
   #lawns-hero {
-    background-image: url("../images/lawns/lawns_hero_top_mobile.webp");
+    background-image: url("../images/lawns/lawns_hero_top.webp");
     min-height: 500px;
     background-position: 10%;
   }
@@ -795,8 +805,8 @@ footer {
 }
 @media (max-width: 768px) {
   #solar-hero {
-    background-image: url("../images/solar/solar-hero-top-mobile.webp");
-    min-height: 450px;
+    background-image: url("../images/solar/solar-hero-top.webp");
+    min-height: 500px;
     background-position: 50%;
   }
 }
@@ -812,8 +822,7 @@ footer {
 }
 @media (max-width: 768px) {
   #solar-middle-hero {
-    background-image: url("../images/solar/solar-middle-hero-mobile.webp");
-    min-height: 450px;
+    background-image: url("../images/solar/solar-middle-hero.webp");
     background-position: 50%;
   }
 }
@@ -829,8 +838,7 @@ footer {
 }
 @media (max-width: 768px) {
   #solar-bottom-hero {
-    background-image: url("../images/solar/solor-bottom-hero-mobile.webp");
-    min-height: 450px;
+    background-image: url("../images/solar/solor-bottom-hero.webp");
     background-position: 50%;
   }
 }
@@ -873,8 +881,8 @@ footer {
 }
 @media (max-width: 768px) {
   #about-hero {
-    background-image: url("../images/about/about-hero-mobile.webp");
-    min-height: 450px;
+    background-image: url("../images/about/about-hero-xl.webp");
+    min-height: 500px;
     background-position: 50%;
   }
 }
@@ -1079,8 +1087,7 @@ hr {
 .rain-types {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 1.25rem;
-  padding: 1rem;
+  grid-gap: 1vw;
 }
 .rain-types div {
   display: flex;
@@ -1088,8 +1095,31 @@ hr {
   align-items: center;
 }
 .rain-types div img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
+}
+@media (max-width: 768px) {
+  .rain-types {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#store-hero {
+  background-image: url("../images/store/shop-hero.webp");
+  min-height: 800px;
+}
+@media (min-width: 1920px) {
+  #store-hero {
+    background-image: url("../images/store/shop-hero-xl.webp");
+  }
+}
+@media (max-width: 768px) {
+  #store-hero {
+    background-image: url("../images/store/shop-hero.webp");
+    min-height: 500px;
+    background-position: 80%;
+  }
 }
 
 .store-img {

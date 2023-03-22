@@ -46,12 +46,12 @@ nav{
 .navlinks{
   display: grid;
   grid-template-columns: repeat(6, auto);
-  column-gap: 5px;
+  column-gap: 10px;
   margin: 10px;
   li{
     list-style: none;
     align-self: left;
-    :last-child{
+    &:last-child{
       margin-right: 15px;
     }
     a{
@@ -80,6 +80,13 @@ nav{
 }
 .navlinks > li{
   position: relative;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.dropdown{
+  display: flex;
+  position: relative;
 }
 .dropdown button{
   border: none;
@@ -96,7 +103,8 @@ nav{
   position: absolute;
   list-style: none;
   margin-top: .6rem;
-  left: 0px;
+  left: -40px;
+  top: 40px;
   padding: 5px;
   transition-duration: .5s;
   opacity: 0;
@@ -106,6 +114,7 @@ nav{
   width: 200px;
   @include for-size(tablet-only){
     flex-direction: column;
+    position: static;
   }
 }
 
@@ -114,7 +123,7 @@ nav{
   opacity: 1;
   display: block;
   @include for-size(tablet-only){
-    display: flex;
+    display: block;
   }
 }
 .mobile-nav-container{

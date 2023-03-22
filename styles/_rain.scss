@@ -32,15 +32,18 @@
 .rain-types{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 1.25rem;
-    padding: 1rem;
+    grid-gap: 1vw;
     div{
         display: flex;
         flex-direction: column;
         align-items: center;
         img{
-            width: 90%;
-            height: 90%;
+            width: 80%;
+            height: 80%;
         }
+    }
+    @include for-size(tablet-only){
+        display: flex;
+        flex-direction: column;
     }
 }

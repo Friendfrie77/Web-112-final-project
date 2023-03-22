@@ -11,6 +11,9 @@ $h1-font:'Ubuntu', sans-serif;
 $navbar-fontsize: clamp(1rem, 1.5rem, 3rem);
 $box-padding: 1rem; 
 $animation-timing: .5s;
+$hero-img-large: 800px;
+$hero-img-small: 500px;
+$mid-hero: 500px;
 
 @mixin for-size($size){
   @if $size == tablet-only{
