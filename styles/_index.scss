@@ -5,7 +5,6 @@
         background-image: url('../images/solar/solar-hero-top-xl.webp');
     }
     @include for-size(tablet-only){
-        background-image: url('../images/solar/solar-hero-top.webp');
         min-height: 450px;
         background-position: 40%;
     }

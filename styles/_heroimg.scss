@@ -1,6 +1,6 @@
 /* hero img */
 .hero-img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     position: relative;
     margin: 0px;
@@ -16,6 +16,13 @@
     display: none;
     margin-bottom: 0px;
     padding: 0;
+  }
+  .slide-img{
+    height: auto;
+    width: 100%;
+    @include for-size(tablet-only){
+      height: auto;
+    }
   }
   .slideshow-text{
    color:#fff;
