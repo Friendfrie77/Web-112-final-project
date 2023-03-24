@@ -1315,7 +1315,7 @@ hr {
 
 /* blog */
 #blog-hero {
-  background-image: url("../blog.jpg");
+  background-image: url("../images/blog.jpg");
   height: 800px;
 }
 @media (max-width: 768px) {

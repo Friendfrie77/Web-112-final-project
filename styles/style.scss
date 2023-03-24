@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5{
 
   /* blog */
   #blog-hero{
-    background-image: url('../blog.jpg');
+    background-image: url('../images/blog.jpg');
     height: $hero-img-large;
     @include for-size(tablet-only){
       min-height: $hero-img-small;
