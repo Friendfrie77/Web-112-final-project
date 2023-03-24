@@ -1120,7 +1120,7 @@ hr {
 
 #store-hero {
   background-image: url("../images/store/shop-hero.webp");
-  min-height: 800px;
+  height: 800px;
 }
 @media (min-width: 1920px) {
   #store-hero {
@@ -1129,7 +1129,6 @@ hr {
 }
 @media (max-width: 768px) {
   #store-hero {
-    background-image: url("../images/store/shop-hero.webp");
     min-height: 500px;
     background-position: 80%;
   }
@@ -1315,6 +1314,17 @@ hr {
 }
 
 /* blog */
+#blog-hero {
+  background-image: url("../blog.jpg");
+  height: 800px;
+}
+@media (max-width: 768px) {
+  #blog-hero {
+    min-height: 500px;
+    background-position: 80%;
+  }
+}
+
 .blog {
   display: grid;
   grid-template-columns: auto auto;
