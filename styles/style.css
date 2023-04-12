@@ -479,12 +479,18 @@ nav {
 }
 
 .slide-img {
-  height: auto;
+  max-height: 900px;
   width: 100%;
+  aspect-ratio: 16/9;
 }
 @media (max-width: 768px) {
   .slide-img {
     height: auto;
+  }
+}
+@media (min-width: 3000px) {
+  .slide-img {
+    max-height: 100%;
   }
 }
 
@@ -659,57 +665,6 @@ footer {
 }
 .sitemap-links a :hover {
   color: #56B356;
-}
-
-#index-hero-1 {
-  background-image: url("../images/solar/solar-hero-top.webp");
-  min-height: 800px;
-}
-@media (min-width: 1920px) {
-  #index-hero-1 {
-    background-image: url("../images/solar/solar-hero-top-xl.webp");
-  }
-}
-@media (max-width: 768px) {
-  #index-hero-1 {
-    min-height: 450px;
-    background-position: 40%;
-  }
-}
-
-#index-hero-2 {
-  background-image: url("../images/index-heros/green-lawns-hero.webp");
-  min-height: 800px;
-}
-@media (min-width: 1920px) {
-  #index-hero-2 {
-    background-image: url("../images/index-heros/green-lawns-hero-xl.webp");
-  }
-}
-@media (max-width: 768px) {
-  #index-hero-2 {
-    background-image: url("../images/index-heros/green-lawns-hero.webp");
-    min-height: 450px;
-    background-position: 60%;
-  }
-}
-
-#index-hero-3 {
-  background-image: url(../images/rain/rain-hero.webp);
-  min-height: 800px;
-  background-position: 50%;
-}
-@media (min-width: 1920px) {
-  #index-hero-3 {
-    background-image: url(../images/rain/rain-hero.webp);
-  }
-}
-@media (max-width: 768px) {
-  #index-hero-3 {
-    background-image: url(../images/rain/rain-hero.webp);
-    min-height: 500px;
-    background-position: 90%;
-  }
 }
 
 .services {

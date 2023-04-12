@@ -83,6 +83,9 @@ h1, h2, h3, h4, h5{
   @if $size == large-desktop{
     @media (min-width: 1920px) {@content;}
   }
+  @if $size == xl-desktop{
+    @media(min-width: 3000px) {@content;}
+  }
 }
 @import './reset';
 @import './animations';
