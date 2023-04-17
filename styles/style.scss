@@ -40,15 +40,15 @@ $mid-hero: 500px;
 }
 
 :root{
-  --fs-hero-text: clamp(3rem, (5vw+1rem), 5.5rem);
+  --fs-hero-text: clamp(2.5rem, (5vw+1rem), 5.5rem);
   --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
   --fs-body-text: 1.5rem;
-  --fs-header-text: clamp(2rem, (3vw+1rem), 4rem);
-  --fs-mid-page-header: clamp(2rem, calc(3vw+1rem), 3rem);
+  --fs-header-text: clamp(2rem, (5vw+2rem), 4rem);
+  --fs-mid-page-header: clamp(1.5rem, calc(3vw+1rem), 3rem);
   --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-  --fs-icons: clamp(4rem, (6vw+1rem), 5.8rem);
+  --fs-icons: clamp(3rem, (6vw+1rem), 5.8rem);
   @include for-size(large-phone-only){
-    --fs-body-text: 1.2rem;
+    --fs-body-text: 1rem;
   }
 }
 

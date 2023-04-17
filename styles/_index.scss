@@ -2,13 +2,13 @@
 .services{
     background-color: #FFFEEC;
     h2{
-        font-size: 2.5rem;
+        font-size: var(--fs-mid-page-header);
         text-align: center;
         color: $header-footer-color;
     }
     p{
         padding: 20px;
-        font-size: 1.7rem;
+        font-size: var(--fs-body-text)
     }
 }
 
@@ -17,11 +17,11 @@
     animation: call-to-action $animation-timing ease-in;
     background-color: #FFFEEC;
     h1{
-        font-size: 3rem;
+        font-size: var(--fs-header-text);
         color: $header-footer-color;
     }
     p{
-        font-size: 1.5rem;
+        font-size: var(--fs-body-text);
         margin-top: 20px;
     }
 }
@@ -48,10 +48,10 @@
     border-radius: 3px;
     box-shadow: (rgba(0,0,0,.4) 0px 5px 10px);
     h1{
-        font-size: clamp(1.2rem, 2.5rem, 4rem);
+        font-size: var(--fs-mid-page-header);
     }
     p{
-        font-size: clamp(1.2rem, 1.3rem, 1.5rem);
+        font-size: var(--fs-body-text);
         color: #FFFEEC;
     }
     img{

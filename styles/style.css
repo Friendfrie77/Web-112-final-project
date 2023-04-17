@@ -1,16 +1,16 @@
 /* scss var */
 :root {
-  --fs-hero-text: clamp(3rem, (5vw+1rem), 5.5rem);
+  --fs-hero-text: clamp(2.5rem, (5vw+1rem), 5.5rem);
   --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
   --fs-body-text: 1.5rem;
-  --fs-header-text: clamp(2rem, (3vw+1rem), 4rem);
-  --fs-mid-page-header: clamp(2rem, calc(3vw+1rem), 3rem);
+  --fs-header-text: clamp(2rem, (5vw+2rem), 4rem);
+  --fs-mid-page-header: clamp(1.5rem, calc(3vw+1rem), 3rem);
   --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-  --fs-icons: clamp(4rem, (6vw+1rem), 5.8rem);
+  --fs-icons: clamp(3rem, (6vw+1rem), 5.8rem);
 }
 @media (max-width: 535px) {
   :root {
-    --fs-body-text: 1.2rem;
+    --fs-body-text: 1rem;
   }
 }
 
@@ -63,6 +63,7 @@ body {
   min-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -479,9 +480,8 @@ nav {
 }
 
 .slide-img {
-  max-height: 900px;
+  max-height: 800px;
   width: 100%;
-  aspect-ratio: 16/9;
 }
 @media (max-width: 768px) {
   .slide-img {
@@ -490,7 +490,7 @@ nav {
 }
 @media (min-width: 3000px) {
   .slide-img {
-    max-height: 100%;
+    max-height: auto;
   }
 }
 
@@ -671,13 +671,13 @@ footer {
   background-color: #FFFEEC;
 }
 .services h2 {
-  font-size: 2.5rem;
+  font-size: var(--fs-mid-page-header);
   text-align: center;
   color: #31572C;
 }
 .services p {
   padding: 20px;
-  font-size: 1.7rem;
+  font-size: var(--fs-body-text);
 }
 
 .call-to-action {
@@ -686,11 +686,11 @@ footer {
   background-color: #FFFEEC;
 }
 .call-to-action h1 {
-  font-size: 3rem;
+  font-size: var(--fs-header-text);
   color: #31572C;
 }
 .call-to-action p {
-  font-size: 1.5rem;
+  font-size: var(--fs-body-text);
   margin-top: 20px;
 }
 
@@ -719,10 +719,10 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
 }
 .service-info h1 {
-  font-size: 2.5rem;
+  font-size: var(--fs-mid-page-header);
 }
 .service-info p {
-  font-size: 1.3rem;
+  font-size: var(--fs-body-text);
   color: #FFFEEC;
 }
 .service-info img {
@@ -836,18 +836,17 @@ footer {
 #about-hero {
   background-image: url("../images/about/about-hero.webp");
   min-height: 800px;
+  background-position: center;
 }
 @media (min-width: 1920px) {
   #about-hero {
     background-image: url("../images/about/about-hero-xl.webp");
-    background-position: 50%;
   }
 }
 @media (max-width: 768px) {
   #about-hero {
     background-image: url("../images/about/about-hero-xl.webp");
-    min-height: 500px;
-    background-position: 50%;
+    background-position: 60%;
   }
 }
 
@@ -1085,7 +1084,7 @@ hr {
 @media (max-width: 768px) {
   #store-hero {
     min-height: 500px;
-    background-position: 80%;
+    background-position: 74% top;
   }
 }
 
