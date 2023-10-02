@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <lastBuildDate>2023-09-26</lastBuildDate>
+    <publisherUrl>https://www.example4.com</publisherUrl>
+    <publisher>NewTech Innovations</publisher>
+    <expectedJobCount>3</expectedJobCount>
+    
+    <!-- Job Posting 1 -->
+    <job>
+        <partnerJobId>54321</partnerJobId>
+        <company>NewTech Innovations</company>
+        <title>Data Scientist</title>
+        <description>We are seeking a talented Data Scientist to join our data analytics team.</description>
+        <industry>Data Analytics</industry>
+        <applyUrl>https://www.example4.com/apply/54321</applyUrl>
+        <companyId>12345</companyId>
+        <location>San Francisco</location>
+        <alternateLocations>
+            <alternateLocation>Los Angeles</alternateLocation>
+        </alternateLocations>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>94101</postalCode>
+        <industryCodes>
+            <industryCode>DA</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Data Science</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Machine Learning</skill>
+            <skill>Data Visualization</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>100000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>80000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 2 -->
+    <job>
+        <partnerJobId>98765</partnerJobId>
+        <company>NewTech Innovations</company>
+        <title>Product Manager</title>
+        <description>We are looking for an experienced Product Manager to lead product development.</description>
+        <industry>Product Management</industry>
+        <applyUrl>https://www.example4.com/apply/98765</applyUrl>
+        <companyId>12345</companyId>
+        <location>Seattle</location>
+        <alternateLocations>
+            <alternateLocation>Portland</alternateLocation>
+        </alternateLocations>
+        <city>Seattle</city>
+        <state>WA</state>
+        <country>USA</country>
+        <postalCode>98101</postalCode>
+        <industryCodes>
+            <industryCode>PM</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Product Management</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Senior</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Product Strategy</skill>
+            <skill>Team Leadership</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>130000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>100000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 3 -->
+    <job>
+        <partnerJobId>12345</partnerJobId>
+        <company>NewTech Innovations</company>
+        <title>UX Designer</title>
+        <description>We are seeking a creative UX Designer to enhance our user experiences.</description>
+        <industry>Design</industry>
+        <applyUrl>https://www.example4.com/apply/12345</applyUrl>
+        <companyId>12345</companyId>
+        <location>New York</location>
+        <alternateLocations>
+            <alternateLocation>Boston</alternateLocation>
+        </alternateLocations>
+        <city>New York</city>
+        <state>NY</state>
+        <country>USA</country>
+        <postalCode>10001</postalCode>
+        <industryCodes>
+            <industryCode>UX</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>User Experience</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>UI Design</skill>
+            <skill>Prototyping</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>90000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+</source>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <lastBuildDate>2023-09-26</lastBuildDate>
+    <publisherUrl>https://www.example5.com</publisherUrl>
+    <publisher>Tech Innovations</publisher>
+    <expectedJobCount>5</expectedJobCount>
+    
+    <!-- Job Posting 1 -->
+    <job>
+        <partnerJobId>11114</partnerJobId>
+        <company>Tech Innovations</company>
+        <title>Data Analyst 2</title>
+        <description>We are seeking a Data Analyst to analyze and interpret data for insights.</description>
+        <industry>Data Analytics</industry>
+        <applyUrl>https://www.example5.com/apply/11111</applyUrl>
+        <companyId>55555</companyId>
+        <location>New York</location>
+        <alternateLocations>
+            <alternateLocation>LA</alternateLocation>
+        </alternateLocations>
+        <city>New York</city>
+        <state>NY</state>
+        <country>USA</country>
+        <postalCode>10001</postalCode>
+        <industryCodes>
+            <industryCode>DA</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Data Analysis</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Data Analysis</skill>
+            <skill>Statistical Analysis</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 2 -->
+    <job>
+        <partnerJobId>22222</partnerJobId>
+        <company>Tech Innovations</company>
+        <title>Software Engineer</title>
+        <description>We are looking for a Software Engineer to develop cutting-edge software solutions.</description>
+        <industry>Information Technology</industry>
+        <applyUrl>https://www.example5.com/apply/22222</applyUrl>
+        <companyId>55555</companyId>
+        <location>San Francisco</location>
+        <alternateLocations>
+            <alternateLocation>Seattle</alternateLocation>
+        </alternateLocations>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>94101</postalCode>
+        <industryCodes>
+            <industryCode>IT</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Software Development</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Java</skill>
+            <skill>Python</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>90000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 3 -->
+    <job>
+        <partnerJobId>33333</partnerJobId>
+        <company>Tech Innovations</company>
+        <title>Web Developer</title>
+        <description>We are seeking a talented Web Developer to create responsive and user-friendly websites.</description>
+        <industry>Web Development</industry>
+        <applyUrl>https://www.example5.com/apply/33333</applyUrl>
+        <companyId>55555</companyId>
+        <location>Los Angeles</location>
+        <alternateLocations>
+            <alternateLocation>San Diego</alternateLocation>
+        </alternateLocations>
+        <city>Los Angeles</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>90001</postalCode>
+        <industryCodes>
+            <industryCode>WD</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Web Development</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Entry-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>HTML</skill>
+            <skill>CSS</skill>
+            <skill>JavaScript</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>45000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 4 -->
+    <job>
+        <partnerJobId>44444</partnerJobId>
+        <company>Tech Innovations</company>
+        <title>Cloud Architect</title>
+        <description>We are looking for a Cloud Architect to design and implement cloud solutions.</description>
+        <industry>Cloud Computing</industry>
+        <applyUrl>https://www.example5.com/apply/44444</applyUrl>
+        <companyId>55555</companyId>
+        <location>Seattle</location>
+        <alternateLocations>
+            <alternateLocation>Portland</alternateLocation>
+        </alternateLocations>
+        <city>Seattle</city>
+        <state>WA</state>
+        <country>USA</country>
+        <postalCode>98101</postalCode>
+        <industryCodes>
+            <industryCode>CC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Cloud Architecture</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Senior</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Cloud Infrastructure</skill>
+            <skill>Security</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>130000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>100000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 5 -->
+    <job>
+        <partnerJobId>55555</partnerJobId>
+        <company>Tech Innovations</company>
+        <title>Machine Learning Engineer</title>
+        <description>We are seeking a Machine Learning Engineer to develop AI-powered solutions.</description>
+        <industry>Artificial Intelligence</industry>
+        <applyUrl>https://www.example5.com/apply/55555</applyUrl>
+        <companyId>55555</companyId>
+        <location>San Jose</location>
+        <alternateLocations>
+            <alternateLocation>Santa Clara</alternateLocation>
+        </alternateLocations>
+        <city>San Jose</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>95101</postalCode>
+        <industryCodes>
+            <industryCode>AI</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Machine Learning</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Python</skill>
+            <skill>Deep Learning</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>95000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+</source>
