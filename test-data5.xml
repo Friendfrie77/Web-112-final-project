@@ -1,0 +1,138 @@
+<source>
+<lastBuildDate>2023-09-26</lastBuildDate>
+<publisherUrl>https://www.example10.com</publisherUrl>
+<publisher>JobProspectsNow</publisher>
+<expectedJobCount>3</expectedJobCount>
+<!--  Job Posting 22  -->
+<job>
+<partnerJobId>1111111</partnerJobId>
+<company>Green Earth Foundation</company>
+<title>Environmental Researcher</title>
+<description>Join our mission to protect our environment! We are seeking an Environmental Researcher to conduct research and gather data on ecological systems and climate change.</description>
+<industry>Environmental Research</industry>
+<applyUrl>https://www.example10.com/apply/1111111</applyUrl>
+<companyId>1111111</companyId>
+<location>Remote</location>
+<city/>
+<state/>
+<country/>
+<postalCode/>
+<industryCodes>
+<industryCode>ER</industryCode>
+</industryCodes>
+<jobFunctions>
+<jobFunction>Environmental Research</jobFunction>
+</jobFunctions>
+<experienceLevel>Entry-Level</experienceLevel>
+<jobtype>Full-Time</jobtype>
+<skills>
+<skill>Ecological Research</skill>
+<skill>Climate Data Analysis</skill>
+</skills>
+<salaries>
+<salary>
+<highEnd>
+<amount>45000</amount>
+<currencyCode>USD</currencyCode>
+</highEnd>
+<lowEnd>
+<amount>38000</amount>
+<currencyCode>USD</currencyCode>
+</lowEnd>
+<period>Yearly</period>
+<type>Salary</type>
+</salary>
+</salaries>
+<workplaceTypes>Remote</workplaceTypes>
+<listDate>2023-09-26</listDate>
+<expirationDate>2023-10-26</expirationDate>
+</job>
+<!--  Job Posting 23  -->
+<job>
+<partnerJobId>2222222</partnerJobId>
+<company>City Foundation</company>
+<title>Urban Planner</title>
+<description>Help shape the future of our cities! We are looking for an Urban Planner to work on projects that focus on sustainable urban development and community design.</description>
+<industry>Urban Planning</industry>
+<applyUrl>https://www.example10.com/apply/2222222</applyUrl>
+<companyId>2222222</companyId>
+<location>Hybrid (San Francisco)</location>
+<city>San Francisco</city>
+<state>CA</state>
+<country>USA</country>
+<postalCode>94101</postalCode>
+<industryCodes>
+<industryCode>UP</industryCode>
+</industryCodes>
+<jobFunctions>
+<jobFunction>Urban Planning</jobFunction>
+</jobFunctions>
+<experienceLevel>Mid-Level</experienceLevel>
+<jobtype>Part-Time</jobtype>
+<skills>
+<skill>Community Development</skill>
+<skill>Sustainability Planning</skill>
+</skills>
+<salaries>
+<salary>
+<highEnd>
+<amount>48000</amount>
+<currencyCode>USD</currencyCode>
+</highEnd>
+<lowEnd>
+<amount>40000</amount>
+<currencyCode>USD</currencyCode>
+</lowEnd>
+<period>Yearly</period>
+<type>Salary</type>
+</salary>
+</salaries>
+<workplaceTypes>Hybrid</workplaceTypes>
+<listDate>2023-09-26</listDate>
+<expirationDate>2023-10-26</expirationDate>
+</job>
+<!--  Job Posting 24  -->
+<job>
+<partnerJobId>3333333</partnerJobId>
+<company>Local Arts Collective</company>
+<title>Art Gallery Curator</title>
+<description>Passion for the arts? Join our creative team and curate inspiring exhibitions. We are looking for an Art Gallery Curator to bring unique art experiences to the community.</description>
+<industry>Arts and Culture</industry>
+<applyUrl>https://www.example10.com/apply/3333333</applyUrl>
+<companyId>3333333</companyId>
+<location>Hybrid (Los Angeles)</location>
+<city>Los Angeles</city>
+<state>CA</state>
+<country>USA</country>
+<postalCode>90001</postalCode>
+<industryCodes>
+<industryCode>AC</industryCode>
+</industryCodes>
+<jobFunctions>
+<jobFunction>Arts and Culture</jobFunction>
+</jobFunctions>
+<experienceLevel>Mid-Level</experienceLevel>
+<jobtype>Internship</jobtype>
+<skills>
+<skill>Art Curation</skill>
+<skill>Event Planning</skill>
+</skills>
+<salaries>
+<salary>
+<highEnd>
+<amount>18000</amount>
+<currencyCode>USD</currencyCode>
+</highEnd>
+<lowEnd>
+<amount>15000</amount>
+<currencyCode>USD</currencyCode>
+</lowEnd>
+<period>Yearly</period>
+<type>Stipend</type>
+</salary>
+</salaries>
+<workplaceTypes>Hybrid</workplaceTypes>
+<listDate>2023-09-26</listDate>
+<expirationDate>2023-10-26</expirationDate>
+</job>
+</source>
