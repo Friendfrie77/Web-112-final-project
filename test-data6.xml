@@ -1,0 +1,974 @@
+
+Sure, here are the job postings combined into a single XML file. I've ensured that the job IDs are unique:
+
+xml
+Copy code
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+    <lastBuildDate>2023-09-26</lastBuildDate>
+    <publisherUrl>https://www.example6.com</publisherUrl>
+    <publisher>TechJobsHub</publisher>
+    <expectedJobCount>15</expectedJobCount>
+    
+    <!-- Job Posting 1 -->
+    <job>
+        <partnerJobId>11111</partnerJobId>
+        <company>CloudTech Solutions</company>
+        <title>Cloud Engineer</title>
+        <description>We are looking for a Cloud Engineer to manage and optimize our cloud infrastructure.</description>
+        <industry>Cloud Computing</industry>
+        <applyUrl>https://www.example6.com/apply/11111</applyUrl>
+        <companyId>11111</companyId>
+        <location>Seattle</location>
+        <alternateLocations>
+            <alternateLocation>Portland</alternateLocation>
+        </alternateLocations>
+        <city>Seattle</city>
+        <state>WA</state>
+        <country>USA</country>
+        <postalCode>98101</postalCode>
+        <industryCodes>
+            <industryCode>CC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Cloud Operations</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Cloud Management</skill>
+            <skill>Infrastructure as Code</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>100000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>80000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 2 -->
+    <job>
+        <partnerJobId>22222</partnerJobId>
+        <company>Data Innovators</company>
+        <title>Data Scientist</title>
+        <description>We are seeking a Data Scientist to analyze data and provide valuable insights.</description>
+        <industry>Data Analytics</industry>
+        <applyUrl>https://www.example6.com/apply/22222</applyUrl>
+        <companyId>22222</companyId>
+        <location>San Francisco</location>
+        <alternateLocations>
+            <alternateLocation>Los Angeles</alternateLocation>
+        </alternateLocations>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>94101</postalCode>
+        <industryCodes>
+            <industryCode>DA</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Data Analysis</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Machine Learning</skill>
+            <skill>Data Visualization</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>90000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 3 -->
+    <job>
+        <partnerJobId>33333</partnerJobId>
+        <company>AI Wizards</company>
+        <title>Machine Learning Engineer</title>
+        <description>We are seeking a Machine Learning Engineer to develop AI-powered solutions.</description>
+        <industry>Artificial Intelligence</industry>
+        <applyUrl>https://www.example6.com/apply/33333</applyUrl>
+        <companyId>33333</companyId>
+        <location>San Jose</location>
+        <alternateLocations>
+            <alternateLocation>Santa Clara</alternateLocation>
+        </alternateLocations>
+        <city>San Jose</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>95101</postalCode>
+        <industryCodes>
+            <industryCode>AI</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Machine Learning</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Python</skill>
+            <skill>Deep Learning</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>95000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 4 -->
+    <job>
+        <partnerJobId>44444</partnerJobId>
+        <company>RocketSoft</company>
+        <title>Software Developer</title>
+        <description>We are looking for a Software Developer to join our dynamic team.</description>
+        <industry>Software Development</industry>
+        <applyUrl>https://www.example6.com/apply/44444</applyUrl>
+        <companyId>44444</companyId>
+        <location>New York</location>
+        <alternateLocations>
+            <alternateLocation>Boston</alternateLocation>
+        </alternateLocations>
+        <city>New York</city>
+        <state>NY</state>
+        <country>USA</country>
+        <postalCode>10001</postalCode>
+        <industryCodes>
+            <industryCode>SD</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Software Development</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Entry-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Java</skill>
+            <skill>Web Development</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>80000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+
+    <!-- Job Posting 5 -->
+    <job>
+        <partnerJobId>55555</partnerJobId>
+        <company>HealthTech Innovations</company>
+        <title>Healthcare Data Analyst</title>
+        <description>We are looking for a Healthcare Data Analyst to analyze medical data.</description>
+        <industry>Healthcare</industry>
+        <applyUrl>https://www.example6.com/apply/55555</applyUrl>
+        <companyId>55555</companyId>
+        <location>Baltimore</location>
+        <alternateLocations>
+            <alternateLocation>Philadelphia</alternateLocation>
+        </alternateLocations>
+        <city>Baltimore</city>
+        <state>MD</state>
+        <country>USA</country>
+        <postalCode>21201</postalCode>
+        <industryCodes>
+            <industryCode>HC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Data Analysis</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Data Analysis</skill>
+            <skill>Healthcare Data</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>85000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Office</workplaceTypes>
+        <listDate>2023-09-26</listDate>
+        <expirationDate>2023-10-26</expirationDate>
+    </job>
+    <job>
+        <partnerJobId>1001</partnerJobId>
+        <company>Tech Solutions Inc.</company>
+        <title>Software Developer</title>
+        <description>We are looking for a talented Software Developer to join our team and build cutting-edge software solutions. If you have a passion for coding and problem-solving, apply now!</description>
+        <industry>Information Technology</industry>
+        <applyUrl>https://www.example11.com/apply/1001</applyUrl>
+        <companyId>1001</companyId>
+        <location>Hybrid (New York)</location>
+        <city>New York</city>
+        <state>NY</state>
+        <country>USA</country>
+        <postalCode>10001</postalCode>
+        <industryCodes>
+            <industryCode>IT</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Software Development</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Java</skill>
+            <skill>JavaScript</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>90000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 2 -->
+    <job>
+        <partnerJobId>1002</partnerJobId>
+        <company>Finance Experts LLC</company>
+        <title>Financial Analyst</title>
+        <description>Join our finance team and analyze financial data to provide valuable insights to our clients. We are seeking a Financial Analyst with strong analytical skills.</description>
+        <industry>Finance</industry>
+        <applyUrl>https://www.example11.com/apply/1002</applyUrl>
+        <companyId>1002</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>FN</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Financial Analysis</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Entry-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Financial Modeling</skill>
+            <skill>Data Analysis</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>50000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 3 -->
+    <job>
+        <partnerJobId>1003</partnerJobId>
+        <company>HealthFirst Clinic</company>
+        <title>Medical Receptionist</title>
+        <description>Join our healthcare team and be the first point of contact for our patients. We are seeking a Medical Receptionist to provide excellent customer service and administrative support.</description>
+        <industry>Healthcare</industry>
+        <applyUrl>https://www.example11.com/apply/1003</applyUrl>
+        <companyId>1003</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>HC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Healthcare Administration</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Entry-Level</experienceLevel>
+        <jobtype>Part-Time</jobtype>
+        <skills>
+            <skill>Customer Service</skill>
+            <skill>Medical Records</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>32000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>26000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 4 -->
+    <job>
+        <partnerJobId>1004</partnerJobId>
+        <company>ManufactoTech Industries</company>
+        <title>Manufacturing Engineer</title>
+        <description>Join our manufacturing team and optimize production processes. We are seeking a Manufacturing Engineer to improve efficiency and quality in our production line.</description>
+        <industry>Manufacturing</industry>
+        <applyUrl>https://www.example11.com/apply/1004</applyUrl>
+        <companyId>1004</companyId>
+        <location>Hybrid (Chicago)</location>
+        <city>Chicago</city>
+        <state>IL</state>
+        <country>USA</country>
+        <postalCode>60601</postalCode>
+        <industryCodes>
+            <industryCode>MF</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Manufacturing Engineering</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Process Optimization</skill>
+            <skill>Lean Manufacturing</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 5 -->
+    <job>
+        <partnerJobId>1005</partnerJobId>
+        <company>GreenTech Innovations</company>
+        <title>Environmental Scientist</title>
+        <description>Join our environmental research team and make a positive impact on the planet. We are seeking an Environmental Scientist to study ecosystems and promote sustainability.</description>
+        <industry>Environmental Science</industry>
+        <applyUrl>https://www.example11.com/apply/1005</applyUrl>
+        <companyId>1005</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>ES</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Environmental Science</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Entry-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Ecosystem Research</skill>
+            <skill>Sustainability Promotion</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>50000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>40000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 6 -->
+    <job>
+        <partnerJobId>1006</partnerJobId>
+        <company></company>
+        <title>Data Analyst</title>
+        <description>We are hiring a Data Analyst to work with large datasets and provide valuable insights. If you have a strong analytical mindset, apply now!</description>
+        <industry></industry>
+        <applyUrl>https://www.example11.com/apply/1006</applyUrl>
+        <companyId></companyId>
+        <location></location>
+        <alternateLocations>
+            <alternateLocation></alternateLocation>
+            <alternateLocation></alternateLocation>
+            <alternateLocation></alternateLocation>
+        </alternateLocations>
+        <city></city>
+        <state></state>
+        <country></country>
+        <postalCode></postalCode>
+        <industryCodes>
+            <industryCode></industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction></jobFunction>
+        </jobFunctions>
+        <experienceLevel></experienceLevel>
+        <jobtype></jobtype>
+        <skills>
+            <skill></skill>
+            <skill></skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount></amount>
+                    <currencyCode></currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount></amount>
+                    <currencyCode></currencyCode>
+                </lowEnd>
+                <period></period>
+                <type></type>
+            </salary>
+        </salaries>
+        <workplaceTypes></workplaceTypes>
+        <listDate></listDate>
+        <expirationDate></expirationDate>
+    </job>
+    <!-- Job Posting 6 -->
+    <job>
+        <partnerJobId>1006</partnerJobId>
+        <company>Marketing Experts Inc.</company>
+        <title>Marketing Manager</title>
+        <description>We are seeking a Marketing Manager to lead our marketing team and develop effective marketing strategies. Join us and drive growth for our brand.</description>
+        <industry>Marketing</industry>
+        <applyUrl>https://www.example11.com/apply/1006</applyUrl>
+        <companyId>1006</companyId>
+        <location>Hybrid (San Francisco)</location>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>94101</postalCode>
+        <industryCodes>
+            <industryCode>MK</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Marketing Management</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Marketing Strategy</skill>
+            <skill>Team Leadership</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>80000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 7 -->
+    <job>
+        <partnerJobId>1007</partnerJobId>
+        <company>Tech Innovations Ltd.</company>
+        <title>AI Research Scientist</title>
+        <description>Join our research team and work on cutting-edge AI projects. We are looking for an AI Research Scientist with a strong background in machine learning and neural networks.</description>
+        <industry>Artificial Intelligence</industry>
+        <applyUrl>https://www.example11.com/apply/1007</applyUrl>
+        <companyId>1007</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>AI</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>AI Research</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Experienced</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Machine Learning</skill>
+            <skill>Neural Networks</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>90000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 8 -->
+    <job>
+        <partnerJobId>1008</partnerJobId>
+        <company>HealthCare Solutions Group</company>
+        <title>Registered Nurse</title>
+        <description>Join our healthcare team as a Registered Nurse and provide compassionate care to our patients. We are dedicated to improving lives through healthcare.</description>
+        <industry>Healthcare</industry>
+        <applyUrl>https://www.example11.com/apply/1008</applyUrl>
+        <companyId>1008</companyId>
+        <location>Hybrid (Los Angeles)</location>
+        <city>Los Angeles</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>90001</postalCode>
+        <industryCodes>
+            <industryCode>HC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Nursing</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Experienced</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Patient Care</skill>
+            <skill>Medical Procedures</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>75000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 9 -->
+    <job>
+        <partnerJobId>1009</partnerJobId>
+        <company>Green Energy Solutions</company>
+        <title>Renewable Energy Engineer</title>
+        <description>Join our mission to promote renewable energy solutions. We are looking for a Renewable Energy Engineer to design and implement sustainable energy projects.</description>
+        <industry>Renewable Energy</industry>
+        <applyUrl>https://www.example11.com/apply/1009</applyUrl>
+        <companyId>1009</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>RE</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Renewable Energy</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Energy Project Design</skill>
+            <skill>Sustainability Planning</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>55000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 10 -->
+    <job>
+        <partnerJobId>1010</partnerJobId>
+        <company>Education Empowerment Foundation</company>
+        <title>Education Program Coordinator</title>
+        <description>Make a difference in education! Join us as an Education Program Coordinator to develop and manage educational programs that empower students and communities.</description>
+        <industry>Education</industry>
+        <applyUrl>https://www.example11.com/apply/1010</applyUrl>
+        <companyId>1010</companyId>
+        <location>Hybrid (Chicago)</location>
+        <city>Chicago</city>
+        <state>IL</state>
+        <country>USA</country>
+        <postalCode>60601</postalCode>
+        <industryCodes>
+            <industryCode>ED</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Education Coordination</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Program Development</skill>
+            <skill>Community Engagement</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>50000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+    <!-- Job Posting 11 -->
+    <job>
+        <partnerJobId>1011</partnerJobId>
+        <company>Green Building Solutions</company>
+        <title>Sustainable Architect</title>
+        <description>Join our architectural team and design sustainable and eco-friendly buildings. We are looking for a Sustainable Architect to create innovative and green structures.</description>
+        <industry>Architecture</industry>
+        <applyUrl>https://www.example11.com/apply/1011</applyUrl>
+        <companyId>1011</companyId>
+        <location>Hybrid (San Francisco)</location>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>94101</postalCode>
+        <industryCodes>
+            <industryCode>AR</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Architecture</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Sustainable Design</skill>
+            <skill>Building Innovation</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>80000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 12 -->
+    <job>
+        <partnerJobId>1012</partnerJobId>
+        <company>Healthy Eats Cafe</company>
+        <title>Chef de Cuisine</title>
+        <description>Join our culinary team as a Chef de Cuisine and create delicious and healthy dishes. We are dedicated to providing nourishing and flavorful meals to our customers.</description>
+        <industry>Food and Culinary</industry>
+        <applyUrl>https://www.example11.com/apply/1012</applyUrl>
+        <companyId>1012</companyId>
+        <location>Hybrid (Los Angeles)</location>
+        <city>Los Angeles</city>
+        <state>CA</state>
+        <country>USA</country>
+        <postalCode>90001</postalCode>
+        <industryCodes>
+            <industryCode>FC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Culinary Arts</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Experienced</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Culinary Creativity</skill>
+            <skill>Menu Development</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>55000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 13 -->
+    <job>
+        <partnerJobId>1013</partnerJobId>
+        <company>Financial Solutions Group</company>
+        <title>Investment Analyst</title>
+        <description>Join our investment team and analyze financial markets to make informed investment decisions. We are seeking an Investment Analyst with a keen understanding of finance.</description>
+        <industry>Finance</industry>
+        <applyUrl>https://www.example11.com/apply/1013</applyUrl>
+        <companyId>1013</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>FN</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Investment Analysis</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Financial Analysis</skill>
+            <skill>Market Research</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>70000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>55000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 14 -->
+    <job>
+        <partnerJobId>1014</partnerJobId>
+        <company>Art Gallery Showcase</company>
+        <title>Art Curator</title>
+        <description>Passionate about art? Join our art gallery and curate stunning exhibitions. We are looking for an Art Curator to bring creativity and culture to our audience.</description>
+        <industry>Arts and Culture</industry>
+        <applyUrl>https://www.example11.com/apply/1014</applyUrl>
+        <companyId>1014</companyId>
+        <location>Hybrid (Chicago)</location>
+        <city>Chicago</city>
+        <state>IL</state>
+        <country>USA</country>
+        <postalCode>60601</postalCode>
+        <industryCodes>
+            <industryCode>AC</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Art Curation</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Experienced</experienceLevel>
+        <jobtype>Full-Time</jobtype>
+        <skills>
+            <skill>Exhibition Planning</skill>
+            <skill>Art History</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>65000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>55000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Hybrid</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+
+    <!-- Job Posting 15 -->
+    <job>
+        <partnerJobId>1015</partnerJobId>
+        <company>Community Health Center</company>
+        <title>Public Health Specialist</title>
+        <description>Join our health center and work to improve public health in our community. We are seeking a Public Health Specialist to develop and implement health programs.</description>
+        <industry>Public Health</industry>
+        <applyUrl>https://www.example11.com/apply/1015</applyUrl>
+        <companyId>1015</companyId>
+        <location>Remote</location>
+        <city/>
+        <state/>
+        <country/>
+        <postalCode/>
+        <industryCodes>
+            <industryCode>PH</industryCode>
+        </industryCodes>
+        <jobFunctions>
+            <jobFunction>Public Health</jobFunction>
+        </jobFunctions>
+        <experienceLevel>Mid-Level</experienceLevel>
+        <jobtype>Part-Time</jobtype>
+        <skills>
+            <skill>Health Program Management</skill>
+            <skill>Epidemiology</skill>
+        </skills>
+        <salaries>
+            <salary>
+                <highEnd>
+                    <amount>60000</amount>
+                    <currencyCode>USD</currencyCode>
+                </highEnd>
+                <lowEnd>
+                    <amount>50000</amount>
+                    <currencyCode>USD</currencyCode>
+                </lowEnd>
+                <period>Yearly</period>
+                <type>Salary</type>
+            </salary>
+        </salaries>
+        <workplaceTypes>Remote</workplaceTypes>
+        <listDate>2023-10-31</listDate>
+        <expirationDate>2023-11-30</expirationDate>
+    </job>
+    <!-- Add additional job postings here -->
+</source>
