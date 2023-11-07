@@ -3,50 +3,6 @@
     <publisherUrl>https://www.example11.com</publisherUrl>
     <publisher>JobGenius</publisher>
     <expectedJobCount>10</expectedJobCount>
-    <job>
-        <partnerJobId>1001</partnerJobId>
-        <company>Tech Solutions Innovators Inc.</company>
-        <title>Software Developer</title>
-        <description>We are looking for a talented Software Developer to join our team and build cutting-edge software solutions. If you have a passion for coding and problem-solving, apply now!</description>
-        <industry>Information Technology</industry>
-        <applyUrl>https://www.example11.com/apply/1001</applyUrl>
-        <companyId>1001</companyId>
-        <location>Hybrid (New York)</location>
-        <city>New York</city>
-        <state>NY</state>
-        <country>USA</country>
-        <postalCode>10001</postalCode>
-        <industryCodes>
-            <industryCode>IT</industryCode>
-        </industryCodes>
-        <jobFunctions>
-            <jobFunction>Software Development</jobFunction>
-        </jobFunctions>
-        <experienceLevel>Mid-Level</experienceLevel>
-        <jobtype>Full-Time</jobtype>
-        <skills>
-            <skill>Java</skill>
-            <skill>JavaScript</skill>
-        </skills>
-        <salaries>
-            <salary>
-                <highEnd>
-                    <amount>90000</amount>
-                    <currencyCode>USD</currencyCode>
-                </highEnd>
-                <lowEnd>
-                    <amount>70000</amount>
-                    <currencyCode>USD</currencyCode>
-                </lowEnd>
-                <period>Yearly</period>
-                <type>Salary</type>
-            </salary>
-        </salaries>
-        <workplaceTypes>Hybrid</workplaceTypes>
-        <listDate>2023-10-31</listDate>
-        <expirationDate>2023-11-30</expirationDate>
-    </job>
-
     <!-- Job Posting 2 -->
     <job>
         <partnerJobId>1002</partnerJobId>
@@ -134,7 +90,7 @@
         </salaries>
         <workplaceTypes>Remote</workplaceTypes>
         <listDate>2023-10-31</listDate>
-        <expirationDate>2023-11-30</expirationDate>
+        <expirationDate>2023-10-30</expirationDate>
     </job>
 
     <!-- Job Posting 4 -->
@@ -181,101 +137,6 @@
         <listDate>2023-10-31</listDate>
         <expirationDate>2023-11-30</expirationDate>
     </job>
-
-    <!-- Job Posting 5 -->
-    <job>
-        <partnerJobId>1005</partnerJobId>
-        <company>GreenTech Eco Innovations</company>
-        <title>Environmental Scientist</title>
-        <description>Join our environmental research team and make a positive impact on the planet. We are seeking an Environmental Scientist to study ecosystems and promote sustainability.</description>
-        <industry>Environmental Science</industry>
-        <applyUrl>https://www.example11.com/apply/1005</applyUrl>
-        <companyId>1005</companyId>
-        <location>Remote</location>
-        <city/>
-        <state/>
-        <country/>
-        <postalCode/>
-        <industryCodes>
-            <industryCode>ES</industryCode>
-        </industryCodes>
-        <jobFunctions>
-            <jobFunction>Environmental Science</jobFunction>
-        </jobFunctions>
-        <experienceLevel>Entry-Level</experienceLevel>
-        <jobtype>Full-Time</jobtype>
-        <skills>
-            <skill>Ecosystem Research</skill>
-            <skill>Sustainability Promotion</skill>
-        </skills>
-        <salaries>
-            <salary>
-                <highEnd>
-                    <amount>50000</amount>
-                    <currencyCode>USD</currencyCode>
-                </highEnd>
-                <lowEnd>
-                    <amount>40000</amount>
-                    <currencyCode>USD</currencyCode>
-                </lowEnd>
-                <period>Yearly</period>
-                <type>Salary</type>
-            </salary>
-        </salaries>
-        <workplaceTypes>Remote</workplaceTypes>
-        <listDate>2023-10-31</listDate>
-        <expirationDate>2023-11-30</expirationDate>
-    </job>
-
-    <!-- Job Posting 6 -->
-    <job>
-        <partnerJobId>1006</partnerJobId>
-        <company>DataTech Solutions</company>
-        <title>Data Analyst</title>
-        <description>We are hiring a Data Analyst to work with large datasets and provide valuable insights. If you have a strong analytical mindset, apply now!</description>
-        <industry></industry>
-        <applyUrl>https://www.example11.com/apply/1006</applyUrl>
-        <companyId></companyId>
-        <location></location>
-        <alternateLocations>
-            <alternateLocation></alternateLocation>
-            <alternateLocation></alternateLocation>
-            <alternateLocation></alternateLocation>
-        </alternateLocations>
-        <city></city>
-        <state></state>
-        <country></country>
-        <postalCode></postalCode>
-        <industryCodes>
-            <industryCode></industryCode>
-        </industryCodes>
-        <jobFunctions>
-            <jobFunction></jobFunction>
-        </jobFunctions>
-        <experienceLevel></experienceLevel>
-        <jobtype></jobtype>
-        <skills>
-            <skill></skill>
-            <skill></skill>
-        </skills>
-        <salaries>
-            <salary>
-                <highEnd>
-                    <amount></amount>
-                    <currencyCode></currencyCode>
-                </highEnd>
-                <lowEnd>
-                    <amount></amount>
-                    <currencyCode></currencyCode>
-                </lowEnd>
-                <period></period>
-                <type></type>
-            </salary>
-        </salaries>
-        <workplaceTypes></workplaceTypes>
-        <listDate></listDate>
-        <expirationDate></expirationDate>
-    </job>
     <!-- Job Posting 6 -->
     <job>
         <partnerJobId>1006</partnerJobId>
@@ -317,8 +178,8 @@
             </salary>
         </salaries>
         <workplaceTypes>Hybrid</workplaceTypes>
-        <listDate>2023-10-31</listDate>
-        <expirationDate>2023-11-30</expirationDate>
+        <listDate>2023-9-31</listDate>
+        <expirationDate>2023-10-30</expirationDate>
     </job>
 
     <!-- Job Posting 7 -->
@@ -725,4 +586,3 @@
         <expirationDate>2023-11-30</expirationDate>
     </job>
 </source>
-
