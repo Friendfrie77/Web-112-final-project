@@ -1,4 +1,4 @@
-//start of css Rest
+/* CSS Reset */
 /* Box sizing rules */
 *,
 *::before,
@@ -16,8 +16,7 @@ p,
 figure,
 blockquote,
 dl,
-dd,
-ol {
+dd {
   margin: 0;
 }
 
@@ -33,19 +32,12 @@ html:focus-within {
 }
 
 /* Set core body defaults */
-html{
-    height: 100%;
-    min-height: 100vh;
-}
-
-body{
-  min-height: 100%;
-  min-width: 100%;
+body {
+  min-height: 100vh;
+  min-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-//   background-color: black;
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -84,6 +76,4 @@ select {
   }
 }
 
-
-
-//end of css Rest
+//* Reset ends *//

@@ -1,0 +1,132 @@
+#store-hero{
+  background-image: url('../images/store/shop-hero.webp');
+  height: $hero-img-large;
+  @include for-size(large-desktop){
+    background-image: url('../images/store/shop-hero-xl.webp');
+  }
+  @include for-size(tablet-only){
+    min-height: $hero-img-small;
+    background-position: 74% top;
+  }
+}
+// .store-img{
+//     padding: 10px;
+//     // height: auto;
+//     // max-width: 250px;
+//   }
+// .store-header{
+//     color: $header-footer-color;
+//     text-align: center;
+// }
+// .store-p{
+//   padding: 15px;
+//   font-size: 1.3rem;
+//   color: #000;
+// }
+.store-box{
+  // background-color: #FFFEEC;
+  // background-color: pink;
+}
+// .store{
+//   display: grid;
+//   grid-template-columns: auto auto;
+//   grid-gap: 1rem;
+//   padding: 1rem;
+//   p{
+//     color: $text-color;
+//   }
+//   .store-item{
+//     position: relative;
+//     background-color: $mid-green;
+//     padding: 10px;
+//     box-shadow: (rgba(0,0,0,.4) 0px 5px 10px);
+//   }
+//   .store-popup{
+//     visibility: hidden;
+//     position: relative;
+//     z-index: 100;
+//     top: 30%;
+//     color: #fff;
+//     background-color:green;
+//     padding: 0px 5px 5px 5px;
+//     border-radius: 5px;
+//     &::after{
+//       content: "";
+//       width: 0px;
+//       height: 0px;
+//       border-width: 8px;
+//       border-style: solid;
+//       border-color: green transparent transparent;
+//       position: absolute;
+//       top: 100%;
+//       left: 85%;
+//     }
+//   }
+//   .show{
+//     visibility: visible;
+//     animation: fadeIn 1s;
+//   }
+//   p{
+//     padding:10px;
+//   }
+//   @include for-size(tablet-only){
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+.store-price{
+  position: relative;
+  button{
+    border:none;
+    background-color: transparent;
+    float: left;
+    i{
+      font-size: 1.5rem;
+      color: $h1-colors;
+    }
+  }
+  .item-price{
+    float: left;
+    padding:0px 0px 0px 10px;
+  }
+}
+.product-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // justify-content: space-evenly;
+}
+.store-product-flex{
+  border: 1px solid gray;
+  border-radius: $border-radius;
+  box-shadow: 0px 0px 4px black;
+  display: flex;
+  flex-direction: column;
+  width: calc(30% - 10px);
+  margin: 10px;
+  padding: 5px;
+  // max-width: 1200px;
+}
+.store-img{
+  align-self: center;
+}
+.product-text{
+  background-color: white;
+}
+.product-price{
+  h2{
+    color: black;
+  }
+}
+.single-review{
+  border-bottom: 2px solid $header-footer-color;
+  margin-bottom: 15px;
+}
+.reviews{
+  background-color: red;
+}
+.review-box{
+  background-color: pink;
+  display: none;
+  transition: transform .02s cubic-bezier(0.42, 0, 0.58, 1);
+}

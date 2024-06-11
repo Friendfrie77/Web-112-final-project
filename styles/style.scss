@@ -1,238 +1,52 @@
-/* scss var */
-$footer-height: 2.5rem;
-$text-color: #ECF39E;
-$header-footer-color:#31572C;
-$content-color: #68DE82;
-$h1-colors: #FCEADE;
-$button-color: #5B8266;
-$light-green: #56B356;
-$mid-green: #2c6b2c;
-$h1-font:'Ubuntu', sans-serif;
-$navbar-fontsize: clamp(1rem, 1.5rem, 3rem);
-$box-padding: 1rem; 
-$animation-timing: .5s;
-$hero-img-large: 800px;
-$hero-img-small: 500px;
-$mid-hero: 500px;
-
-@mixin for-size($size){
-  @if $size == tablet-only{
-      @media (max-width: 768px){ @content;}
-  }
-  @if $size == small-tablet-only{
-      @media (max-width: 720px){ @content;}
-  }
-  @if $size == large-phone-only{
-      @media (max-width: 535px) {@content;}
-  }
-  @if $size == phone-only{
-      @media (max-width: 425px){ @content;}
-  }
-  @if $size == small-desktop{
-      @media (max-width: 1300px){@content;}
-  }
-  @if $size == Desktop{
-      @media (min-width: 1300px) {@content;}
-  }
-  @if $size == large-desktop{
-    @media (min-width: 1920px) {@content;}
-  }
+@import './reset';
+@import './vars';
+@import './mixins';
+:root{
+    --fs-hero-text: clamp(2.5rem, (5vw+1rem), 5.5rem);
+    --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
+    --fs-body-text: 1.5rem;
+    --fs-header-text: clamp(2rem, (5vw+2rem), 4rem);
+    --fs-mid-page-header: clamp(1.5rem, calc(3vw+1rem), 3rem);
+    --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
+    --fs-icons: clamp(3rem, (6vw+1rem), 5.8rem);
+    @include for-size(large-phone-only){
+      --fs-body-text: 1rem;
+    }
 }
 
-:root{
-  --fs-hero-text: clamp(2.5rem, (5vw+1rem), 5.5rem);
-  --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
-  --fs-body-text: 1.5rem;
-  --fs-header-text: clamp(2rem, (5vw+2rem), 4rem);
-  --fs-mid-page-header: clamp(1.5rem, calc(3vw+1rem), 3rem);
-  --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-  --fs-icons: clamp(3rem, (6vw+1rem), 5.8rem);
-  @include for-size(large-phone-only){
-    --fs-body-text: 1rem;
-  }
+html {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+#root{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+    align-self: center;
+    grid-template-areas: "nav" "content" "footer";
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
 }
 
 html, body{
-  background-color: $header-footer-color;
-  font-family: 'Lato', sans-serif;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
 }
 h1, h2, h3, h4, h5{
-  font-family: $h1-font;
-  color: $h1-colors;
+    font-family: $h1-font;
+    color: $h1-colors;
 }
 
-@mixin for-size($size){
-  @if $size == tablet-only{
-      @media (max-width: 768px){ @content;}
-  }
-  @if $size == small-tablet-only{
-      @media (max-width: 720px){ @content;}
-  }
-  @if $size == large-phone-only{
-      @media (max-width: 535px) {@content;}
-  }
-  @if $size == phone-only{
-      @media (max-width: 425px){ @content;}
-  }
-  @if $size == small-desktop{
-      @media (max-width: 1300px){@content;}
-  }
-  @if $size == Desktop{
-      @media (min-width: 1300px) {@content;}
-  }
-  @if $size == large-desktop{
-    @media (min-width: 1920px) {@content;}
-  }
-  @if $size == xl-desktop{
-    @media(min-width: 3000px) {@content;}
-  }
-}
-@import './reset';
-@import './animations';
-@import './wrappers';
 @import './nav';
-@import './heroimg';
-@import './footer';
-@import './index';
-@import './lawns';
-@import './solar';
-@import './about';
-@import './contact';
-@import './shared-classes';
-@import './rain';
-@import './store';
-
-.about{
-  h1{
-    text-align: center;
-  }
-}
-.circle-img{
-  border-radius: 50%;
-  padding-right: 15px
-}
-.img-float-left{
-  img{
-    float:left;
-    margin: 5px;
-    max-width: 100%;
-    height: auto;
-  }
-  p{
-    text-align: justify;
-    font-size: 20px;
-    }
-}
-
-.main{
-    padding: 15px;
-    margin: none;
-    font-size: 1.7rem;
-    p{
-      color:$text-color;
-      margin-top: 20px;
-    }
-  }
-
-  .contact{
-    background-color: $header-footer-color;
-    button{
-      position: relative;
-      padding: 15px;
-      margin: 10px 0px 10px 0px;
-      color: #fff;
-      background-color: $button-color;
-      font-size: 1.2rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    h2{
-      text-align: center;
-    }
-    .social{
-      width: 100%;
-      text-align: center;
-      font-size: 3.5rem;
-      padding: 10px 10px 0px;
-      color: $text-color;
-    }
-    i:hover{
-      color:#fff;
-    }
-  }
-  
-  /* contact page */
-  .social-contact{
-      background-color: $mid-green;
-      h3{
-        color: $text-color;
-        padding-bottom: 10px;
-      }
-      i{
-          font-size: 3rem;
-          padding: 15px;
-          color: $h1-colors;
-        }
-      span{
-        font-size: 1.25rem;
-      }
-      button{
-        height: 50px;
-        font-size: 1.25rem;
-        padding: 10px 10px 10px 10px;
-        background-color: $button-color;
-      }
-  }
-  .page-push{
-    min-height: 33vh;
-    text-align: center;
-    background-color: $mid-green;
-    i{
-      font-size: 4rem;
-      margin-top: 40px;
-      padding: 40px 40px 40px 40px;
-    }
-  }
-
-  /* blog */
-  #blog-hero{
-    background-image: url('../images/blog.jpg');
-    height: $hero-img-large;
-    @include for-size(tablet-only){
-      min-height: $hero-img-small;
-      background-position: 80%;
-    }
-  }
-  .blog{
-    display:grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    background-color: #FFFEEC;
-    padding: 1rem;
-    @include for-size(tablet-only){
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  .blog-item{
-    padding: 15px;
-    margin: 5px;
-    background-color: $mid-green;
-    box-shadow: (rgba(0,0,0,.4) 0px 5px 10px);
-    iframe{
-      display: block;
-      margin: 0 auto;
-      height: auto;
-      width: 100%;
-      aspect-ratio: 16/9;
-    }
-    p{
-      font-size: 1.2rem;
-      padding: 10px 0px 0px;
-      color: $text-color;
-    }
-    h1{
-      text-align: center;
-    }
-  }
-

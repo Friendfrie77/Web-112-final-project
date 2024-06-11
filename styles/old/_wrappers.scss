@@ -1,8 +1,8 @@
 /* wrapper setup */
 .main-wrapper{
     min-height: 100%;
-    background: rgb(44,107,44);
-    background: linear-gradient(-45deg, rgba(44,107,44,1), #20af24, rgba(0,156,209,1));
+    // background: rgb(44,107,44);
+    // background: linear-gradient(-45deg, rgba(44,107,44,1), #20af24, rgba(0,156,209,1));
     background-size: 400% 400%;
     animation: gradient 30s ease infinite;
     min-width: 100%;
@@ -22,9 +22,9 @@
     max-width: 1400px;
     margin: 0px auto;
     height: 100%;
-    background-color: #FFFEEC;
+    // background-color: #FFFEEC;
     overflow: auto;
-    box-shadow: 0px 0px 10px #000;
+    // box-shadow: 0px 0px 10px #000;
     display: flex;
     flex-direction: column;
 }
@@ -37,4 +37,9 @@
     align-self: center;
     align-items: center;
     margin: auto;
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
 }

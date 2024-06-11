@@ -50,7 +50,7 @@ function showSlides(n) {
 
 // newsletter submit message
 function popup(){
-    var popup = document.getElementById("confirm");
+    const popup = document.getElementById("confirm");
     popup.classList.toggle("show");
 }
 
