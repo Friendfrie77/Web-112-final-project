@@ -19,18 +19,17 @@ const navBar = () =>{
             <div class='mobile-nav' id = 'mobile-nav'></div>
         </label>
         <ul class="navlinks">
-            <li><a href="index.html" id="active">Home</a></li>
-            <li class="dropdown"><button>Services<span>&#9660;</span></button>
-                <ul class="nav-dropdown">
-                    <li><a href="solar.html">Solar</a></li>
-                    <li><a href="lawns.html">Green Lawns</a></li>
-                    <li><a href="rain.html">Rain Collection</a></li>
+            <li><a class = 'navLink' href="index.html">Home</a></li>
+            <li class="dropdown"><button id='navDropdownButton'>Services<span>&#9660;</span></button>
+                <ul class="nav-dropdown" id='navDropDown'>
+                    <li><a class ='navLink' href="solar.html">Solar</a></li>
+                    <li><a class ='navLink' href="lawns.html">Green Lawns</a></li>
+                    <li><a class ='navLink' href="rain.html">Rain Collection</a></li>
                 </ul>
             </li>
-            <li><a href="shop.html">Store</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class ='navLink' href="shop.html">Store</a></li>
+            <li><a class ='navLink' href="about.html">About</a></li>
+            <li><a class ='navLink' href="contact.html">Contact</a></li>
         </ul>
     `
     root.append(socialBar)
@@ -76,7 +75,6 @@ const footer = () =>{
                 <li><a href="shop.html">Store</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
     </div>
@@ -86,9 +84,12 @@ const footer = () =>{
 }
 
 const createNav = () =>{
-    navBar();
-    contentDiv();
-    footer();
+    return new Promise((resolve) =>{
+        navBar();
+        contentDiv();
+        footer();
+        resolve();
+    })
 }
 export {createNav}
-// window.onload=createNav
+

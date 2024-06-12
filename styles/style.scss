@@ -2,13 +2,14 @@
 @import './vars';
 @import './mixins';
 :root{
-    --fs-hero-text: clamp(2.5rem, (5vw+1rem), 5.5rem);
+    // --fs-hero-text: clamp(4.5rem, calc(5vw+1rem), 5.5rem);
+    --fs-hero-text: clamp(1.5rem, calc(5vw + 0.5rem), 4.5rem);
     --fs-nav-bar: clamp(1rem, 1.5rem, 3rem);
     --fs-body-text: 1.5rem;
-    --fs-header-text: clamp(2rem, (5vw+2rem), 4rem);
-    --fs-mid-page-header: clamp(1.5rem, calc(3vw+1rem), 3rem);
-    --fs-footer-header: clamp(1rem (3vw + 1rem), 3rem);
-    --fs-icons: clamp(3rem, (6vw+1rem), 5.8rem);
+    --fs-header-text: clamp(2rem, ca(5vw + 2rem), 4rem);
+    --fs-mid-page-header: clamp(1.5rem, calc(3vw + 1rem), 3rem);
+    --fs-footer-header: clamp(1rem, calc(3vw + 0.5rem), 2.5rem);
+    --fs-icons: clamp(3rem, calc(6vw + 1rem), 5.8rem);
     @include for-size(large-phone-only){
       --fs-body-text: 1rem;
     }
@@ -30,16 +31,19 @@ body {
 
 #root{
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     position: relative;
     align-self: center;
-    grid-template-areas: "nav" "content" "footer";
+    grid-template-areas: "social-bar" "nav" "content" "footer";
     max-width: 100%;
     width: 100%;
     position: relative;
     flex-grow: 1;
 }
-
+.content-wrapper{
+    grid-area: 'content';
+    background-color: red;
+}
 html, body{
     background-color: white;
     font-family: 'Lato', sans-serif;
@@ -48,5 +52,10 @@ h1, h2, h3, h4, h5{
     font-family: $h1-font;
     color: $h1-colors;
 }
-
+.hero-text{
+    font-size: var(--fs-hero-text);
+    text-shadow: 1px 1px 2px black;
+    color: white;
+}
 @import './nav';
+@import './hero';
