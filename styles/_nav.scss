@@ -31,15 +31,13 @@ nav {
   width: 100%;
   height: 65px;
   position: absolute;
-  top: calc(0px + 40px);
+  top: 0;
+  // top: calc(0px + 40px);
   z-index: 1000;
-  // background-color: $header-footer-color;
   font-family: $h1-font;
   background-color: transparent;
-  // animation: navbar-load $animation-timing ease-in;
   transition: background-color .6s;
   transition: position .6s;
-  grid-area: "nav";
   @include for-size(tablet-only) {
     background-color: $header-footer-color;
     position: relative;
@@ -227,6 +225,7 @@ footer {
   grid-gap: 1rem;
   h1 {
     font-size: var(--fs-footer-header);
+    color: $text-color;
   }
   @include for-size(large-phone-only) {
     display: flex;

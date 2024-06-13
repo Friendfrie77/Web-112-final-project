@@ -32,12 +32,11 @@ const navBar = () =>{
             <li><a class ='navLink' href="contact.html">Contact</a></li>
         </ul>
     `
-    root.append(socialBar)
+    // root.append(socialBar)
     root.append(nav)
 }
 const contentDiv = () =>{
-    const mainContent = document.createElement('section');
-    mainContent.className = 'content-wrapper';
+    const mainContent = document.createElement('div');
     mainContent.setAttribute('id', 'mainContent');
 
     root.append(mainContent)
