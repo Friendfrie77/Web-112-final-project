@@ -30,10 +30,6 @@ const index = (wrapper) =>{
             <h1>Placeholder Placeholder</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis justo tortor. Aliquam tincidunt, sapien a laoreet sollicitudin, felis metus condimentum justo, et malesuada elit tellus eu ex. In accumsan ligula sapien, at iaculis arcu consequat nec. In non cursus est. Suspendisse vitae semper velit. Donec eu justo luctus, sollicitudin lacus ut, dignissim turpis. Ut commodo lectus sed justo egestas commodo. Vestibulum suscipit tellus eget arcu elementum, ac vestibulum magna consectetur. Aliquam sit amet faucibus est. Aliquam pellentesque orci nec ultricies finibus. Ut porttitor vulputate urna, in fringilla ipsum sagittis vel.</p>
         </div>
-        <div>
-            <h1>Placeholder Placeholder</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis justo tortor. Aliquam tincidunt, sapien a laoreet sollicitudin, felis metus condimentum justo, et malesuada elit tellus eu ex. In accumsan ligula sapien, at iaculis arcu consequat nec. In non cursus est. Suspendisse vitae semper velit. Donec eu justo luctus, sollicitudin lacus ut, dignissim turpis. Ut commodo lectus sed justo egestas commodo. Vestibulum suscipit tellus eget arcu elementum, ac vestibulum magna consectetur. Aliquam sit amet faucibus est. Aliquam pellentesque orci nec ultricies finibus. Ut porttitor vulputate urna, in fringilla ipsum sagittis vel.</p>
-        </div>
         <div class='card-container'>
             <h1 class='card-container-title'>How can we help</h1>
             <div class='card'>
@@ -68,6 +64,9 @@ const index = (wrapper) =>{
                     </div>
                 </div>
             </div>
+            <div>
+                <h1>
+            </div>
         </div>
     `
     wrapper.append(index)
@@ -83,6 +82,9 @@ const onPageLoad = () =>{
     createNav().then(()=>{
         const wrapper = document.getElementById("mainContent");
         createIndexPage(wrapper)
+        if(document.getElementsByClassName('hero-img-wrapper')){
+            console.log('yes')
+        }
     });
 }
 window.onload = onPageLoad;

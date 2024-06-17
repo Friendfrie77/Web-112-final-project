@@ -1,16 +1,16 @@
 const categoryList = {
-    1 : 'tools',
-    2 : 'seeds',
-    3 : 'materials',
+    0 : 'Tools',
+    1 : 'Seeds',
+    2 : 'Materials',
 
 }
 const productList = [
     {
         id: 0,
         brand: 'Dewalt',
-        title : 'DCD777B 20V 1/2" Brushless Cordless Compact Drill/Driver',
+        title : 'DCD777B 20V 0/2" Brushless Cordless Compact Drill/Driver',
         price: 100,
-        category: 1,
+        category: 0,
         stock: 100,
         discription: "This 20v cordless drill comes complete with one battery and charge. It is light weight at 3 ½ pounds without the battery. The drill features 3 modes, including a standard drilling mode, one for working on masonry, and the last mode for screwing in screws with a torque limiter. It is a essential tool to have for any project, and will come in handy for doing small jobs around the house.",
         rating: 4,
@@ -22,7 +22,7 @@ const productList = [
         brand: 'Dewalt',
         title: 'Impact Driver',
         price: 100,
-        category: 1,
+        category: 0,
         stock: 50,
         discription: "Are you looking for a little more power to drive home nuts or loosen bolt that have rusted from being outside for a long time? An impact drill is perfect your you. With more power than your standard drill, it can really get that nut or bolt where you want it. The impact drill comes with a battery and charger to get you started. It is the perfect tool for any project that you need to be sure is going to hold together.",
         rating: 5,
@@ -33,7 +33,7 @@ const productList = [
         brand: 'Dewalt',
         title: 'Cordless saw',
         price: 140,
-        category: 1,
+        category: 0,
         stock: 20,
         discription: "Do you find yourself constantly working outside and needing a cordless saw to make cuts for your projects? This lightweight saw is perfect for you. It shares batteries with the rest of the tools that we sell, making it the perfect tool to add to your collection. While it might not have the power of the larger corded tools, it is a lot more convenient when you are working on a project.",
         rating: 4.5,
@@ -44,7 +44,7 @@ const productList = [
         brand: 'Dewalt',
         title: 'Spare battery',
         price: 50,
-        category: 1,
+        category: 0,
         stock: 150,
         discription: "Looking to get more run time out of your tools? Picking up a spare battery can help extend the amount of time that you can use your tools before you need to take a break. Having at least one spare battery allows you to have a battery charging while you use the tool, allowing almost no down time in your work.",
         rating: 4,
@@ -55,12 +55,16 @@ const productList = [
         brand: 'Dewalt',
         title: 'Battery Charge',
         price: 60,
-        category: 1,
+        category: 0,
         stock: 70,
         discription: "Having another charger can come in handy as you can have one packed away with the drill while having one set up to charge batteries. It also allows charging more than one battery at a time. We offer models that support more than one battery at a time, just select that option at checkout",
         rating: 4,
         img: "images/store/items/battery-charger.webp"
-    },    
+    },
+    {
+        id: 5,
+        
+    }
 ]
 
 const productReviews = [
@@ -117,4 +121,4 @@ const reviewCount = (id) =>{
     return count;
 }
 
-export {productList, productMap, productReviews, reviewCount};
+export {productList, productMap, productReviews, categoryList, reviewCount};

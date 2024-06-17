@@ -1,4 +1,4 @@
-import {productMap, reviewCount, productReviews} from "./productInfo.js";
+import {productMap, reviewCount, productReviews} from "./scripts/productInfo.js";
 import { getStars } from "./shop.js";
 const expandReviews = () =>{
     const showReview = document.getElementById('review-box');
