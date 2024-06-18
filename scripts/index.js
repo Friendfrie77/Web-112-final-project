@@ -1,10 +1,11 @@
 import { createNav } from "./nav.js";
-import { setPageTitle } from "./helpers.js";
+import { setPageTitle, isNavSticky} from "./helpers.js";
 
 const heroImg = (wrapper) =>{
     return new Promise((resolve) =>{
         const heroImg = document.createElement('div');
         heroImg.className = 'hero-img-wrapper';
+        heroImg.setAttribute('id', 'hero-img-wrapper')
         heroImg.innerHTML = `
             <img class='hero-img' src ='images/index/index-heros/test-hero1.webp' />
             <div class='call-to-action'>
@@ -82,9 +83,7 @@ const onPageLoad = () =>{
     createNav().then(()=>{
         const wrapper = document.getElementById("mainContent");
         createIndexPage(wrapper)
-        if(document.getElementsByClassName('hero-img-wrapper')){
-            console.log('yes')
-        }
+        isNavSticky();
     });
 }
 window.onload = onPageLoad;

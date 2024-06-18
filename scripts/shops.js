@@ -1,5 +1,5 @@
 import { createNav } from "./nav.js";
-import { setPageTitle, navBarNoHero} from "./helpers.js";
+import { setPageTitle, isNavSticky} from "./helpers.js";
 import {productList, reviewCount, categoryList} from './productInfo.js';
 
 const createCategories = () =>{
@@ -70,12 +70,7 @@ const onPageLoad = () =>{
     setPageTitle('Shop', 'shop page for Green Home Living');
     createNav().then(() =>{
         createCategories();
-        displayProducts();
+        isNavSticky();
     })
-    if(document.getElementsByClassName('hero-img-wrapper').length === 0){
-        navBarNoHero()
-    }
-
 }
-
 window.onload = onPageLoad
