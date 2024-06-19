@@ -20,29 +20,31 @@ const createCategories = () =>{
     })
     wrapper.append(index)
 }
+
+const createFilters = () =>{
+
+}
 const displayProducts =() =>{
     productList.forEach((product) =>{
         const tempWrapper = document.getElementById(`${categoryList[product.category]}`)
         const productDiv = document.createElement('div');
         productDiv.className = "store-product-flex";
         productDiv.innerHTML = `
-                    <a href='product.html?id=${
-                    product.id
-                    }'"><img class='store-img' src=${
-        product.img
-        } width='350px' height='350px' alt='${product.title}'/></a>
+                    <a href='product.html?id=${product.id}'">
+                      <img class='store-img' src=${product.img} width='350px' height='350px' alt='${product.title}'>
+                    </a>
                     <div class='product-text'>
-                        <p>${product.brand}</p>
+                        <h1 class='sub-header'>${product.brand}</h1>
                         <p>${product.title}</p>
                     </div>
-                    <div class='product-price'>
+                    <div class='product-price flex-col'>
                         <h2>$${product.price}</h2>
                         <div>
-                            <span>${product.rating}</span> <span>${getStars(
-        product.rating
-        )}</span> <link>${reviewCount(product.id)}</link>
+                            <span>${product.rating}</span> 
+                            <span>${getStars(product.rating)}</span>
+                            <span>${reviewCount(product.id)}</span>
                         </div>
-                        <button>Add to Cart</button>
+                          <button class='product-button'>Add to Cart</button>
                     </div>
             `;
         tempWrapper.append(productDiv)
@@ -69,8 +71,9 @@ const displayProducts =() =>{
 const onPageLoad = () =>{
     setPageTitle('Shop', 'shop page for Green Home Living');
     createNav().then(() =>{
-        createCategories();
         isNavSticky();
+        createCategories();
+        displayProducts();
     })
 }
 window.onload = onPageLoad

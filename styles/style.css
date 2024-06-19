@@ -132,37 +132,6 @@ html, body {
   font-family: "Lato", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Ubuntu", sans-serif;
-  color: black;
-}
-
-.hero-text {
-  font-size: var(--fs-hero-text);
-  text-shadow: 1px 1px 2px black;
-  color: white;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-row-col {
-  display: flex;
-  flex-direction: row;
-}
-@media (max-width: 768px) {
-  .flex-row-col {
-    flex-direction: column;
-  }
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 .card-container {
   padding: 10px;
 }
@@ -192,6 +161,37 @@ h1, h2, h3, h4, h5 {
   font-size: 1.4rem;
   padding: 15px;
   border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+}
+
+.hero-text {
+  font-size: var(--fs-hero-text);
+  text-shadow: 1px 1px 2px black;
+  color: white;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-col {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .flex-row-col {
+    flex-direction: column;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .socialBar {
@@ -603,4 +603,39 @@ footer {
   flex-direction: column;
   margin: auto;
   margin-bottom: 10px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.store-product-flex {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.store-img {
+  margin: auto;
+}
+
+.product-text {
+  margin: 10px 0px;
+}
+
+.product-price {
+  gap: 5px;
+}
+
+.product-button {
+  background-color: #5B8266;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  max-width: 125px;
 }/*# sourceMappingURL=style.css.map */

@@ -8,11 +8,11 @@ const productList = [
     {
         id: 0,
         brand: 'Dewalt',
-        title : 'DCD777B 20V 0/2" Brushless Cordless Compact Drill/Driver',
+        title : 'DCD777B 20V Max Brushless Compact Drill/Driver',
         price: 100,
         category: 0,
         stock: 100,
-        discription: "This 20v cordless drill comes complete with one battery and charge. It is light weight at 3 ½ pounds without the battery. The drill features 3 modes, including a standard drilling mode, one for working on masonry, and the last mode for screwing in screws with a torque limiter. It is a essential tool to have for any project, and will come in handy for doing small jobs around the house.",
+        discription: "This 20V Max cordless drill comes with a battery and charger. Weighing just 3 ½ pounds without the battery, it features three modes: standard drilling, masonry work, and screw driving with torque limiter. This versatile tool is essential for any project, from small home repairs to larger tasks.",
         rating: 4,
         img: "images/store/items/drill/drill_front.webp",
         imgList:["images/store/items/drill/drill_front.webp", "images/store/items/drill/drill_side_branding.webp", "images/store/items/drill/drill_side_warning.webp"]
@@ -20,50 +20,106 @@ const productList = [
     {
         id: 1,
         brand: 'Dewalt',
-        title: 'Impact Driver',
+        title: 'DCF885C1 20V Max Impact Driver Kit',
         price: 100,
         category: 0,
         stock: 50,
-        discription: "Are you looking for a little more power to drive home nuts or loosen bolt that have rusted from being outside for a long time? An impact drill is perfect your you. With more power than your standard drill, it can really get that nut or bolt where you want it. The impact drill comes with a battery and charger to get you started. It is the perfect tool for any project that you need to be sure is going to hold together.",
+        discription: "The Dewalt 20V Max Impact Driver offers high torque for driving screws and bolts with ease. This kit includes one battery and a charger. Ideal for heavy-duty fastening applications, it ensures you have the power you need to complete tough jobs efficiently.",
         rating: 5,
         img: "images/store/items/impact-drill.webp"
     },
     {
         id: 2,
         brand: 'Dewalt',
-        title: 'Cordless saw',
+        title: 'DCS391B 20V Max Cordless Circular Saw',
         price: 140,
         category: 0,
         stock: 20,
-        discription: "Do you find yourself constantly working outside and needing a cordless saw to make cuts for your projects? This lightweight saw is perfect for you. It shares batteries with the rest of the tools that we sell, making it the perfect tool to add to your collection. While it might not have the power of the larger corded tools, it is a lot more convenient when you are working on a project.",
+        discription: "The Dewalt 20V Max Cordless Circular Saw is perfect for cutting wood and other materials on the go. Lightweight and versatile, it shares batteries with other Dewalt 20V tools, making it a great addition to your toolkit. Includes one battery and charger.",
         rating: 4.5,
         img: "images/store/items/saw.webp"
     },
     {
         id: 3,
         brand: 'Dewalt',
-        title: 'Spare battery',
+        title: 'DCB205 20V Max Spare Battery Pack',
         price: 50,
         category: 0,
         stock: 150,
-        discription: "Looking to get more run time out of your tools? Picking up a spare battery can help extend the amount of time that you can use your tools before you need to take a break. Having at least one spare battery allows you to have a battery charging while you use the tool, allowing almost no down time in your work.",
+        discription: "Extend your tool usage with the Dewalt 20V Max Spare Battery Pack. This high-capacity lithium-ion battery provides longer run time, ensuring less downtime on your projects. Compatible with all Dewalt 20V Max tools.",
         rating: 4,
         img: "images/store/items/battery.webp"
     },
     {
         id: 4,
         brand: 'Dewalt',
-        title: 'Battery Charge',
+        title: 'DCB115 20V Max Battery Charger',
         price: 60,
         category: 0,
         stock: 70,
-        discription: "Having another charger can come in handy as you can have one packed away with the drill while having one set up to charge batteries. It also allows charging more than one battery at a time. We offer models that support more than one battery at a time, just select that option at checkout",
+        discription: "Keep your Dewalt 20V Max batteries charged with this reliable charger. It's compact, easy to use, and can charge multiple battery types, ensuring your tools are always ready for the job. An essential accessory for any Dewalt tool owner.",
         rating: 4,
         img: "images/store/items/battery-charger.webp"
     },
     {
         id: 5,
-        
+        brand: 'Makita',
+        title: 'XT269M 18V LXT Brushless Cordless Combo Kit',
+        price: 299,
+        category: 0,
+        stock: 80,
+        discription: "This Makita combo kit includes a powerful brushless drill and impact driver. The kit comes with two 18V LXT lithium-ion 4.0Ah batteries and a rapid charger. Both tools feature variable speed control and ergonomic design for comfort and control. Perfect for tackling a variety of projects around the home or on the job site.",
+        rating: 4.5,
+        img: "images/store/items/makita/combo_kit_front.webp",
+        imgList:["images/store/items/makita/combo_kit_front.webp", "images/store/items/makita/combo_kit_side.webp"]
+    },
+    {
+        id: 6,
+        brand: 'Bosch',
+        title: 'GSR12V-140FCB22 12V Max Flexiclick 5-In-1 Drill/Driver System',
+        price: 199,
+        category: 0,
+        stock: 60,
+        discription: "The Bosch Flexiclick Drill/Driver System is versatile with 4 attachments—a locking bit holder, keyless chuck, right angle, and offset angle. This 12V kit includes two batteries and a charger, making it ideal for tight spaces and difficult angles. The compact design and power efficiency make it an essential tool for professionals.",
+        rating: 4,
+        img: "images/store/items/bosch/flexiclick_front.webp",
+        imgList:["images/store/items/bosch/flexiclick_front.webp", "images/store/items/bosch/flexiclick_attachments.webp"]
+    },
+    {
+        id: 7,
+        brand: 'Milwaukee',
+        title: '2897-22 M18 Fuel 2-Tool Combo Kit',
+        price: 399,
+        category: 0,
+        stock: 45,
+        discription: "The Milwaukee M18 Fuel Combo Kit includes a hammer drill and impact driver. Both tools feature POWERSTATE brushless motors and REDLITHIUM batteries, providing longer run-time and increased power. The kit comes with two 18V batteries and a charger, perfect for demanding applications and heavy-duty projects.",
+        rating: 4.9,
+        img: "images/store/items/milwaukee/combo_kit_front.webp",
+        imgList:["images/store/items/milwaukee/combo_kit_front.webp", "images/store/items/milwaukee/combo_kit_side.webp"]
+    },
+    {
+        id: 8,
+        brand: 'Ryobi',
+        title: 'P883 One+ 18V Lithium Ion Cordless Contractor Kit',
+        price: 159,
+        category: 0,
+        stock: 100,
+        discription: "The Ryobi One+ Contractor Kit includes a drill/driver, impact driver, reciprocating saw, and circular saw. This versatile kit comes with two 18V lithium-ion batteries and a charger, providing the power and flexibility for various projects. Ideal for DIY enthusiasts and professionals alike.",
+        rating: 4.6,
+        img: "images/store/items/ryobi/contractor_kit_front.webp",
+        imgList:["images/store/items/ryobi/contractor_kit_front.webp", "images/store/items/ryobi/contractor_kit_side.webp"]
+    },
+    {
+        id: 9,
+        brand: 'Porter-Cable',
+        title: 'PCCK619L8 20V MAX 8-Tool Combo Kit',
+        price: 499,
+        category: 0,
+        stock: 30,
+        discription: "The Porter-Cable 8-Tool Combo Kit includes a drill/driver, circular saw, reciprocating saw, impact driver, jigsaw, oscillating tool, grinder, and flashlight. The kit comes with two 20V MAX lithium-ion batteries and a charger. This comprehensive set is ideal for tackling a variety of projects with ease and efficiency.",
+        rating: 3.5,
+        img: "images/store/items/porter_cable/combo_kit_front.webp",
+        imgList:["images/store/items/porter_cable/combo_kit_front.webp", "images/store/items/porter_cable/combo_kit_tools.webp"]
     }
 ]
 

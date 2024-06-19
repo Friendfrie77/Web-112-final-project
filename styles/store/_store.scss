@@ -1,0 +1,11 @@
+.store-box{
+
+}
+.product-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+

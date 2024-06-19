@@ -1,0 +1,22 @@
+.store-product-flex{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.store-img{
+    margin: auto;
+}
+.product-text{
+    margin: 10px 0px;
+}
+.product-price{
+    gap: 5px;;
+}
+.product-button{
+    background-color: $button-color;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    max-width: 125px;
+}
