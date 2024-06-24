@@ -17,6 +17,19 @@
     border: none;
     border-radius: 5px;
     padding: 10px;
-    color: white;
+    color: $text-color;
     max-width: 125px;
+}
+.no-stock{
+    background-color: rgba(91, 130, 102, 70%);
+    color: $text-color;
+}
+
+.store-controls{
+    background-color: red;
+    min-width: 250px;
+}
+
+.store-control-fieldset{
+    border: none;
 }

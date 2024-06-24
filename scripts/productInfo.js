@@ -115,7 +115,7 @@ const productList = [
         title: 'PCCK619L8 20V MAX 8-Tool Combo Kit',
         price: 499,
         category: 0,
-        stock: 30,
+        stock: 2,
         discription: "The Porter-Cable 8-Tool Combo Kit includes a drill/driver, circular saw, reciprocating saw, impact driver, jigsaw, oscillating tool, grinder, and flashlight. The kit comes with two 20V MAX lithium-ion batteries and a charger. This comprehensive set is ideal for tackling a variety of projects with ease and efficiency.",
         rating: 3.5,
         img: "images/store/items/porter_cable/combo_kit_front.webp",

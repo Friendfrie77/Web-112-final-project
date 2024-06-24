@@ -1,7 +1,10 @@
 .content-wrapper{
-    max-width: 1400px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-bottom: 10px;
+}
+.store-wrapper{
+    flex-direction: row;
 }
