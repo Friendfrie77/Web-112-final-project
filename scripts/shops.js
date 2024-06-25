@@ -2,43 +2,46 @@ import { createNav } from "./nav.js";
 import { setPageTitle, isNavSticky} from "./helpers.js";
 import {productList, reviewCount, categoryList} from './productInfo.js';
 
+let checkedFilters = {
+  categories: [],
+  onlyInStock: false,
+  starRating: 1,
+}
 const createCategories = (id) =>{
-    const wrapper = document.getElementById("mainContent");
+  const wrapper = document.getElementById("mainContent");
+  if(!document.querySelector('.content-wrapper')){
     const index = document.createElement('section');
     index.className = 'content-wrapper store-wrapper';
-    if(!document.querySelector('.store-controls')){
-      const controls = createStoreControls()
-      index.append(controls)
-    }
+    index.append(createStoreControls());
     const storeWrapper = document.createElement('div')
-    if(id){
-      const categoryDivs = document.querySelectorAll('.store-box')
-      categoryDivs.forEach(div =>{
-        const divID = Number(div.id);
-        if(!id.includes(divID)){
-          div.style.display = 'none'
-        }if(id.includes(divID) && div.style.display === 'none'){
-          div.style.display ='block'
-        }
-      })
-    }else{
-      Object.entries(categoryList).forEach(([key, value]) => {
-        const tempWrapper = document.createElement('div');
-        tempWrapper.className = 'store-box';
-        tempWrapper.setAttribute('id', `${key}`)
-        const tempBox = document.createElement('div');
-        tempBox.className = 'product-grid'
-        tempBox.setAttribute('id', `${value}`);
-        tempWrapper.innerHTML = `
-          <h1 class='store-header'>${value}</h1>
+    Object.entries(categoryList).forEach(([key, value]) => {
+      const tempWrapper = document.createElement('div');
+      tempWrapper.className = 'store-box';
+      tempWrapper.setAttribute('id', `${key}`)
+      const tempBox = document.createElement('div');
+      tempBox.className = 'product-grid'
+      tempBox.setAttribute('id', `${value}`);
+      tempWrapper.innerHTML = `
+        <h1 class='header-text'>${value}</h1>
       `; 
-        tempWrapper.append(tempBox);
-        storeWrapper.append(tempWrapper);
-      })
-    }
+      tempWrapper.append(tempBox);
+      storeWrapper.append(tempWrapper);
+    })      
     index.append(storeWrapper)
     wrapper.append(index)
+  }else if(id){
+    const categoriesDivs = document.querySelectorAll('.store-box');
+    categoriesDivs.forEach(div =>{
+      const divId = Number(div.id);
+      if(!id.includes(divId)){
+        div.style.display = 'none'
+      }if(id.includes(divId) && div.style.display === 'none'){
+        div.style.display = 'block'
+      }
+    })
+  }
 }
+
 const showAllCategories = () =>{
   const categoryDivs = document.querySelectorAll('.store-box');
   categoryDivs.forEach(div =>{
@@ -55,26 +58,45 @@ const createStoreControls = () =>{
     <legend>Categories</legend>
    ${Object.entries(categoryList).map(([key, value]) =>
     `<div>
-      <input type='checkbox' id=${key} name=${value} value=${key} />
-      <lable for=${value}>${value}</lable>
+      <input type='checkbox' id=${key} name='categories' value=${key}/>
+      <lable for=${key}>${value}</lable>
     </div>`
    ).join('')}
    </fieldset>
   <fieldset class='store-control-fieldset'>
+   <legend>Price Range</legend>
+
+  </fieldset>
+  <fieldset class='store-control-fieldset'>
+   <lengend>Avg. Customer Review</legend>
+   <div class='star-ratings'>
+      <button class='star-rating-button' data-rating=4><span>${getStars(4)} & up<span></button>
+   </div>
+   <div class='star-ratings'>
+      <button class='star-rating-button' data-rating=3><span>${getStars(3)} & up<span></button>
+   </div>
+   <div class='star-ratings'>
+      <button class='star-rating-button' data-rating=2><span>${getStars(2)} & up<span></button>
+   </div>
+   <div class='star-ratings'>
+      <button class='star-rating-button' data-rating=1><span>${getStars(1)} & up<span></button>
+   </div>
+  </fieldset>
+  <fieldset class='store-control-fieldset'>
     <legend>Stock</legend>
     <div>
-      <input type='radio' />
-      <lable>In Stock</lable>
+      <input type='checkbox' name = 'stock' id='stock'/>
+      <lable for='stock'>In Stock</lable>
     </div>
   </fieldset>
   `
   return wrapper
 }
-const createFilters = (id, categories) =>{
-  const filteredProducts = productList.filter(products => id.includes(products.category))
-  displayProducts(filteredProducts);
-  createCategories(id ,categories);
+
+const addAdditionalControls = () =>{
+  //adding in controls based off what categories are selected
 }
+
 const displayProducts=(filteredProducts) =>{
   Object.values(categoryList).forEach(category => {
     const tempWrapper = document.getElementById(category);
@@ -109,6 +131,46 @@ const displayProducts=(filteredProducts) =>{
   })
 }
 
+const checkBoxSelector = () =>{
+  document.querySelectorAll('input[type="checkbox"').forEach(box =>{
+    box.addEventListener('change', (updateCheckBoxState))
+  })
+  document.querySelectorAll('.star-rating-button').forEach(button =>{
+    button.addEventListener('click', (event) =>{
+      checkedFilters.starRating = event.currentTarget.getAttribute('data-rating')
+      createFilters(checkedFilters)
+    })
+  })
+}
+
+const updateCheckBoxState = () =>{
+  checkedFilters.categories = [...document.querySelectorAll('input[name="categories"]:checked')].map(box => Number(box.id))
+  checkedFilters.onlyInStock = document.querySelector('#stock').checked
+  createFilters(checkedFilters);
+}
+
+const createFilters = (checkedFilters) =>{
+  let filteredProducts;
+  if(checkedFilters.onlyInStock && checkedFilters.categories.length === 0){
+    filteredProducts = productList.filter(products => products.stock > 0 && products.rating >= checkedFilters.starRating)
+  }else if(checkedFilters.onlyInStock && checkedFilters.categories.length <= 1){
+    filteredProducts = productList.filter(products => products.stock > 0 && checkedFilters.categories.includes(products.category) && products.rating >= checkedFilters.starRating)
+  }else{
+    filteredProducts = productList.filter(products => products.rating >= checkedFilters.starRating)
+  }
+  if(checkedFilters.categories.length != 0){
+    if(checkedFilters.categories.length === 0){
+      displayProducts(filteredProducts);
+    }else{
+      displayProducts(filteredProducts);
+      createCategories(checkedFilters.categories);
+    }
+  }else{
+    displayProducts(filteredProducts);
+    showAllCategories()
+  }
+}
+
 const getStars = (productRating) => {
   const fullStars = Math.floor(productRating);
   const halfStar = productRating - fullStars >= 0.5 ? 1 : 0;
@@ -121,45 +183,18 @@ const getStars = (productRating) => {
     starsHTML += '<i class="fas fa-star-half-alt filled-stars"></i>';
   }
   for (let i = 0; i < emptyStar; i++) {
-    starsHTML += '<i class="far fa-star"></i>';
+    starsHTML += '<i class="far fa-star empty-star"></i>';
   }
   return starsHTML;
 };
-const stockRadioChange = () =>{
-  
-}
-const checkBoxCatChange = () =>{
-  const fieldsets = document.querySelector('#categories');
-  const checkbox = fieldsets.querySelectorAll("input[type = 'checkbox']")
-  let productId = []
-  checkbox.forEach(box =>{
-    box.addEventListener('change', (event) =>{
-      if(event.target.type === 'checkbox'){
-        const id = Number(event.target.value)
-        if(event.target.checked){
-          productId.push(id)
-        }else{
-          const index = productId.indexOf(id)
-          productId.splice(index, 1)
-        }
-        productId = productId.filter((item) => item !== undefined && item !== null);
-        if(productId.length === 0){
-          displayProducts(productList)
-          showAllCategories();
-        }else{
-          createFilters(productId)
-        }
-      }
-    })
-  })
-}
+
 const onPageLoad = () =>{
     setPageTitle('Shop', 'shop page for Green Home Living');
     createNav().then(() =>{
         isNavSticky();
         createCategories();
         displayProducts(productList);
-        checkBoxCatChange();
+        checkBoxSelector();
     })
 }
 

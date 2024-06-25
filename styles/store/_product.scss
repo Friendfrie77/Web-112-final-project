@@ -26,10 +26,36 @@
 }
 
 .store-controls{
-    background-color: red;
+    position: sticky;
+    top: 60px;
     min-width: 250px;
+    height: 100%;
+    margin-top: 10px;
+    @include for-size(large-phone-only){
+        display: none;
+    }
 }
 
 .store-control-fieldset{
     border: none;
+    color: $mid-green;
+    font-family: $h1-font;
+}
+
+.filled-stars{
+    color: $header-footer-color;
+}
+
+.empty-star{
+    color: $header-footer-color;
+}
+.star-ratings{
+    width: auto;
+    cursor: pointer;
+}
+.star-rating-button{
+    background-color: transparent;
+    border: none;
+    color: $mid-green;
+    cursor: pointer;
 }
