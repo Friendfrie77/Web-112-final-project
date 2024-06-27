@@ -1,3 +1,4 @@
+import { productList } from "./productInfo.js";
 const setPageTitle = (title, description) =>{
     document.title = title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)
@@ -42,4 +43,39 @@ const isNavSticky = () =>{
   }
 }
 
-export {setPageTitle, isNavSticky}
+const getStars = (productRating) => {
+  const fullStars = Math.floor(productRating);
+  const halfStar = productRating - fullStars >= 0.5 ? 1 : 0;
+  const emptyStar = 5 - fullStars - halfStar;
+  let starsHTML = "";
+  for (let i = 0; i < fullStars; i++) {
+    starsHTML += '<i class="fas fa-star filled-stars"></i>';
+  }
+  if (halfStar) {
+    starsHTML += '<i class="fas fa-star-half-alt filled-stars"></i>';
+  }
+  for (let i = 0; i < emptyStar; i++) {
+    starsHTML += '<i class="far fa-star empty-star"></i>';
+  }
+  return starsHTML;
+};
+
+const maxPrice = (filterdproductList) =>{
+  let maxPrice = 0;
+  if(filterdproductList){
+    if(filterdproductList.categories.length != 0){
+      filterdproductList.forEach(product =>{
+        maxPrice = product.price > maxPrice ? product.price : maxPrice;
+      })
+    }else{
+      maxPrice = filterdproductList.priceRangeMax;
+    }
+  }else{
+    productList.forEach(product =>{
+      maxPrice = product.price > maxPrice ? product.price : maxPrice;
+    })
+  }
+  return maxPrice;
+}
+
+export {setPageTitle, isNavSticky, getStars, maxPrice}

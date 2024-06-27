@@ -40,6 +40,8 @@
     border: none;
     color: $mid-green;
     font-family: $h1-font;
+    height: 100%;
+    position: relative;
 }
 
 .filled-stars{
@@ -58,4 +60,45 @@
     border: none;
     color: $mid-green;
     cursor: pointer;
+}
+.price-display-wrapper{
+    max-width: 100%;
+    background-color: red;
+    display: none;
+}
+.price-display{
+    // max-width: 25%;
+}
+.slider-container{
+    height: 6px;
+    width: 100%;
+    position: relative;
+}
+.price-slider {
+    height: 100%;
+    top: 9.1px;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: red;
+    position: absolute;
+}
+
+.range-input{
+    position: relative;
+}
+
+.price-input{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    appearance: none;
+    top: 0;
+    cursor: pointer;
+}
+
+.price-lable{
+    position: absolute;
+    transform: translate(-50%, -100%)
 }
