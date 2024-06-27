@@ -14,28 +14,28 @@ const updateRangeLables = (filteredPrice) =>{
         maxVal = price;
         minVal = 0
     }else{
+        console.log(filteredPrice)
         price = maxPrice(filteredPrice)
-        console.log(price)
-        maxVal = price;
-        minVal = filteredPrice.priceRangeMin;
+        maxVal = parseInt(price);
+        minVal = parseInt(filteredPrice.priceRangeMin);
+    }
+    if(minVal > maxVal - 100){
+        minVal = maxVal - 100;
+    }
+    if (maxVal < minVal + 100){
+        maxVal = minVal + 100;
     }
     minSlider.value = minVal;
-    maxSlider.value = maxVal
-    if(minVal > maxVal - 10){
-        minSlider.value = maxVal - 10;
-    }
-    if (maxVal < minVal + 10){
-        maxSlider.value = minVal + 10;
-    }
-    const percentMin = (minSlider.value / price) * 100;
-    const percentMax = (maxSlider.value / price) * 100;
+    maxSlider.value = maxVal;
+    const percentMin = (minSlider.value / maxPrice()) * 100;
+    const percentMax = (maxSlider.value / maxPrice()) * 100;
     priceSlider.style.left = percentMin + '%';
     priceSlider.style.width = (percentMax - percentMin) + '%';
     minLable.innerText = `$${minSlider.value}`;
     maxLable.innerText = `$${maxSlider.value}`;
     minLable.style.left = percentMin + '%';
     maxLable.style.left = percentMax + '%';
-    console.log(maxVal, minVal,percentMin, percentMax)
+    return {minVal, maxVal}
 }
 
 export {updateRangeLables}

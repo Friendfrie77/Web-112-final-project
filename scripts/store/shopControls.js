@@ -33,13 +33,13 @@ const createPriceRange = () =>{
     const wrapper = createFieldSet();
     wrapper.style.marginBottom = '10px'
     wrapper.innerHTML = `
-    <legend>Price Range</legend>
+    <legend style = 'margin-bottom:10px;'>Price Range</legend>
     <div class='slider-container'>
         <div class='price-slider'>
         </div>
     </div>
     <div class='range-input'>
-        <input id='min' class='price-input' type = 'range' min = '0' max='${maxPrice()}}' step ='1' value ='0' />
+        <input id='min' class='price-input' type = 'range' min = '0' max='${maxPrice()}' step ='1' value ='0' />
         <input id='max' class='price-input' type = 'range' min = '0' max='${maxPrice()}' step ='1' value ='${maxPrice()}' />
     </div>
     <span class='price-lable' id='lable-min'>test</span>

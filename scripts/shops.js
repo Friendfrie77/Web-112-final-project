@@ -104,8 +104,10 @@ const priceSlider = () =>{
       }else{
         checkedFilters.priceRangeMax = event.target.value
       }
-      updateRangeLables(checkedFilters)
-      createFilters(checkedFilters)
+      const sliderVal = updateRangeLables(checkedFilters)
+      checkedFilters.priceRangeMin = sliderVal.minVal;
+      checkedFilters.priceRangeMax = sliderVal.maxVal;
+      renderFiliteredProducts(checkedFilters)
     })
   })
 }
@@ -116,7 +118,7 @@ const checkBoxSelector = () =>{
   document.querySelectorAll('.star-rating-button').forEach(button =>{
     button.addEventListener('click', (event) =>{
       checkedFilters.starRating = event.currentTarget.getAttribute('data-rating')
-      createFilters(checkedFilters)
+      renderFiliteredProducts(checkedFilters)
     })
   })
 }
@@ -124,7 +126,7 @@ const checkBoxSelector = () =>{
 const updateCheckBoxState = () =>{
   checkedFilters.categories = [...document.querySelectorAll('input[name="categories"]:checked')].map(box => Number(box.id))
   checkedFilters.onlyInStock = document.querySelector('#stock').checked
-  createFilters(checkedFilters);
+  renderFiliteredProducts(checkedFilters)
 }
 
 const createFilters = (checkedFilters) =>{
@@ -136,18 +138,46 @@ const createFilters = (checkedFilters) =>{
   }else{
     filteredProducts = productList.filter(products => products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
   }
+  return filteredProducts;
+}
+
+const renderFiliteredProducts = (checkedFilters) =>{
+  const filters = createFilters(checkedFilters)
+  console.log(checkedFilters)
   if(checkedFilters.categories.length != 0){
     if(checkedFilters.categories.length === 0){
-      displayProducts(filteredProducts);
+      displayProducts(filters);
     }else{
-      displayProducts(filteredProducts);
+      displayProducts(filters);
       createCategories(checkedFilters.categories);
     }
   }else{
-    displayProducts(filteredProducts);
+    displayProducts(filters);
     showAllCategories()
   }
+
 }
+// const createFilters = (checkedFilters) =>{
+//   let filteredProducts;
+//   if(checkedFilters.onlyInStock && checkedFilters.categories.length === 0){
+//     filteredProducts = productList.filter(products => products.stock > 0 && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
+//   }else if(checkedFilters.onlyInStock && checkedFilters.categories.length <= 1){
+//     filteredProducts = productList.filter(products => products.stock > 0 && checkedFilters.categories.includes(products.category) && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
+//   }else{
+//     filteredProducts = productList.filter(products => products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
+//   }
+//   if(checkedFilters.categories.length != 0){
+//     if(checkedFilters.categories.length === 0){
+//       displayProducts(filteredProducts);
+//     }else{
+//       displayProducts(filteredProducts);
+//       createCategories(checkedFilters.categories);
+//     }
+//   }else{
+//     displayProducts(filteredProducts);
+//     showAllCategories()
+//   }
+// }
 
 const onPageLoad = () =>{
     setPageTitle('Shop', 'shop page for Green Home Living');
