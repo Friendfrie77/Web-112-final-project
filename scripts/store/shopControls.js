@@ -48,11 +48,44 @@ const createPriceRange = () =>{
     return wrapper
 }
 
-const createManufacture = () =>{
-
-
+const createManufacture = (filteredProducts) =>{
+    const wrapper = document.querySelector('#brand-controls') ? document.querySelector('#brand-controls') : createFieldSet('brand-controls');
+    let manufactureList = filteredProducts.map(product => product.brand)
+    manufactureList = [...new Set(manufactureList)]
+    wrapper.innerHTML = `
+    <legend>Manufacture</legend>
+    <div class='flex-col brand-container' id='brand-div'>
+        ${manufactureList.map(brand =>
+            `
+            <div class='flex-row'>
+                <input type='checkbox' name='brand' value='${brand}'/>
+                <lable>${brand}</lable>       
+            </div>
+            `
+        ).join('')}
+    </div>
+    <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
+    `
+    return wrapper;
 }
 
+const expandBrandList = () =>{
+    const div = document.querySelector('#brand-div');
+    const button = document.querySelector('#brand-div-button');
+    div.style.height = div.style.height ==='' ? '100%' : ''
+    button.innerHTML = button.innerHTML.includes(`See more`) ? `&#8896<span>Close</span>` : `&#8897<span>See more</span>`
+}
+
+const expandRegionList = () =>{
+    const div = document.querySelector('#region-div');
+    const button = document.querySelector('#region-div-button');
+    div.style.height = div.style.height ==='' ? '100%' : ''
+    button.innerHTML = button.innerHTML.includes(`See more`) ? `&#8896<span>Close</span>` : `&#8897<span>See more</span>`
+}
+const expandEventListener = () =>{
+    document.querySelector('#brand-div-button').addEventListener('click', expandBrandList)
+    document.querySelector('#region-div-button').addEventListener('click', expandRegionList)
+}
 const createAvgCustomerReview = () =>{
     const wrapper = createFieldSet();
     wrapper.innerHTML = `
@@ -83,14 +116,73 @@ const createStock = () =>{
     `
     return wrapper;
 }
+
+const createSeedRegion = (productList) =>{
+    const wrapper = createFieldSet();
+    let filteredList = productList.filter(product => product.category === 1).map(product => product.region);
+    filteredList = [...new Set(filteredList)]
+    console.log(filteredList)
+    wrapper.innerHTML = `
+    <legend>Seed Region</legend>
+    <div class='flex-col brand-container' id='region-div'>
+        ${filteredList.map(region =>
+            `
+            <div class='flex-row'>
+                <input type='checkbox' name='region' value=${region} />
+                <lable for='region'>${region}</lable>
+            </div>
+            `
+        ).join(' ')}
+    </div>
+    <a class='expand-div-button' id='region-div-button'>&#8897<span>See more</span></a>
+    `
+    return wrapper;
+}
+
+const filterBrands = (filteredProducts) =>{
+    const storeControls = document.querySelector('#brand-controls');
+    storeControls.innerHTML = ``
+    storeControls.append(createManufacture(filteredProducts))
+    return storeControls;
+}
+
+const updateMenuForFilters = (filteredProducts, divID) =>{
+    console.log(filteredProducts)
+    // const menuToChange = document.querySelector(`#${divID}`);
+    // menuToChange.innerHTML = ``;
+    // let filterList;
+    // let name;
+    // if(divID === 'region-div'){
+    //     filteredList = filteredProducts.filter(product => product.category === 1).map(product => product.region);
+    //     filteredList = [...new Set(filteredList)];
+    //     name = 'region'
+    // }else if(divID === 'brand-div'){
+    //     filterList = filteredProducts.map(product => product.brand);
+    //     filterList = [...new Set(manufactureList)];
+    //     name = 'brand'
+    // }
+    // menuToChange.innerHTML = `
+    // ${filteredList.map( change =>
+    //     `
+    //     <div class='flex-row'>
+    //         <input type='checkbox' name=${name} value=${change} />
+    //         <lable for='region'>${change}</lable>
+    //     </div>
+    //     `
+    // ).join(' ')}
+    // `;
+}
+
 const createStoreControls = () =>{
      const wrapper = document.createElement('div');
      wrapper.className = 'store-controls'
      wrapper.append(createCategories('categories'));
      wrapper.append(createPriceRange())
+     wrapper.append(createManufacture(productList))
+     wrapper.append(createSeedRegion(productList))
      wrapper.append(createAvgCustomerReview());
      wrapper.append(createStock());
      return wrapper
 }
 
-export {createStoreControls};
+export {createStoreControls, expandEventListener, updateMenuForFilters};

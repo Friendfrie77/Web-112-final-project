@@ -1,11 +1,13 @@
 import { createNav } from "./nav.js";
 import { setPageTitle, isNavSticky, getStars, maxPrice} from "./helpers.js";
 import {productList, reviewCount, categoryList} from './productInfo.js';
-import {createStoreControls} from "./store/shopControls.js";
+import {createStoreControls, expandEventListener, updateMenuForFilters} from "./store/shopControls.js";
 import { updateRangeLables } from "./store/priceSliderDisplayTag.js";
 
 let checkedFilters = {
   categories: [],
+  brand: [],
+  seedRegion: [],
   onlyInStock: false,
   starRating: 1,
   priceRangeMin: 0,
@@ -18,7 +20,6 @@ const createCategories = (id) =>{
     const index = document.createElement('section');
     index.className = 'content-wrapper store-wrapper';
     index.append(createStoreControls());
-    // index.append(test());
     const storeWrapper = document.createElement('div')
     Object.entries(categoryList).forEach(([key, value]) => {
       const tempWrapper = document.createElement('div');
@@ -111,6 +112,7 @@ const priceSlider = () =>{
     })
   })
 }
+
 const checkBoxSelector = () =>{
   document.querySelectorAll('input[type="checkbox"').forEach(box =>{
     box.addEventListener('change', (updateCheckBoxState))
@@ -124,26 +126,32 @@ const checkBoxSelector = () =>{
 }
 
 const updateCheckBoxState = () =>{
-  checkedFilters.categories = [...document.querySelectorAll('input[name="categories"]:checked')].map(box => Number(box.id))
-  checkedFilters.onlyInStock = document.querySelector('#stock').checked
+  checkedFilters.categories = [...document.querySelectorAll('input[name="categories"]:checked')].map(box => Number(box.id));
+  checkedFilters.brand = [...document.querySelectorAll('input[name="brand"]:checked')].map(box => box.value);
+  checkedFilters.seedRegion = [...document.querySelectorAll('input[name="region"]:checked')].map(box => box.value);
+  checkedFilters.onlyInStock = document.querySelector('#stock').checked;
   renderFiliteredProducts(checkedFilters)
 }
 
 const createFilters = (checkedFilters) =>{
-  let filteredProducts;
-  if(checkedFilters.onlyInStock && checkedFilters.categories.length === 0){
-    filteredProducts = productList.filter(products => products.stock > 0 && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-  }else if(checkedFilters.onlyInStock && checkedFilters.categories.length <= 1){
-    filteredProducts = productList.filter(products => products.stock > 0 && checkedFilters.categories.includes(products.category) && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-  }else{
-    filteredProducts = productList.filter(products => products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-  }
-  return filteredProducts;
+  const stockNum = checkedFilters.onlyInStock ? 1 : 0;
+  const {brand, categories, seedRegion, starRating, priceRangeMin, priceRangeMax} = checkedFilters
+  return productList.filter( product =>{
+        const filterConditions = [
+          brand.length === 0 || brand.includes(product.brand),
+          categories.length === 0 || categories.includes(product.category),
+          !(product.category === 1 && seedRegion.length > 0)|| seedRegion.includes(product.region),
+          product.price >= priceRangeMin,
+          product.price <= priceRangeMax,
+          product.rating >= starRating,
+          product.stock >= stockNum
+        ]
+        return filterConditions.every(condition => condition)
+  })
 }
 
 const renderFiliteredProducts = (checkedFilters) =>{
   const filters = createFilters(checkedFilters)
-  console.log(checkedFilters)
   if(checkedFilters.categories.length != 0){
     if(checkedFilters.categories.length === 0){
       displayProducts(filters);
@@ -155,29 +163,8 @@ const renderFiliteredProducts = (checkedFilters) =>{
     displayProducts(filters);
     showAllCategories()
   }
-
+  updateMenuForFilters(filters)
 }
-// const createFilters = (checkedFilters) =>{
-//   let filteredProducts;
-//   if(checkedFilters.onlyInStock && checkedFilters.categories.length === 0){
-//     filteredProducts = productList.filter(products => products.stock > 0 && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-//   }else if(checkedFilters.onlyInStock && checkedFilters.categories.length <= 1){
-//     filteredProducts = productList.filter(products => products.stock > 0 && checkedFilters.categories.includes(products.category) && products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-//   }else{
-//     filteredProducts = productList.filter(products => products.rating >= checkedFilters.starRating && products.price >= checkedFilters.priceRangeMin && products.price <= checkedFilters.priceRangeMax)
-//   }
-//   if(checkedFilters.categories.length != 0){
-//     if(checkedFilters.categories.length === 0){
-//       displayProducts(filteredProducts);
-//     }else{
-//       displayProducts(filteredProducts);
-//       createCategories(checkedFilters.categories);
-//     }
-//   }else{
-//     displayProducts(filteredProducts);
-//     showAllCategories()
-//   }
-// }
 
 const onPageLoad = () =>{
     setPageTitle('Shop', 'shop page for Green Home Living');
@@ -187,7 +174,8 @@ const onPageLoad = () =>{
         displayProducts(productList);
         checkBoxSelector();
         priceSlider();
-        updateRangeLables()
+        updateRangeLables();
+        expandEventListener();
     })
 }
 

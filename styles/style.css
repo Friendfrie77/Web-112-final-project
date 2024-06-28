@@ -656,8 +656,6 @@ footer {
 }
 
 .store-controls {
-  position: sticky;
-  top: 60px;
   min-width: 250px;
   height: 100%;
   margin-top: 10px;
@@ -751,4 +749,9 @@ footer {
 .price-lable {
   position: absolute;
   transform: translate(-50%, -100%);
+}
+
+.brand-container {
+  height: 100px;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
