@@ -1,8 +1,9 @@
 import { createNav } from "./nav.js";
 import { setPageTitle, isNavSticky, getStars, maxPrice} from "./helpers.js";
-import {productList, reviewCount, categoryList} from './productInfo.js';
+import {productList, categoryList} from './productInfo.js';
 import {createStoreControls, expandEventListener, updateMenuForFilters} from "./store/shopControls.js";
 import { updateRangeLables } from "./store/priceSliderDisplayTag.js";
+import {reviewCount} from "./productInfo/productReviews.js";
 
 let checkedFilters = {
   categories: [],
@@ -167,7 +168,7 @@ const renderFiliteredProducts = (checkedFilters) =>{
 }
 
 const onPageLoad = () =>{
-    setPageTitle('Shop', 'shop page for Green Home Living');
+    setPageTitle('Shop', 'Shop page for Green Home Living');
     createNav().then(() =>{
         isNavSticky();
         createCategories();

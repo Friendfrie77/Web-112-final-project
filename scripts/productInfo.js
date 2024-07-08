@@ -417,14 +417,5 @@ productList.forEach(product =>{
     productMap[product.id] = product
 })
 
-const reviewCount = (id) =>{
-    let count = 0;
-    productReviews.forEach(review =>{
-        if(review.productId === id){
-            count ++
-        }
-    })
-    return count;
-}
 
-export {productList, productMap, productReviews, categoryList, reviewCount};
+export {productList, productMap, categoryList};

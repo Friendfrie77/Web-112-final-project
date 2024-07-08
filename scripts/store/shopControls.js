@@ -1,4 +1,4 @@
-import {productList, reviewCount, categoryList} from '../productInfo.js';
+import {productList, categoryList} from '../productInfo.js';
 import { getStars, maxPrice} from '../helpers.js';
 
 const createFieldSet = (id) =>{

@@ -1,0 +1,49 @@
+.reviews > .flex-row:first-child{
+    border: 1px solid $header-footer-color;
+    border-radius: 5px;
+    padding: 5px;
+}
+.expandReview{
+    margin-left: auto;
+}
+.review-box{
+    display: block;
+    border: 1px solid $header-footer-color;
+    border-radius: 5px;
+    padding: 5px;
+}
+.single-review{
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+
+.rating-text{
+    font-size: 3.3rem;
+    font-family: $h1-font;
+    margin-right: 10px;
+    display: inline-block;
+    height: 100;
+}
+.review-spread{
+    width: 40%;
+}
+
+.review-spread-wrapper{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+.review-spread-box{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+.spread-fill{
+    display: block;
+    background-color: $header-footer-color;
+    height: 100%;
+    border-radius: 5px;
+}

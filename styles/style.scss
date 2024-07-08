@@ -75,6 +75,19 @@ html, body{
     padding: 15px;
     border-radius: 5px;
 }
+.button{
+    background-color: transparent;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    height: fit-content;
+    padding: 10px;
+    color: $header-footer-color;
+    font-family: $h1-font;
+    &:hover{
+        background-color: $button-color;
+        color: #efefef;
+    }
+}
 @import './text/text';
 @import './layouts/layouts';
 
@@ -83,3 +96,4 @@ html, body{
 @import './wrappers';
 @import './store/store';
 @import './store/product';
+@import './store/productPage';
