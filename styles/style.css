@@ -178,69 +178,58 @@ html, body {
   color: #efefef;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Ubuntu", sans-serif;
-  color: black;
+.customer-test {
+  background-color: #2c6b2c;
+  width: 100%;
 }
 
-.hero-text {
-  font-size: var(--fs-hero-text);
-  text-shadow: 1px 1px 2px black;
+.customer-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+  background-color: red;
+}
+
+.testimony {
+  background-color: pink;
+}
+
+.hero-img-wrapper {
+  width: 100%;
+  height: 600px;
+  top: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.call-to-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.call-to-action span {
   color: white;
+  font-size: clamp(1.25rem, 5vw + 0.2rem, 1.5rem);
 }
 
-.header-text {
-  color: #2c6b2c;
-  font-size: 2rem;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-row-col {
-  display: flex;
-  flex-direction: row;
-}
-@media (max-width: 768px) {
-  .flex-row-col {
-    flex-direction: column;
-  }
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-content-center {
-  justify-content: center;
-}
-
-.flex-space-between {
-  justify-content: space-between;
-}
-
-.justify-content-start {
-  justify-content: start;
-}
-
-.justify-content-end {
-  justify-content: end;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-end {
-  align-items: end;
-}
-
-.flex-col-gap {
-  -moz-column-gap: 0.3rem;
-       column-gap: 0.3rem;
+.hero-link {
+  font-size: clamp(1.5rem, 5vw + 0.2rem, 1.9rem);
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px black;
 }
 
 .socialBar {
@@ -608,42 +597,69 @@ footer {
   color: #56B356;
 }
 
-.hero-img-wrapper {
-  width: 100%;
-  height: 600px;
-  top: 0;
-  overflow: hidden;
-  position: relative;
+h1, h2, h3, h4, h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: black;
 }
 
-.hero-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.call-to-action {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-.call-to-action span {
+.hero-text {
+  font-size: var(--fs-hero-text);
+  text-shadow: 1px 1px 2px black;
   color: white;
-  font-size: clamp(1.25rem, 5vw + 0.2rem, 1.5rem);
 }
 
-.hero-link {
-  font-size: clamp(1.5rem, 5vw + 0.2rem, 1.9rem);
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  border: 3px solid white;
-  border-radius: 2px;
-  box-shadow: 1px 1px 2px black;
+.header-text {
+  color: #2c6b2c;
+  font-size: 2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-col {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .flex-row-col {
+    flex-direction: column;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-content-center {
+  justify-content: center;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.flex-col-gap {
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
 }
 
 .content-wrapper {

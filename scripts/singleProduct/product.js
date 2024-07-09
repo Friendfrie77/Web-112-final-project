@@ -62,6 +62,9 @@ const createReviews = (product) =>{
     return reviewDiv;
 }
 
+const createSpecs = (product) =>{
+    
+}
 const createReviewSpread = (id) =>{
     const reviewSpreadResults = reviewSpread(id);
     const count = reviewCount(id);

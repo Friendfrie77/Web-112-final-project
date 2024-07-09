@@ -88,12 +88,8 @@ html, body{
         color: #efefef;
     }
 }
-@import './text/text';
+@import './indexPage/indexPage';
 @import './layouts/layouts';
-
-@import './nav';
-@import './hero';
-@import './wrappers';
 @import './store/store';
 @import './store/product';
 @import './store/productPage';

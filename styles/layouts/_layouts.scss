@@ -1,37 +1,5 @@
-.flex-row{
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-row-col{
-    display: flex;
-    flex-direction: row;
-    @include for-size(tablet-only){
-        flex-direction: column;
-    }
-}
-.flex-col{
-    display: flex;
-    flex-direction: column;
-}
-.flex-content-center{
-    justify-content: center;
-}
-.flex-space-between{
-    justify-content: space-between;
-}
-.justify-content-start{
-    justify-content: start;
-}
-.justify-content-end{
-    justify-content: end;
-}
-.align-items-center{
-    align-items: center;
-}
-.align-items-end{
-    align-items: end;
-}
-.flex-col-gap{
-    column-gap: .3rem;
-}
+@import 'hero';
+@import 'nav';
+@import 'text';
+@import 'utilityClasses';
+@import 'wrappers';
