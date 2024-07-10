@@ -1,5 +1,5 @@
+"use strict";
 import { maxPrice} from "../helpers.js";
-
 const updateRangeLables = (filteredPrice) =>{
     let price;
     const minSlider = document.querySelector('#min');

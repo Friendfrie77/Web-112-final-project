@@ -1,15 +1,16 @@
-.customer-test{
+.customer-testimony{
     background-color: $mid-green;
     width: 100%;
 }
-
 .customer-wrapper{
     max-width: 1400px;
     width: 100%;
     margin: auto;
-    background-color: red;
+    h1{
+        color: white;
+    }
 }
 
 .testimony{
-    background-color: pink;
+    color:$text-color
 }

@@ -1,5 +1,5 @@
+"use strict";
 const root = document.getElementById('root')
-
 const navBar = () =>{
     const socialBar = document.createElement('div');
     socialBar.className = 'socialBar';

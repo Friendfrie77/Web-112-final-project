@@ -1,5 +1,6 @@
-import { productMap} from "../productInfo.js";
-import {productReviews, reviewCount, reviewSpread} from "../productInfo/productReviews.js";
+"use strict";
+import {productMap} from '../../data/productInfo/productInfo.js'
+import {productReviews, reviewCount, reviewSpread} from "../../data/productInfo/productReviews.js";
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js"
 import { createNav } from "../nav.js";
 

@@ -1,7 +1,8 @@
+"use strict";
 import { createNav } from "../nav.js";
 import { setPageTitle, isNavSticky} from "../helpers.js";
 import {customerTestimony} from "../../data/customerTestimony.js"
-
+import { createCarousel, carouselButtons} from "../carousel/carousel.js";
 const heroImg = (wrapper) =>{
     return new Promise((resolve) =>{
         const heroImg = document.createElement('div');
@@ -75,7 +76,7 @@ const index = (wrapper) =>{
 
 const createCustomerSection = (wrapper) =>{
     const customerWrapper = document.createElement('div');
-    customerWrapper.classList = 'flex-row-col customer-test'
+    customerWrapper.classList = 'flex-row-col customer-testimony carousel-wrapper'
     customerWrapper.innerHTML =`
     <div class='customer-wrapper'>
         <h1>Find out what our customers are saying</h1>
@@ -86,21 +87,22 @@ const createCustomerSection = (wrapper) =>{
 
 const createCustomerTestimony = () =>{
     const wrapper = document.querySelector('.customer-wrapper');
-    console.log(wrapper)
-    const testimony = document.createElement('div')
-    testimony.classList = 'flex-row-col testimony'
-    testimony.innerHTML = `
-    ${customerTestimony.map(customer =>
-    `
-    <div class='flex-col align-items-center'>
-        <img src=${customer.headshot} width='200px' height='200px' alt='${customer.headshot}' />
-        <span><p>${customer.name}</p></span>
-        <p>${customer.testimony}</p>
-    </div>
-    `
-    ).join(' ')}
-    `
-    wrapper.append(testimony)
+    wrapper.append(createCarousel('customer', customerTestimony))
+    // const testimony = document.createElement('div')
+    // testimony.classList = 'flex-row-col testimony'
+    // testimony.innerHTML = `
+    // ${customerTestimony.map(customer =>
+    // `
+    // <div class='flex-col align-items-center'>
+    //     <img src=${customer.headshot} width='200px' height='200px' alt='${customer.headshot}' />
+    //     <span><p>${customer.name}</p></span>
+    //     <p>${customer.testimony}</p>
+    // </div>
+    // `
+    // ).join(' ')}
+    // `
+    // wrapper.append(testimony)
+    carouselButtons();
 }
 const createStoreCta = (wrapper) =>{
     const storeCta = document.createElement('div');

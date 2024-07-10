@@ -1,4 +1,5 @@
-import {productList, categoryList} from '../productInfo.js';
+"use strict";
+import {productList, categoryList} from '../../data/productInfo/productInfo.js'
 import { getStars, maxPrice} from '../helpers.js';
 
 const createFieldSet = (id) =>{

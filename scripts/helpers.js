@@ -1,4 +1,6 @@
-import { productList } from "./productInfo.js";
+"use strict";
+import {productList} from '../data/productInfo/productInfo.js'
+
 const setPageTitle = (title, description) =>{
     document.title = title;
     document.querySelector('meta[name="description"]').setAttribute('content', description)

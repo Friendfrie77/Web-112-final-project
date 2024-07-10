@@ -1,9 +1,10 @@
+"use strict";
 import { createNav } from "./nav.js";
 import { setPageTitle, isNavSticky, getStars, maxPrice} from "./helpers.js";
-import {productList, categoryList} from './productInfo.js';
 import {createStoreControls, expandEventListener, updateMenuForFilters} from "./store/shopControls.js";
 import { updateRangeLables } from "./store/priceSliderDisplayTag.js";
-import {reviewCount} from "./productInfo/productReviews.js";
+import {reviewCount} from "../data/productInfo/productReviews.js";
+import {productList, categoryList} from '../data/productInfo/productInfo.js'
 
 let checkedFilters = {
   categories: [],
