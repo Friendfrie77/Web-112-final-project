@@ -15,7 +15,8 @@ const productList = [
         discription: "This 20V Max cordless drill comes with a battery and charger. Weighing just 3 ½ pounds without the battery, it features three modes: standard drilling, masonry work, and screw driving with torque limiter. This versatile tool is essential for any project, from small home repairs to larger tasks.",
         rating: 4,
         img: "images/store/items/drill/drill_front.webp",
-        imgList:["images/store/items/drill/drill_front.webp", "images/store/items/drill/drill_side_branding.webp", "images/store/items/drill/drill_side_warning.webp"]
+        imgList:["images/store/items/drill/drill_front.webp", "images/store/items/drill/drill_side_branding.webp", "images/store/items/drill/drill_side_warning.webp"],
+        limit: 5,
     },
     {
         id: 1,

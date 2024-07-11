@@ -1,10 +1,10 @@
 "use strict";
-import { createNav } from "./nav.js";
-import { setPageTitle, isNavSticky, getStars, maxPrice} from "./helpers.js";
-import {createStoreControls, expandEventListener, updateMenuForFilters} from "./store/shopControls.js";
-import { updateRangeLables } from "./store/priceSliderDisplayTag.js";
-import {reviewCount} from "../data/productInfo/productReviews.js";
-import {productList, categoryList} from '../data/productInfo/productInfo.js'
+import { createNav } from "../nav.js";
+import { setPageTitle, isNavSticky, getStars, maxPrice} from "../helpers.js";
+import {createStoreControls, expandEventListener, updateMenuForFilters} from "./shopControls.js";
+import { updateRangeLables } from "./priceSliderDisplayTag.js";
+import {reviewCount} from "../../data/productInfo/productReviews.js";
+import {productList, categoryList} from '../../data/productInfo/productInfo.js'
 
 let checkedFilters = {
   categories: [],
@@ -75,7 +75,7 @@ const displayProducts=(filteredProducts) =>{
       productDiv.className = "store-product-flex";
       productDiv.innerHTML = `
                   <a href='product.html?id=${product.id}'">
-                    <img class='store-img' width='350px' height='350px' alt='${product.title}'>
+                    <img class='store-img' width='350px' height='350px' src='${product.img}' alt='${product.title}'>
                   </a>
                   <div class='product-text'>
                       <h1 class='sub-header'>${product.brand}</h1>

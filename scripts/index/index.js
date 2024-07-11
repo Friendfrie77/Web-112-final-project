@@ -88,20 +88,6 @@ const createCustomerSection = (wrapper) =>{
 const createCustomerTestimony = () =>{
     const wrapper = document.querySelector('.customer-wrapper');
     wrapper.append(createCarousel('customer', customerTestimony))
-    // const testimony = document.createElement('div')
-    // testimony.classList = 'flex-row-col testimony'
-    // testimony.innerHTML = `
-    // ${customerTestimony.map(customer =>
-    // `
-    // <div class='flex-col align-items-center'>
-    //     <img src=${customer.headshot} width='200px' height='200px' alt='${customer.headshot}' />
-    //     <span><p>${customer.name}</p></span>
-    //     <p>${customer.testimony}</p>
-    // </div>
-    // `
-    // ).join(' ')}
-    // `
-    // wrapper.append(testimony)
     carouselButtons();
 }
 const createStoreCta = (wrapper) =>{

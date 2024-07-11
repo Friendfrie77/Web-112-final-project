@@ -32,7 +32,9 @@ const createCarousel = (carouselType, imgSrc) =>{
         <div class = 'flex-col store-img-thumbnail'>
             ${imgSrc.imgList.map(imgSrc =>
                 `
-                <img class ='' src='${imgSrc}' width ='200px' height='200px' />
+                <div class='store-img-thumbnail-box'>
+                    <img class ='' src='${imgSrc}' width ='200px' height='200px' />
+                </div>
                 `
             ).join(' ')}
         </div>
@@ -42,8 +44,8 @@ const createCarousel = (carouselType, imgSrc) =>{
             <div class='carousel-inner' id='carousel-inner'>
                 ${imgSrc.imgList.map(imgSrc =>
                 `
-                <div class='slide'>
-                    <img src=${imgSrc} width='400px' height='400px' />
+                <div class='slide' style="background-color:red">
+                    <img src=${imgSrc} width='400px' height='400px' style="margin:auto"/>
                 </div>
                 `
                 ).join(' ')}
@@ -71,6 +73,6 @@ const carouselButtons = () =>{
 }
 
 
-test.append(createCarousel('store', product));
-carouselButtons()
+// test.append(createCarousel('store', product));
+// carouselButtons()
 export {createCarousel, carouselButtons}

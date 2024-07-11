@@ -2,11 +2,11 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    width: 100%;
 }
 
 .carousel-inner{
     width: 100%;
+    width: fit-content;
     display: flex;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -14,48 +14,56 @@
 }
 
 .slide{
-    width: 100%;
+    // width: 100%;
+    width: fit-content;
     height: 100%;
     flex: 1 0 100%;
 }
 
 .slide-customer{
     flex: 1 0 50%;
+    @include for-size(tablet-only){
+      flex:1 0 100%;
+    }
 }
 .customer-slide-headshot{
     flex: 0 0 50%;
 }
 .slide-arrow {
-    position: absolute;
-    display: flex;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 5rem;
-    background-color: $light-green;
-    color: $text-color;
-    border: none;
-    width: 2rem;
-    font-size: 3rem;
-    padding: 0;
-    cursor: pointer;
-    opacity: 0.1;
-    transition: opacity 100ms;
-  }
-  
-  .slide-arrow:hover,
-  .slide-arrow:focus {
-    opacity: 1;
-  }
-  
-  #slide-arrow-prev {
-    left: 0;
-    padding-left: 0.25rem;
-    border-radius: 0 2rem 2rem 0;
-  }
-  
-  #slide-arrow-next {
-    right: 0;
-    padding-left: 0.75rem;
-    border-radius: 2rem 0 0 2rem;
-  }
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 5rem;
+  background-color: $light-green;
+  color: $text-color;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.1;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.test{
+  width: 50%;
+}

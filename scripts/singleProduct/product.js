@@ -1,7 +1,8 @@
 "use strict";
 import {productMap} from '../../data/productInfo/productInfo.js'
 import {productReviews, reviewCount, reviewSpread} from "../../data/productInfo/productReviews.js";
-import {getStars, isNavSticky, setPageTitle} from "../helpers.js"
+import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
+import { createCarousel, carouselButtons} from '../carousel/carousel.js';
 import { createNav } from "../nav.js";
 
 const parseProductInfo = () =>{
@@ -14,16 +15,43 @@ const createProductPage = (product) =>{
     const productSection = document.createElement('section');
     productSection.className = 'content-wrapper';
     productSection.innerHTML = `
-    <h1>${product.brand} ${product.title}</h1>
-    <div class='discription'>
-        <h2>Discription:</h2>
-        <p>${product.discription}</p>
+    <div class='flex-row-col flex-col-gap-large margin-bottom-large'>
+        <div class='flex-col product-info-box'>
+            <h1>${product.brand} ${product.title}</h1>
+            <div class='product-imgs'>
+            </div>
+        </div>
+        <div class='flex-col test flex-row-gap-small'>
+            <div class='product-info-box flex-row flex-col-gap-large'>
+                <span class='header-text'>$${product.price}</span>
+                <div class='flex-col'>
+                    <p>limit ${product.limit} per order</p>
+                    <p>Stock: ${product.stock}</p>
+                </div>
+            </div>
+            <div class='discription product-info-box'>
+                <h2>Discription:</h2>
+                <p>${product.discription}</p>
+            </div>
+            <div class='product-info-box flex-row flex-content-center'>
+                <button class='button'>Add to Cart</button>
+            </div>
+        </div>
     </div>
     `
     productSection.append(createReviews(product))
     wrapper.append(productSection)
 }
 
+const addProductImgs = (product) =>{
+    const wrapper = document.querySelector('.product-imgs')
+    wrapper.append(createCarousel("store", product))
+    carouselButtons();
+}
+
+const createRecomended = () =>{
+
+}
 const writeReview = () =>{
     console.log('aaaa')
 }
@@ -33,7 +61,7 @@ const createReviews = (product) =>{
     const reviewDiv = document.createElement('div');
     reviewDiv.className = 'reviews'
     reviewDiv.innerHTML = `
-    <div class="flex-row">
+    <div class="flex-row box-shadow-gray">
         <h2>Reviews: ${getStars(product.rating)} <span class='reviewNumber'>${reviewCount(product.id)}</span></h2>
         <button class='expandReview' id='expandReview'><i class='fas fa-caret-down'></i></button>
     </div>
@@ -66,6 +94,7 @@ const createReviews = (product) =>{
 const createSpecs = (product) =>{
     
 }
+
 const createReviewSpread = (id) =>{
     const reviewSpreadResults = reviewSpread(id);
     const count = reviewCount(id);
@@ -98,6 +127,7 @@ const onPageLoad = () =>{
         isNavSticky();
         createProductPage(product);
         createReviewSpread(product.id)
+        addProductImgs(product)
     })
 }
 window.onload = onPageLoad;

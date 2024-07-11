@@ -1,16 +1,6 @@
 "use strict";
 const root = document.getElementById('root')
 const navBar = () =>{
-    const socialBar = document.createElement('div');
-    socialBar.className = 'socialBar';
-    socialBar.innerHTML = `
-        <i class="fas fa-phone-alt"> 000-000-0000</i>
-        <div class="social-icons">
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter social"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram social"></i></a>
-        </div>
-    `
     const nav = document.createElement('nav');
     nav.innerHTML = `
         <a href="index.html"><img class="logo" src="images/logo.svg" height="200px" width="200px" alt="company logo"></a>
@@ -29,10 +19,8 @@ const navBar = () =>{
             </li>
             <li><a class ='navLink' href="shop.html">Store</a></li>
             <li><a class ='navLink' href="about.html">About</a></li>
-            <li><a class ='navLink' href="contact.html">Contact</a></li>
         </ul>
     `
-    // root.append(socialBar)
     root.append(nav)
 }
 const contentDiv = () =>{
