@@ -14,8 +14,8 @@ const productList = [
         stock: 100,
         discription: "This 20V Max cordless drill comes with a battery and charger. Weighing just 3 ½ pounds without the battery, it features three modes: standard drilling, masonry work, and screw driving with torque limiter. This versatile tool is essential for any project, from small home repairs to larger tasks.",
         rating: 4,
-        img: "images/store/items/drill/drill_front.webp",
-        imgList:["images/store/items/drill/drill_front.webp", "images/store/items/drill/drill_side_branding.webp", "images/store/items/drill/drill_side_warning.webp"],
+        img: "images/store/items/tools/dewalt/DCD777B/drill_front.webp",
+        imgList:["images/store/items/tools/dewalt/DCD777B/drill_front.webp", "images/store/items/tools/dewalt/DCD777B/drill_side_branding.webp", "images/store/items/tools/dewalt/DCD777B/drill_side_warning.webp"],
         limit: 5,
     },
     {
@@ -27,7 +27,9 @@ const productList = [
         stock: 50,
         discription: "The Dewalt 20V Max Impact Driver offers high torque for driving screws and bolts with ease. This kit includes one battery and a charger. Ideal for heavy-duty fastening applications, it ensures you have the power you need to complete tough jobs efficiently.",
         rating: 5,
-        img: "images/store/items/impact-drill.webp"
+        img: "images/store/items/tools/dewalt/DCF885C1/full_kit.webp",
+        imgList:["images/store/items/tools/dewalt/DCF885C1/full_kit.webp","images/store/items/tools/dewalt/DCF885C1/drill.webp","images/store/items/tools/dewalt/DCF885C1/drill_with_text.webp"],
+        limit: 1
     },
     {
         id: 2,
