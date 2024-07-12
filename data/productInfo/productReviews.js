@@ -409,7 +409,6 @@ const reviewSpread = (id) =>{
     filteredReviews.forEach(review =>{
         reviewSpreadCount[review.rating] += 1
     })
-    console.log(reviewSpreadCount)
     return reviewSpreadCount
 }
 

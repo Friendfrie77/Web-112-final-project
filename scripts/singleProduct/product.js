@@ -1,5 +1,5 @@
 "use strict";
-import {productMap} from '../../data/productInfo/productInfo.js'
+import {productMap, productList} from '../../data/productInfo/productInfo.js'
 import {productReviews, reviewCount, reviewSpread} from "../../data/productInfo/productReviews.js";
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
 import { createCarousel, carouselButtons} from '../carousel/carousel.js';
@@ -40,6 +40,7 @@ const createProductPage = (product) =>{
     </div>
     `
     productSection.append(createReviews(product))
+    productSection.append(createRecommended(product))
     wrapper.append(productSection)
 }
 
@@ -49,8 +50,37 @@ const addProductImgs = (product) =>{
     carouselButtons();
 }
 
-const createRecomended = () =>{
-
+const createRecommended = (product) =>{
+    const similarProducts = productList.filter(products => products.category === product.category && products.id !== product.id)
+    const recommendedProducts = [];
+    for(let i = 0; i < 5; i++){
+        let randomNum = Math.floor(Math.random() * similarProducts.length)
+        console.log(randomNum)
+        console.log(similarProducts[randomNum])
+        recommendedProducts.push(similarProducts[randomNum]);
+        similarProducts.splice(randomNum, 1);
+    }
+    const recommendedDiv = document.createElement('div');
+    recommendedDiv.classList = 'flex-col product-info-box margin-top-large';
+    recommendedDiv.innerHTML = `
+    <h1>Recommended for you:</h1>
+    <div class='flex-row flex-col-gap-xlarge flex-content-center'>
+        ${recommendedProducts.map(product =>
+            `
+            <div class='flex-col'>
+                <img src=${product.img} width ='200px' height='200px' alt="${product.brand} ${product.title}" />
+                <span>${product.brand} ${product.title}</span>
+                <div class='flex-row'>
+                    <span>${getStars(product.id)} (${reviewCount(product.id)})</span>
+                </div>
+                <span>$${product.price}</span>
+            </div>
+            
+            `
+        ).join(' ')}
+    </div>
+    `
+    return recommendedDiv;
 }
 const writeReview = () =>{
     console.log('aaaa')
@@ -127,7 +157,7 @@ const onPageLoad = () =>{
         isNavSticky();
         createProductPage(product);
         createReviewSpread(product.id)
-        addProductImgs(product)
+        // addProductImgs(product)
     })
 }
 window.onload = onPageLoad;

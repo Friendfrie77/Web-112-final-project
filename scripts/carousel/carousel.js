@@ -4,7 +4,6 @@ import { productList } from "../../data/productInfo/productInfo.js";
 const testImg = ['images/headshots/placeholder-headshot-300x300.png', 'images/headshots/placeholder-headshot-300x300.png', 'images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png']
 const product = productList[0]
 const test = document.querySelector('#root')
-console.log(productList[0])
 const createCarousel = (carouselType, imgSrc) =>{
     const carouselWrapper = document.createElement('div');
     if(carouselType === 'customer'){
