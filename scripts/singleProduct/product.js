@@ -4,7 +4,7 @@ import {productReviews, reviewCount, reviewSpread} from "../../data/productInfo/
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
 import { createCarousel, carouselButtons} from '../carousel/carousel.js';
 import { createNav } from "../nav.js";
-
+import { createModal } from '../modal/modal.js';
 const parseProductInfo = () =>{
     const id = new URLSearchParams(window.location.search).get('id')
     return productMap[id]
@@ -21,7 +21,7 @@ const createProductPage = (product) =>{
             <div class='product-imgs'>
             </div>
         </div>
-        <div class='flex-col test flex-row-gap-small'>
+        <div class='flex-col product-info-wrapper flex-row-gap-small'>
             <div class='product-info-box flex-row flex-col-gap-large'>
                 <span class='header-text'>$${product.price}</span>
                 <div class='flex-col'>
@@ -34,7 +34,7 @@ const createProductPage = (product) =>{
                 <p>${product.discription}</p>
             </div>
             <div class='product-info-box flex-row flex-content-center'>
-                <button class='button'>Add to Cart</button>
+                <button class='button' id='add-to-cart'>Add to Cart</button>
             </div>
         </div>
     </div>
@@ -42,6 +42,7 @@ const createProductPage = (product) =>{
     productSection.append(createReviews(product))
     productSection.append(createRecommended(product))
     wrapper.append(productSection)
+    productSection.querySelector('#add-to-cart').onclick = () => createModal(product)
 }
 
 const addProductImgs = (product) =>{
@@ -55,8 +56,6 @@ const createRecommended = (product) =>{
     const recommendedProducts = [];
     for(let i = 0; i < 5; i++){
         let randomNum = Math.floor(Math.random() * similarProducts.length)
-        console.log(randomNum)
-        console.log(similarProducts[randomNum])
         recommendedProducts.push(similarProducts[randomNum]);
         similarProducts.splice(randomNum, 1);
     }
@@ -68,12 +67,14 @@ const createRecommended = (product) =>{
         ${recommendedProducts.map(product =>
             `
             <div class='flex-col'>
-                <img src=${product.img} width ='200px' height='200px' alt="${product.brand} ${product.title}" />
-                <span>${product.brand} ${product.title}</span>
-                <div class='flex-row'>
-                    <span>${getStars(product.id)} (${reviewCount(product.id)})</span>
-                </div>
-                <span>$${product.price}</span>
+                <a href='product.html?id=${product.id}'>
+                    <img src=${product.img} width ='200px' height='200px' alt="${product.brand} ${product.title}" />
+                    <span>${product.brand} ${product.title}</span>
+                    <div class='flex-row'>
+                        <span>${getStars(product.rating)} (${reviewCount(product.id)})</span>
+                    </div>
+                    <span>$${product.price}</span>
+                </a>
             </div>
             
             `
@@ -157,7 +158,7 @@ const onPageLoad = () =>{
         isNavSticky();
         createProductPage(product);
         createReviewSpread(product.id)
-        // addProductImgs(product)
+        addProductImgs(product)
     })
 }
 window.onload = onPageLoad;

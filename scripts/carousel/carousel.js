@@ -37,13 +37,13 @@ const createCarousel = (carouselType, imgSrc) =>{
                 `
             ).join(' ')}
         </div>
-        <div class='carousel-wrapper'>
+        <div class='carousel-wrapper flex-content-center flex-col'>
             <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
             <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
             <div class='carousel-inner' id='carousel-inner'>
                 ${imgSrc.imgList.map(imgSrc =>
                 `
-                <div class='slide' style="background-color:red">
+                <div class='slide'>
                     <img src=${imgSrc} width='400px' height='400px' style="margin:auto"/>
                 </div>
                 `

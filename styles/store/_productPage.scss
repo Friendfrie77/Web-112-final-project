@@ -66,3 +66,10 @@
         margin: 0px 0px 10px 0px
     }
 }
+
+.product-info-wrapper{
+    width: 50%;
+    @include for-size(tablet-only){
+        width: 100%;
+    }
+}
