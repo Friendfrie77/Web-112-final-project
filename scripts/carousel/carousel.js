@@ -1,9 +1,5 @@
 "use strict";
-import {customerTestimony} from "../../data/customerTestimony.js"
-import { productList } from "../../data/productInfo/productInfo.js";
-const testImg = ['images/headshots/placeholder-headshot-300x300.png', 'images/headshots/placeholder-headshot-300x300.png', 'images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png','images/headshots/placeholder-headshot-300x300.png']
-const product = productList[0]
-const test = document.querySelector('#root')
+import { createModal } from "../modal/modal.js";
 const createCarousel = (carouselType, imgSrc) =>{
     const carouselWrapper = document.createElement('div');
     if(carouselType === 'customer'){
@@ -26,17 +22,8 @@ const createCarousel = (carouselType, imgSrc) =>{
         </div>
         `
     }else if(carouselType === 'store'){
-        carouselWrapper.classList = 'flex-row'
+        carouselWrapper.classList = 'flex-col'
         carouselWrapper.innerHTML =`
-        <div class = 'flex-col store-img-thumbnail'>
-            ${imgSrc.imgList.map(imgSrc =>
-                `
-                <div class='store-img-thumbnail-box'>
-                    <img class ='' src='${imgSrc}' width ='200px' height='200px' />
-                </div>
-                `
-            ).join(' ')}
-        </div>
         <div class='carousel-wrapper flex-content-center flex-col'>
             <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
             <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
@@ -50,17 +37,27 @@ const createCarousel = (carouselType, imgSrc) =>{
                 ).join(' ')}
             </div>
         </div>
+        <div class ='flex-row store-img-thumbnail flex-space-even'>
+            ${imgSrc.imgList.map((imgSrc, index) =>
+                `
+                <button class='button-no-border store-img-thumbnail-box thumbnail-button-${index + 1}'>
+                    <img class ='' src='${imgSrc}' width ='100px' height='100px' />
+                </button>
+                `
+            ).join(' ')}
+        </div>
         `
+        pagination();
     }
     return carouselWrapper
 }
 
-const carouselButtons = () =>{
+const carouselButtons = (product) =>{
     const container = document.getElementById('carousel-inner');
     const slides = document.querySelector('.slide');
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    
+    container.onclick = () => createModal(product, 'pictureModal');
     nextButton.addEventListener('click', () =>{
         const slideWidth = slides.clientWidth;
         container.scrollLeft += slideWidth
@@ -71,6 +68,9 @@ const carouselButtons = () =>{
     });
 }
 
+const pagination = () =>{
+    
+}
 
 // test.append(createCarousel('store', product));
 // carouselButtons()

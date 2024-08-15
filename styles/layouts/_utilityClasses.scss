@@ -12,6 +12,11 @@
         flex-direction: column;
     }
 }
+.button-no-border{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 .red-backround{
     background-color: red;
 }

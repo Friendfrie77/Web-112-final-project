@@ -48,7 +48,7 @@ const createProductPage = (product) =>{
 const addProductImgs = (product) =>{
     const wrapper = document.querySelector('.product-imgs')
     wrapper.append(createCarousel("store", product))
-    carouselButtons();
+    carouselButtons(product);
 }
 
 const createRecommended = (product) =>{
@@ -84,7 +84,7 @@ const createRecommended = (product) =>{
     return recommendedDiv;
 }
 const writeReview = () =>{
-    console.log('aaaa')
+    createModal(false,'review')
 }
 
 const createReviews = (product) =>{
