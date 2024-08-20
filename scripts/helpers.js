@@ -62,6 +62,30 @@ const getStars = (productRating) => {
   return starsHTML;
 };
 
+const starRating = () =>{
+  let starHtml = document.createElement('div')
+  starHtml.classList = 'flex-row';
+  starHtml.setAttribute('id','rating-button-div')
+  starHtml.innerHTML = `
+  <button class='' id='star-1'><i class="far fa-star empty-star"></i></button>
+  <button class='' id='star-2'><i class="far fa-star empty-star"></i></button>
+  <button class='' id='star-3'><i class="far fa-star empty-star"></i></button>
+  <button class='' id='star-4'><i class="far fa-star empty-star"></i></button>
+  <button class='' id='star-5'><i class="far fa-star empty-star"></i></button>
+  `
+  return starHtml
+}
+
+const starRattingEventListner = (div) =>{
+  Array.from(div.children).forEach((button, index) =>{
+    button.onclick = () => starRatingButtonOnClick(index)
+  })
+}
+const starRatingButtonOnClick = (id) =>{
+
+  console.log(document.querySelector(`#star-${id+1}`))
+  console.log(id)
+}
 const maxPrice = (filterdproductList) =>{
   let maxPrice = 0;
   if(filterdproductList){
@@ -81,4 +105,4 @@ const maxPrice = (filterdproductList) =>{
   return maxPrice;
 }
 
-export {setPageTitle, isNavSticky, getStars, maxPrice}
+export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRattingEventListner}

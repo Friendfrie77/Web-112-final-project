@@ -26,7 +26,6 @@ const navBar = () =>{
 const contentDiv = () =>{
     const mainContent = document.createElement('div');
     mainContent.setAttribute('id', 'mainContent');
-
     root.append(mainContent)
 }
 const footer = () =>{

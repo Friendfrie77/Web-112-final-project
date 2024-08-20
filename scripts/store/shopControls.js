@@ -122,7 +122,6 @@ const createSeedRegion = (productList) =>{
     const wrapper = createFieldSet();
     let filteredList = productList.filter(product => product.category === 1).map(product => product.region);
     filteredList = [...new Set(filteredList)]
-    console.log(filteredList)
     wrapper.innerHTML = `
     <legend>Seed Region</legend>
     <div class='flex-col brand-container' id='region-div'>

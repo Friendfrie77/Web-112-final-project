@@ -1,4 +1,5 @@
 "use strict";
+import { starRating,starRattingEventListner } from "../helpers.js";
 const createModal = (product, type) =>{
     const wrapper = document.querySelector('#mainContent');
     const modal = document.createElement('div');
@@ -43,15 +44,28 @@ const modalInnerContent = (modal, product) =>{
 }
 
 const reviewInnerContent = (modal) =>{
-    console.log(modal)
     const innerModal = document.createElement('div');
     innerModal.classList ='innerModal flex-col'
     innerModal.innerHTML = `
     <div class='close-span flex-row justify-content-end'>
         <button id='close-modal'>X</button>
     </div>
+    <div class='flex-col'>
+        <h1>Write your review below</h1>
+        <div class='flex-col'>
+            <div id='star-rating'></div>
+            <form class='flex-row review-form'>
+                <input type='text' name='title'>
+                <label for='title'>Please title your review</label>
+                <textarea name='reivew'></textarea>
+                <label for='review'>Write your review below</label>
+            </form>
+        </div>
+    </div>
     `
+    innerModal.querySelector('#star-rating').append(starRating())
     modal.append(innerModal)
+    starRattingEventListner(innerModal.querySelector('#rating-button-div'))
     innerModal.querySelector('#close-modal').onclick = closeModal
 }
 const thumbnailOnClick = () =>{
