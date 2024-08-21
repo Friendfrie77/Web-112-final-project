@@ -1,0 +1,21 @@
+.review-input:focus, .review-textarea:focus{
+    @include inputFocus;
+} 
+
+.review-textarea{
+    height: 200px;
+}
+
+.star-button{
+    @include transparent-button;
+    i{
+        font-size: 2rem;
+    }
+}
+
+.review-form{
+    button{
+        width: 20%;
+        margin: 10px auto;
+    }
+}

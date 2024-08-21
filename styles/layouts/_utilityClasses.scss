@@ -63,3 +63,28 @@
 .margin-top-large{
     margin-top: 1rem
 }
+.padding-5px{
+    padding: 5px;
+}
+.button-link{
+    margin-top: 20px;
+    align-self: flex-start;
+    color: white;
+    background-color: $button-color;
+    font-size: 1.4rem;
+    padding: 15px;
+    border-radius: 5px;
+}
+.button{
+    background-color: transparent;
+    border: 1px solid $button-color;
+    border-radius: 5px;
+    height: fit-content;
+    padding: 10px;
+    color: $header-footer-color;
+    font-family: $h1-font;
+    &:hover{
+        background-color: $button-color;
+        color: #efefef;
+    }
+}

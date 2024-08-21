@@ -24,3 +24,14 @@
       @media(min-width: 3000px) {@content;}
     }
   }
+
+  @mixin inputFocus{
+    border-color: $header-footer-color;
+    outline: none;
+    box-shadow: 0 0 3px $header-footer-color;
+  }
+
+  @mixin transparent-button{
+    border: none;
+    background-color: transparent;
+  }

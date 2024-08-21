@@ -4,7 +4,7 @@ import {productReviews, reviewCount, reviewSpread} from "../../data/productInfo/
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
 import { createCarousel, carouselButtons} from '../carousel/carousel.js';
 import { createNav } from "../nav.js";
-import { createModal } from '../modal/modal.js';
+import { createModal , closeModal} from '../modal/modal.js';
 const parseProductInfo = () =>{
     const id = new URLSearchParams(window.location.search).get('id')
     return productMap[id]
@@ -86,7 +86,14 @@ const createRecommended = (product) =>{
 const writeReview = () =>{
     createModal(false,'review')
 }
-
+const reviewOnSubmit = (event) =>{
+    event.preventDefault();
+    const product = parseProductInfo()
+    const reviewData = new FormData(event.target);
+    console.log(reviewData.get('title'))
+    console.log('test')
+    closeModal();
+}
 const createReviews = (product) =>{
     const reviews = productReviews.filter(review => review.productId === product.id);
     const reviewDiv = document.createElement('div');
@@ -162,3 +169,4 @@ const onPageLoad = () =>{
     })
 }
 window.onload = onPageLoad;
+export {reviewOnSubmit}

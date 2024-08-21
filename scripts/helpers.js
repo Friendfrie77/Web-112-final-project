@@ -64,14 +64,17 @@ const getStars = (productRating) => {
 
 const starRating = () =>{
   let starHtml = document.createElement('div')
-  starHtml.classList = 'flex-row';
+  starHtml.classList = 'flex-col';
   starHtml.setAttribute('id','rating-button-div')
   starHtml.innerHTML = `
-  <button class='' id='star-1'><i class="far fa-star empty-star"></i></button>
-  <button class='' id='star-2'><i class="far fa-star empty-star"></i></button>
-  <button class='' id='star-3'><i class="far fa-star empty-star"></i></button>
-  <button class='' id='star-4'><i class="far fa-star empty-star"></i></button>
-  <button class='' id='star-5'><i class="far fa-star empty-star"></i></button>
+  <span>Overall rating</span>
+  <div class='flex-row'>
+    <button class='star-button' id='star-1'><i class="far fa-star empty-star"></i></button>
+    <button class='star-button' id='star-2'><i class="far fa-star empty-star"></i></button>
+    <button class='star-button' id='star-3'><i class="far fa-star empty-star"></i></button>
+    <button class='star-button' id='star-4'><i class="far fa-star empty-star"></i></button>
+    <button class='star-button' id='star-5'><i class="far fa-star empty-star"></i></button>
+  </div>
   `
   return starHtml
 }

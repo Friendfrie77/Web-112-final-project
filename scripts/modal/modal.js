@@ -1,5 +1,6 @@
 "use strict";
 import { starRating,starRattingEventListner } from "../helpers.js";
+import { reviewOnSubmit } from "../singleProduct/product.js";
 const createModal = (product, type) =>{
     const wrapper = document.querySelector('#mainContent');
     const modal = document.createElement('div');
@@ -50,24 +51,31 @@ const reviewInnerContent = (modal) =>{
     <div class='close-span flex-row justify-content-end'>
         <button id='close-modal'>X</button>
     </div>
-    <div class='flex-col'>
-        <h1>Write your review below</h1>
+    <h1>Write your review below</h1>
+    <div class='flex-col padding-5px'>
         <div class='flex-col'>
             <div id='star-rating'></div>
-            <form class='flex-row review-form'>
-                <input type='text' name='title'>
-                <label for='title'>Please title your review</label>
-                <textarea name='reivew'></textarea>
-                <label for='review'>Write your review below</label>
+            <form class='flex-col review-form'>
+                <div class='flex-col'>
+                    <label for='title'>Please title your review</label>
+                    <input class='review-input' type='text' name='title' placeholder="What's the most important to know?">
+                </div>
+                <div class='flex-col'>
+                    <label for='review'>Write your review below</label>
+                    <textarea class='review-textarea' name='reivew' placeholder="What did you like or dislike about the product?"5></textarea>
+                </div>
+                <button class='button' type='submit'>Submit</button>
             </form>
         </div>
     </div>
     `
     innerModal.querySelector('#star-rating').append(starRating())
+    innerModal.querySelector('.review-form').onsubmit = reviewOnSubmit;
     modal.append(innerModal)
     starRattingEventListner(innerModal.querySelector('#rating-button-div'))
     innerModal.querySelector('#close-modal').onclick = closeModal
 }
+
 const thumbnailOnClick = () =>{
     const thumbnails = document.querySelectorAll('.thumbnail');
     thumbnails.forEach((pics)=>{
@@ -86,4 +94,4 @@ const thumbnailClicked = (pics, id) =>{
     pics.closest('div').classList = 'thumbnail-box-selected'
     mainPicture.src = pics.src;
 }
-export {createModal}
+export {createModal, closeModal}

@@ -153,31 +153,6 @@ html, body {
   text-shadow: 1px 1px 1px black;
 }
 
-.button-link {
-  margin-top: 20px;
-  align-self: flex-start;
-  color: white;
-  background-color: #5B8266;
-  font-size: 1.4rem;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.button {
-  background-color: transparent;
-  border: 1px solid #5B8266;
-  border-radius: 5px;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 10px;
-  color: #31572C;
-  font-family: "Ubuntu", sans-serif;
-}
-.button:hover {
-  background-color: #5B8266;
-  color: #efefef;
-}
-
 .customer-testimony {
   background-color: #2c6b2c;
   width: 100%;
@@ -704,6 +679,35 @@ h1, h2, h3, h4, h5 {
   margin-top: 1rem;
 }
 
+.padding-5px {
+  padding: 5px;
+}
+
+.button-link {
+  margin-top: 20px;
+  align-self: flex-start;
+  color: white;
+  background-color: #5B8266;
+  font-size: 1.4rem;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #5B8266;
+  border-radius: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  color: #31572C;
+  font-family: "Ubuntu", sans-serif;
+}
+.button:hover {
+  background-color: #5B8266;
+  color: #efefef;
+}
+
 .content-wrapper {
   max-width: 1440px;
   display: flex;
@@ -1009,6 +1013,29 @@ h1, h2, h3, h4, h5 {
 
 .test {
   width: 50%;
+}
+
+.review-input:focus, .review-textarea:focus {
+  border-color: #31572C;
+  outline: none;
+  box-shadow: 0 0 3px #31572C;
+}
+
+.review-textarea {
+  height: 200px;
+}
+
+.star-button {
+  border: none;
+  background-color: transparent;
+}
+.star-button i {
+  font-size: 2rem;
+}
+
+.review-form button {
+  width: 20%;
+  margin: 10px auto;
 }
 
 .modal {
