@@ -90,6 +90,7 @@ const reviewOnSubmit = (event) =>{
     event.preventDefault();
     const product = parseProductInfo()
     const reviewData = new FormData(event.target);
+    addReviews(reviewData)
     console.log(reviewData.get('title'))
     console.log('test')
     closeModal();
@@ -123,12 +124,24 @@ const createReviews = (product) =>{
             <p>${review.review}</p>
         </div>
         `).join('')}
+    </div>
     `
     reviewDiv.querySelector('#expandReview').onclick = expandReviews;
     reviewDiv.querySelector('#writeReview').onclick = writeReview;
     return reviewDiv;
 }
-
+const addReviews = (review) => {
+    console.log(review)
+    const newReview = document.createElement('div');
+    newReview.className ='single-review';
+    newReview.innerHTML=`
+        <h3>${review.get('title')}</h3>
+        ${getStars(parseInt(review.get('selected-star-rating')))}
+        <p>${review.get('review')}</p>
+    `
+    console.log(newReview)
+    document.querySelector('#review-box').append(newReview)
+}
 const createSpecs = (product) =>{
     
 }

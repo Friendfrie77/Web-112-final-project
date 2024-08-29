@@ -65,10 +65,9 @@ const getStars = (productRating) => {
 const starRating = () =>{
   let starHtml = document.createElement('div')
   starHtml.classList = 'flex-col';
-  starHtml.setAttribute('id','rating-button-div')
   starHtml.innerHTML = `
   <span>Overall rating</span>
-  <div class='flex-row'>
+  <div class='flex-row' id='rating-button-div'>
     <button class='star-button' id='star-1'><i class="far fa-star empty-star"></i></button>
     <button class='star-button' id='star-2'><i class="far fa-star empty-star"></i></button>
     <button class='star-button' id='star-3'><i class="far fa-star empty-star"></i></button>
@@ -79,15 +78,35 @@ const starRating = () =>{
   return starHtml
 }
 
-const starRattingEventListner = (div) =>{
+const starRateingEventListner = (div) =>{
   Array.from(div.children).forEach((button, index) =>{
     button.onclick = () => starRatingButtonOnClick(index)
+    button.onmouseover = () => starRatingHover(index);
+    button.onmouseleave = () => resetStarRating(index)
   })
 }
-const starRatingButtonOnClick = (id) =>{
 
-  console.log(document.querySelector(`#star-${id+1}`))
-  console.log(id)
+const starRatingHover = (id) =>{
+  for(let i = 0; i <= id; i++){
+    document.querySelector(`#star-${i+1}`).innerHTML=`
+      <i class="fas fa-star filled-stars"></i>
+    `
+  }
+}
+const resetStarRating = (id) =>{
+  for(let i = 0; i <= id; i++){
+    document.querySelector(`#star-${i+1}`).innerHTML=`
+      <i class="far fa-star empty-star"></i>
+    `
+  }
+}
+const starRatingButtonOnClick = (id) =>{
+  for(let i = 0; i <= id; i++){
+    document.querySelector(`#star-${i+1}`).innerHTML=`
+      <i class="fas fa-star filled-stars"></i>
+    `
+  }
+  document.querySelector('#selected-star-rating').value = id+1
 }
 const maxPrice = (filterdproductList) =>{
   let maxPrice = 0;
@@ -108,4 +127,4 @@ const maxPrice = (filterdproductList) =>{
   return maxPrice;
 }
 
-export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRattingEventListner}
+export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRateingEventListner}

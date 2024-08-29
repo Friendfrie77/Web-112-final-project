@@ -862,6 +862,10 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
 }
 
+.star-button {
+  cursor: pointer;
+}
+
 .reviews > .flex-row:first-child {
   border: 1px solid #31572C;
   border-radius: 5px;
