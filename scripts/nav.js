@@ -19,6 +19,7 @@ const navBar = () =>{
             </li>
             <li><a class ='navLink' href="shop.html">Store</a></li>
             <li><a class ='navLink' href="about.html">About</a></li>
+            <li><a class ='navLink' href='cart.html'><i class="fa-solid fa-cart-shopping"></i></li></a></li>
         </ul>
     `
     root.append(nav)

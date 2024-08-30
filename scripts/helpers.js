@@ -92,6 +92,11 @@ const starRatingHover = (id) =>{
       <i class="fas fa-star filled-stars"></i>
     `
   }
+  for(let i = 4; i > id; i--){
+    document.querySelector(`#star-${i+1}`).innerHTML=`
+      <i class="far fa-star empty-star"></i>
+    `
+  }
 }
 const resetStarRating = (id) =>{
   for(let i = 0; i <= id; i++){
