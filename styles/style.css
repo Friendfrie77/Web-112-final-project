@@ -113,7 +113,8 @@ body {
 
 #root {
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   position: relative;
   align-self: center;
   grid-template-areas: "nav" "content" "footer";
@@ -123,12 +124,8 @@ body {
   flex-grow: 1;
 }
 
-.content-wrapper {
-  grid-area: "content";
-}
-
 html, body {
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
   font-family: "Lato", sans-serif;
 }
 
@@ -671,12 +668,20 @@ h1, h2, h3, h4, h5 {
   row-gap: 0.5rem;
 }
 
+.flex-row-gap-large {
+  row-gap: 1rem;
+}
+
+.flex-row-gap-xlarge {
+  row-gap: 2rem;
+}
+
 .margin-bottom-large {
   margin-bottom: 1rem;
 }
 
 .margin-top-large {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .padding-5px {
@@ -710,8 +715,11 @@ h1, h2, h3, h4, h5 {
 
 .content-wrapper {
   max-width: 1440px;
+  grid-area: "content";
+  width: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   margin: auto;
   margin-bottom: 10px;
   padding: 5px;
@@ -727,6 +735,52 @@ h1, h2, h3, h4, h5 {
   flex-direction: row;
   gap: 10px;
   justify-content: space-evenly;
+}
+
+.purchase-amount-wrapper {
+  padding: 5px;
+  border: 0.5px #5B8266 solid;
+  border-radius: 5px;
+}
+
+.input-purchase-amount {
+  border-radius: 5px;
+  border: transparent;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: center;
+  height: 100%;
+  width: 40px;
+  color: #31572C;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.purchase-amount-button {
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px #5B8266 solid;
+  cursor: pointer;
+}
+.purchase-amount-button:hover {
+  background-color: #5B8266;
+}
+.purchase-amount-button:hover i {
+  color: white;
+}
+.purchase-amount-button i {
+  color: #5B8266;
+}
+.purchase-amount-button:disabled {
+  border: 1px solid rgba(91, 130, 102, 0.5);
+  cursor: not-allowed;
+}
+.purchase-amount-button:disabled:hover {
+  background-color: transparent;
+}
+.purchase-amount-button:disabled i {
+  color: rgba(91, 130, 102, 0.5);
 }
 
 .store-product-flex {
@@ -1096,4 +1150,13 @@ h1, h2, h3, h4, h5 {
 #close-modal:hover {
   cursor: pointer;
   border: 0.5px solid rgba(128, 128, 128, 0.5);
+}
+
+.cart-page-section {
+  background-color: white;
+  border-radius: 5px;
+  min-width: 75%;
+  padding: 5px;
+  box-shadow: gray 1px 1px 3px;
+  min-height: 100px;
 }/*# sourceMappingURL=style.css.map */

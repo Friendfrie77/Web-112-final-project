@@ -57,11 +57,17 @@
 .flex-row-gap-small{
     row-gap: .5rem;
 }
+.flex-row-gap-large{
+    row-gap: 1rem;
+}
+.flex-row-gap-xlarge{
+    row-gap: 2rem;
+}
 .margin-bottom-large{
     margin-bottom: 1rem;
 }
 .margin-top-large{
-    margin-top: 1rem
+    margin-top: 1rem !important;
 }
 .padding-5px{
     padding: 5px;

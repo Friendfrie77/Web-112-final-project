@@ -5,6 +5,7 @@ import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
 import { createCarousel, carouselButtons} from '../carousel/carousel.js';
 import { createNav } from "../nav.js";
 import { createModal , closeModal} from '../modal/modal.js';
+import { addToCart,purchaseAmountIncrease, purchaseAmountDecrease, checkButtonState, inputMaxMin} from '../cart/cartHelpers.js';
 const parseProductInfo = () =>{
     const id = new URLSearchParams(window.location.search).get('id')
     return productMap[id]
@@ -13,6 +14,7 @@ const parseProductInfo = () =>{
 const createProductPage = (product) =>{
     const wrapper = document.querySelector('#mainContent');
     const productSection = document.createElement('section');
+    const maxPurchase = Math.min(product.limit, product.stock)
     productSection.className = 'content-wrapper';
     productSection.innerHTML = `
     <div class='flex-row-col flex-col-gap-large margin-bottom-large'>
@@ -33,7 +35,12 @@ const createProductPage = (product) =>{
                 <h2>Discription:</h2>
                 <p>${product.discription}</p>
             </div>
-            <div class='product-info-box flex-row flex-content-center'>
+            <div class='product-info-box flex-row flex-content-center flex-col-gap-large'>
+                <div class='purchase-amount-wrapper'>
+                    <button class='purchase-amount-button' id='purchase-amount-decrease'><i class="fa-solid fa-minus"></i></button>
+                    <input class='input-purchase-amount' type='number' id='purchase-amount' name='purchase-amount' min='1' max='${maxPurchase}' value='1'/>
+                    <button class='purchase-amount-button' id='purchase-amount-increase'><i class="fa-solid fa-plus"></i></button>
+                </div>
                 <button class='button' id='add-to-cart'>Add to Cart</button>
             </div>
         </div>
@@ -42,7 +49,19 @@ const createProductPage = (product) =>{
     productSection.append(createReviews(product))
     productSection.append(createRecommended(product))
     wrapper.append(productSection)
-    productSection.querySelector('#add-to-cart').onclick = () => createModal(product)
+    /*
+        function calls for dealing with cart functionality
+        checkButtonState checkes if a button needs to be disabled or enabled on load.
+    */
+    const productAmount = productSection.querySelector('#purchase-amount');
+    const increaseBtn =  productSection.querySelector('#purchase-amount-increase');
+    const decreaseBtn = productSection.querySelector('#purchase-amount-decrease');
+    productSection.querySelector('#add-to-cart').onclick = () => addToCart(product.id, parseInt(productAmount.value))
+    productAmount.addEventListener('input', () => inputMaxMin(productAmount))
+    productAmount.addEventListener('blur', () => inputMaxMin(productAmount))
+    increaseBtn.onclick = () => purchaseAmountIncrease(productAmount);
+    decreaseBtn.onclick  = () => purchaseAmountDecrease(productAmount)
+    checkButtonState(productAmount, increaseBtn)
 }
 
 const addProductImgs = (product) =>{

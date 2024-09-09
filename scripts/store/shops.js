@@ -88,10 +88,18 @@ const displayProducts=(filteredProducts) =>{
                           <span>${getStars(product.rating)}</span>
                           <span>${reviewCount(product.id)}</span>
                       </div>
+                      <div class='flex-row flex-col-gap-large'>
+                        <div class='purchase-amount-wrapper'>
+                          <button class='purchase-amount-button' id='purchase-amount-decrease'><i class="fa-solid fa-minus"></i></button>
+                          <input class='input-purchase-amount' type='number' id='purchase-amount' name='purchase-amount' min='1' max='${Math.min(product.limit, product.stock)}' value='1'/>
+                          <button class='purchase-amount-button' id='purchase-amount-increase'><i class="fa-solid fa-plus"></i></button>
+                        </div>
                         ${product.stock != 0
                           ? `<button class='product-button'>Add to Cart</button>`
                           : `<button class='product-button no-stock' disabled>Out of Stock</button>`
                         }
+
+                      </div>
                   </div>
           `;
       tempWrapper.append(productDiv)

@@ -7,3 +7,46 @@
     justify-content: space-evenly;
 }
 
+.purchase-amount-wrapper{
+    padding: 5px;
+    border: .5px $button-color solid;
+    border-radius: 5px;
+}
+.input-purchase-amount{
+    border-radius: 5px;
+    border: transparent;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    text-align: center;
+    height: 100%;
+    width: 40px;
+    color: $header-footer-color;
+    font-family: $h1-font;
+}
+.purchase-amount-button{
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px $button-color solid;
+    cursor: pointer;
+    &:hover{
+        background-color: $button-color;
+        i{
+            color: white;
+        }
+    }
+    i{
+        color: $button-color;
+    }
+    &:disabled{
+        border: 1px solid rgba(91, 130, 102, .5);
+        cursor: not-allowed ;
+        &:hover{
+            background-color: transparent;
+        }
+        i{
+            color:rgba(91, 130, 102, .5);
+        }
+    }
+}
