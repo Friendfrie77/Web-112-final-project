@@ -51,7 +51,8 @@ const productList = [
         stock: 150,
         discription: "Extend your tool usage with the Dewalt 20V Max Spare Battery Pack. This high-capacity lithium-ion battery provides longer run time, ensuring less downtime on your projects. Compatible with all Dewalt 20V Max tools.",
         rating: 4,
-        img: "images/store/items/battery.webp"
+        img: "images/store/items/battery.webp",
+        limit: 5
     },
     {
         id: 4,

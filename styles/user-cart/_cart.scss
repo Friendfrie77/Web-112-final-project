@@ -6,3 +6,21 @@
     box-shadow: gray 1px 1px 3px;
     min-height: 100px;
 }
+
+.price-span{
+    flex-grow: 1;
+    text-align: end;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#user-cart input[type='submit']{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: $mid-green;
+    &:hover{
+        text-decoration: underline;
+    }
+}

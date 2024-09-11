@@ -612,7 +612,7 @@ h1, h2, h3, h4, h5 {
   cursor: pointer;
 }
 
-.red-backround {
+.red-background {
   background-color: red;
 }
 
@@ -647,6 +647,10 @@ h1, h2, h3, h4, h5 {
 
 .align-items-end {
   align-items: end;
+}
+
+.align-self-start {
+  align-self: flex-start;
 }
 
 .flex-col-gap {
@@ -688,6 +692,10 @@ h1, h2, h3, h4, h5 {
   padding: 5px;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
 .button-link {
   margin-top: 20px;
   align-self: flex-start;
@@ -727,6 +735,43 @@ h1, h2, h3, h4, h5 {
 
 .store-wrapper {
   flex-direction: row;
+}
+
+.custom-checkbox-wrapper input[type=checkbox] {
+  display: none;
+}
+
+.custom-checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px #5B8266 soild;
+  border-radius: 5px;
+  background-color: lightgray;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox-wrapper input[type=checkbox]:checked + .custom-checkbox {
+  background-color: #5B8266;
+}
+
+.custom-checkbox-wrapper input[type=checkbox]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .product-grid {
@@ -1159,4 +1204,22 @@ h1, h2, h3, h4, h5 {
   padding: 5px;
   box-shadow: gray 1px 1px 3px;
   min-height: 100px;
+}
+
+.price-span {
+  flex-grow: 1;
+  text-align: end;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#user-cart input[type=submit] {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #2c6b2c;
+}
+#user-cart input[type=submit]:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
