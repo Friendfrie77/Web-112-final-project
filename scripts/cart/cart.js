@@ -2,21 +2,14 @@
 import { productList } from "../../data/productInfo/productInfo.js";
 import { createNav } from "../nav.js";
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
-import { updateTotalPrice, shoppingCartHeader} from "./cartHelpers.js";
+import { updateTotalPrice, shoppingCartHeader, removeFromCart, getCartContents} from "./cartHelpers.js";
 import { selectAllInputListener, checkBoxListener} from "./cartEventListeners.js";
 /*
 save user cart in sessionStorage 
 load cart 
 */
 // sessionStorage.clear();
-//check if item has the stock
 
-const getCartContents = () => {
-    if(sessionStorage.getItem('cart')){
-        return JSON.parse(sessionStorage.getItem('cart'))
-    }
-    return null
-}
 const createCartPage = () =>{
     const wrapper = document.querySelector('#mainContent');
     const cartWrapper = document.createElement('section');
@@ -55,9 +48,11 @@ const populateCart = () =>{
             for (let i = 1; i <= Math.min(product.limit, product.stock); i++){
                 if(i == Object.values(element)){
                     quantityOptions += `<option value=${i} selected>Qty: ${i}</option>`
+                }else{
+                    quantityOptions += `<option value=${i}>Qty: ${i}</option>`
                 }
-                quantityOptions += `<option value=${i}>Qty: ${i}</option>`
             }
+            console.log(quantityOptions)
             const tempDiv = document.createElement('div');
             tempDiv.classList ='padding-5px'
             tempDiv.innerHTML = `
@@ -78,7 +73,7 @@ const populateCart = () =>{
                                 <option value='0'>0 (delete)</option>
                                 ${quantityOptions}
                             </select>
-                            <input type='submit' value='Delete'/>
+                            <input type='submit' id='delete-button-${product.id}' value='Delete'/>
                             <input type='submit' value='Save for later'/>
                         </div>
                     </div>
@@ -86,23 +81,18 @@ const populateCart = () =>{
                 </div>
                 <hr />
             `
-        wrapper.append(tempDiv)
+            //event listners for the select delete and save for later
+            wrapper.append(tempDiv)
+            document.querySelector(`#delete-button-${product.id}`).addEventListener('click', () => removeFromCart(product.id))
         });
         shoppingCartHeader()
         updateTotalPrice(cart)
         selectAllInputListener()
     }
-    document.querySelector('#uncheckAll').addEventListener('click', uncheckAll )
 }
 
 
-const uncheckAll = () =>{
-    const checkBox = document.querySelectorAll('.custom-checkbox-wrapper input')
-    checkBox.forEach(e =>{
-        e.checked = false
-    })
-    updateTotalPrice()
-}
+
 const onPageLoad = () =>{
     setPageTitle('Shoping cart', 'Site cart')
     createNav().then(() =>{
@@ -114,7 +104,7 @@ const onPageLoad = () =>{
 }
 window.onload = onPageLoad
 
-
+export {populateCart}
 
 
 // const test = [{1:2}, {2:20}]

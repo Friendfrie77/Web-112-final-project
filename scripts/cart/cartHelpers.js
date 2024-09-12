@@ -1,23 +1,32 @@
 "use strict"
 import { productList } from "../../data/productInfo/productInfo.js";
 import { selectAllInputListener } from "./cartEventListeners.js";
+import { populateCart } from "./cart.js";
+
 const addToCart = (id, amount) =>{
     let currentCart = {};
     if(!sessionStorage.getItem('cart')){
         currentCart = [{[id] : amount}];
     }else{
-        currentCart = JSON.parse(sessionStorage.getItem('cart'));
+        currentCart = getCartContents();
         let foundItem = currentCart.find(p => p.hasOwnProperty(id.toString()))
         if(!foundItem){
             currentCart.push({[id]:amount})
         }else{
-            console.log(parseInt(foundItem[id]) + amount)
             foundItem[id] = parseInt(foundItem[id] + amount)
         }
     }
     sessionStorage.setItem('cart', JSON.stringify(currentCart))
 
 }
+const removeFromCart = (id) =>{
+    let cart = getCartContents();
+    let foundItem = cart.find(e => e.hasOwnProperty(id.toString()))
+    cart = cart.filter(e => e !== foundItem)
+    sessionStorage.setItem('cart', JSON.stringify(cart))
+    populateCart()
+}
+
 
 const getSaveForLater = () => {
     if(sessionStorage.getItem('saveForLater')){
@@ -34,15 +43,23 @@ const getCartContents = () => {
 }
 
 const checkButtonState = (inputSelector) =>{
+    let increaseBtn, decreaseBtn;
     const currentVal = parseInt(inputSelector.value);
     const maxVal = parseInt(inputSelector.max);
     const minVal = parseInt(inputSelector.min)
-    const increaseBtn = document.querySelector('#purchase-amount-increase')
-    const decreaseBtn = document.querySelector('#purchase-amount-decrease')
+    if(inputSelector.id == 'purchase-amount'){
+        increaseBtn = document.querySelector('#purchase-amount-increase')
+        decreaseBtn = document.querySelector('#purchase-amount-decrease')
+    }else{
+        let productId = inputSelector.id.split('-')[2]
+        increaseBtn = document.querySelector(`#purchase-amount-increase-${productId}`)
+        decreaseBtn = document.querySelector(`#purchase-amount-decrease-${productId}`)
+    }
     if(increaseBtn){
         if(currentVal === maxVal){
             increaseBtn.disabled = true
-        }else{
+        }
+        else{
             increaseBtn.disabled = false
         }
     }
@@ -56,9 +73,11 @@ const checkButtonState = (inputSelector) =>{
 }
 
 const inputMaxMin = (inputSelector) =>{
+    console.log('test')
     let currentVal = parseInt(inputSelector.value)
     const maxVal = parseInt(inputSelector.max)
     const minVal = parseInt(inputSelector.min)
+    console.log(currentVal, maxVal, minVal)
     if(currentVal >= maxVal){
         inputSelector.value = maxVal;
     }
@@ -69,6 +88,7 @@ const inputMaxMin = (inputSelector) =>{
 
 }
 const purchaseAmountIncrease = (inputSelector) =>{
+    console.log(inputSelector)
     let currentVal = parseInt(inputSelector.value);
     inputSelector.value = currentVal + 1;
     checkButtonState(inputSelector)
@@ -121,10 +141,10 @@ const shoppingCartHeader = () =>{
     let input;
     for(let i = 0; i < checkBox.length; i++){
         if(!checkBox[i].checked){
-            input = `<input class='align-self-start' type='submit' id='uncheckAll' value='Select all items'>`
+            input = `<input class='align-self-start' type='submit' id='shop-header-button' name='checkAll' value='Select all items'>`
             break
         }if(i == (checkBox.length -1)){
-            input = `<input class='align-self-start' type='submit' id='uncheckAll' value='Uncheck all'></input>`
+            input = `<input class='align-self-start' type='submit' id='shop-header-button' name='uncheckAll' value='Uncheck all'></input>`
         }
     }
     document.querySelector('#cart-header').innerHTML =`
@@ -133,19 +153,23 @@ const shoppingCartHeader = () =>{
             <p class='text-align-right'>Price</p>
             <hr style='width:100%;'>
     `
-
+    selectAllInputListener()
 }
 
 const uncheckAll = (checked) =>{
     const checkBox = document.querySelectorAll('.custom-checkbox-wrapper input')
+    const cart = getCartContents()
     checkBox.forEach(e =>{
         if(checked){
             e.checked = false
+            updateTotalPrice()
         }else{
-            e.checked
+            e.checked = true
+            updateTotalPrice(cart)
         }
     })
     selectAllInputListener()
-    updateTotalPrice()
 }
-export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents}
+
+
+export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents, removeFromCart}

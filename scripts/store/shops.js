@@ -5,6 +5,7 @@ import {createStoreControls, expandEventListener, updateMenuForFilters} from "./
 import { updateRangeLables } from "./priceSliderDisplayTag.js";
 import {reviewCount} from "../../data/productInfo/productReviews.js";
 import {productList, categoryList} from '../../data/productInfo/productInfo.js'
+import { addToCart, purchaseAmountIncrease, purchaseAmountDecrease, checkButtonState, inputMaxMin} from "../cart/cartHelpers.js";
 
 let checkedFilters = {
   categories: [],
@@ -90,9 +91,9 @@ const displayProducts=(filteredProducts) =>{
                       </div>
                       <div class='flex-row flex-col-gap-large'>
                         <div class='purchase-amount-wrapper'>
-                          <button class='purchase-amount-button' id='purchase-amount-decrease'><i class="fa-solid fa-minus"></i></button>
-                          <input class='input-purchase-amount' type='number' id='purchase-amount' name='purchase-amount' min='1' max='${Math.min(product.limit, product.stock)}' value='1'/>
-                          <button class='purchase-amount-button' id='purchase-amount-increase'><i class="fa-solid fa-plus"></i></button>
+                          <button class='purchase-amount-button' id='purchase-amount-decrease-${product.id}'><i class="fa-solid fa-minus"></i></button>
+                          <input class='input-purchase-amount' type='number' id='purchase-amount-${product.id}' name='purchase-amount' min='1' max='${Math.min(product.limit, product.stock)}' value='1'/>
+                          <button class='purchase-amount-button' id='purchase-amount-increase-${product.id}'><i class="fa-solid fa-plus"></i></button>
                         </div>
                         ${product.stock != 0
                           ? `<button class='product-button'>Add to Cart</button>`
@@ -102,7 +103,16 @@ const displayProducts=(filteredProducts) =>{
                       </div>
                   </div>
           `;
+      const productAmount = productDiv.querySelector(`#purchase-amount-${product.id}`);
+      const increaseBtn = productDiv.querySelector(`#purchase-amount-increase-${product.id}`);
+      const decreaseBtn = productDiv.querySelector(`#purchase-amount-decrease-${product.id}`);
+      productDiv.querySelector('.product-button').addEventListener('click', () => addToCart(product.id, productAmount.value))
+      productAmount.addEventListener('input', () => inputMaxMin(productAmount))
+      productAmount.addEventListener('blur', () => inputMaxMin(productAmount))
+      increaseBtn.onclick = () => purchaseAmountIncrease(productAmount);
+      decreaseBtn.onclick  = () => purchaseAmountDecrease(productAmount)
       tempWrapper.append(productDiv)
+      checkButtonState(productAmount)
   })
 }
 

@@ -61,7 +61,7 @@ const createProductPage = (product) =>{
     productAmount.addEventListener('blur', () => inputMaxMin(productAmount))
     increaseBtn.onclick = () => purchaseAmountIncrease(productAmount);
     decreaseBtn.onclick  = () => purchaseAmountDecrease(productAmount)
-    checkButtonState(productAmount, increaseBtn)
+    checkButtonState(productAmount)
 }
 
 const addProductImgs = (product) =>{
