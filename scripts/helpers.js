@@ -131,5 +131,16 @@ const maxPrice = (filterdproductList) =>{
   }
   return maxPrice;
 }
-
-export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRateingEventListner}
+const randomNum = (maxNum) =>{
+  return Math.floor(Math.random() * maxNum)
+}
+const heroImgElement = (imgURL, CTA) =>{
+  const heroImg = document.createElement('div');
+  heroImg.classList = 'hero-img-wrapper';
+  heroImg.innerHTML = `
+    <img class='hero-img' src = ${imgURL} />
+  `
+  CTA ? heroImg.appendChild(CTA) : null
+  return heroImg
+}
+export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRateingEventListner, heroImgElement, randomNum}

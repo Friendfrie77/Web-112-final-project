@@ -2,26 +2,27 @@
 import { productList } from "../../data/productInfo/productInfo.js";
 import { createNav } from "../nav.js";
 import {getStars, isNavSticky, setPageTitle} from "../helpers.js";
-import { updateTotalPrice, shoppingCartHeader, removeFromCart, getCartContents} from "./cartHelpers.js";
+import { updateTotalPrice, shoppingCartHeader, removeFromCart, getCartContents, getSaveForLater} from "./cartHelpers.js";
 import { selectAllInputListener, checkBoxListener} from "./cartEventListeners.js";
 /*
-save user cart in sessionStorage 
-load cart 
+combine save for later and recomanded
 */
 // sessionStorage.clear();
 
 const createCartPage = () =>{
     const wrapper = document.querySelector('#mainContent');
     const cartWrapper = document.createElement('section');
-    cartWrapper.classList = 'content-wrapper align-items-center margin-top-large'
+    cartWrapper.classList = 'content-wrapper align-items-center margin-top-large flex-row-gap-large'
     const cartSection = document.createElement('div');
     cartSection.setAttribute('id','user-cart')
     cartSection.classList = 'cart-page-section flex-col flex-row-gap-xlarge'
     const recommendedSection = document.createElement('div');
     recommendedSection.classList = 'cart-page-section'
     const saveForLater = document.createElement('div');
-    
+    saveForLater.setAttribute('id', 'user-save-for-later')
+    saveForLater.classList = 'cart-page-section flex-col flex-row-gap-xlarge'
     cartWrapper.append(cartSection)
+    cartWrapper.append(saveForLater)
     // wrapper.append(recommendedSection)
     wrapper.append(cartWrapper)
 }
@@ -29,6 +30,17 @@ const createCartPage = () =>{
 
 
 */
+
+const populateSaveForLater = () =>{
+    const saveForLater = getSaveForLater();
+    const wrapper = document.querySelector('#user-save-for-later')
+    if(!saveForLater || saveForLater.length === 0){
+        wrapper.innerHTML = `
+            <h1>You are not currently saving anything for later</h1>
+            <p>You can add anything to this list by simply clicking the button on any product</p>
+        `
+    }
+}
 const populateCart = () =>{
     const cart = getCartContents();
     const wrapper = document.querySelector('#user-cart');
@@ -99,6 +111,7 @@ const onPageLoad = () =>{
         isNavSticky();
         createCartPage()
         populateCart()
+        populateSaveForLater()
         checkBoxListener()
     })
 }

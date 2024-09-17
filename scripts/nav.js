@@ -25,7 +25,7 @@ const navBar = () =>{
     root.append(nav)
 }
 const contentDiv = () =>{
-    const mainContent = document.createElement('div');
+    const mainContent = document.createElement('main');
     mainContent.setAttribute('id', 'mainContent');
     root.append(mainContent)
 }
@@ -37,9 +37,9 @@ const footer = () =>{
         <div class="footer-social">
             <h1>Follow us here!</h1>
             <div class='social-links'>
-                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter social"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram social"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <div class="newsletter">

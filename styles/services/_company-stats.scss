@@ -1,0 +1,28 @@
+.company-stats{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    span:first-of-type{
+        font-size: var(--fs-header-text);
+        color: white;
+        font-weight: bold;
+        font-family: inherit;
+    }
+    hr{
+        width: 1rem;
+        color: white;
+    }
+    span:nth-of-type(2){
+        color:rgba(255,255,255, .7);
+        font-size: 1.5rem;
+    }
+}

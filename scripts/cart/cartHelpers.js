@@ -172,4 +172,4 @@ const uncheckAll = (checked) =>{
 }
 
 
-export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents, removeFromCart}
+export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents, getSaveForLater, removeFromCart}

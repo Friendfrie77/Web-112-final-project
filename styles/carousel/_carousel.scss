@@ -29,6 +29,14 @@
 .customer-slide-headshot{
     flex: 0 0 50%;
 }
+.carousel-inner .filled-stars{
+  color: white;
+  font-size: 23px;
+}
+.carousel-inner .empty-star{
+  color: white;
+  font-size: 23px;
+}
 .slide-arrow {
   position: absolute;
   display: flex;

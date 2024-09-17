@@ -1,5 +1,6 @@
 "use strict";
 import { createModal } from "../modal/modal.js";
+import {getStars} from "../helpers.js"
 const createCarousel = (carouselType, imgSrc) =>{
     const carouselWrapper = document.createElement('div');
     if(carouselType === 'customer'){
@@ -15,7 +16,10 @@ const createCarousel = (carouselType, imgSrc) =>{
                     <img src=${imgSrc.headshot} width='200px' height='200px' alt='${imgSrc.name}'/>
                     <span><p>${imgSrc.name}</p></span>
                 </div>
-                <p>${imgSrc.testimony}</p>
+                <div class='flex-col'>
+                    <p>${imgSrc.testimony}</p>
+                    <span>${getStars(imgSrc.starRating)}<span>
+                </div>
             </div>
             `
         ).join(' ')}
@@ -57,7 +61,7 @@ const carouselButtons = (product) =>{
     const slides = document.querySelector('.slide');
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    container.onclick = () => createModal(product, 'pictureModal');
+    product ? container.onclick = () => createModal(product, 'pictureModal') : null;
     nextButton.addEventListener('click', () =>{
         const slideWidth = slides.clientWidth;
         container.scrollLeft += slideWidth
