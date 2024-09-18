@@ -37,6 +37,15 @@ const solarServicesData = {
         ]
       }
     ],
+    "solarCleaning": {
+      "title": "Solar Panel Cleaning",
+      "description": "Keep your solar panels operating at peak efficiency with our professional cleaning services. Dust, dirt, and debris can reduce the effectiveness of your panels. Our cleaning service ensures they remain clear and able to capture the maximum amount of sunlight.",
+      "key-Benefits": [
+        "Maximize solar energy output",
+        "Prolong the lifespan of your panels",
+        "Improve system efficiency by removing dirt and debris"
+      ]
+    },
     "callToAction": "Ready to switch to solar? Contact us today for a free consultation and find the perfect solution for your home or business."
   }
 
