@@ -1,0 +1,32 @@
+.service-img-arry{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    @include for-size(small-desktop){
+        flex-direction: column;
+    }
+    @include for-size(tablet-only){
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.text{
+    width: 60%;
+    @include for-size(tablet-only){
+        width: 100%;
+    }
+}
+
+.img-first {
+    @include for-size(tablet-only){
+        flex-direction: column-reverse;
+    }
+}
+.service-img{
+    margin: auto;
+}

@@ -1273,4 +1273,44 @@ h1, h2, h3, h4, h5 {
 .stats span:nth-of-type(2) {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
+}
+
+.service-img-arry {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 1300px) {
+  .service-img-arry {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .service-img-arry {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.text {
+  width: 60%;
+}
+@media (max-width: 768px) {
+  .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-first {
+    flex-direction: column-reverse;
+  }
+}
+
+.service-img {
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

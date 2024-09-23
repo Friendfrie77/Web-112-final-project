@@ -3,7 +3,7 @@ import {isNavSticky, setPageTitle, heroImgElement} from "../../helpers.js";
 import { createNav } from "../../nav.js";
 import {solarCustomerTestimony} from "../../../data/customerTestimony.js"
 import {createCarousel, carouselButtons} from "../../carousel/carousel.js"
-import { serviceStats, serviceSections, customerRatings, } from "../service_helpers.js";
+import { serviceStats, serviceSectionImg, customerRatings, serviceSectiontxt, serviceSectionCTA} from "../service_helpers.js";
 import { solarServicesData } from "../../../data/pageCopy/pageCopy.js";
 //need to fix buttons to work with all the sections
 const solarHero = () =>{
@@ -20,29 +20,19 @@ const createSolarPage = () =>{
    wrapper.append(solarHero())
    wrapper.append(solarInstall())
    wrapper.append(installRatings())
-   wrapper.append(solarCleaning())
-   wrapper.append(cleaningRatings())
-   wrapper.append(repairRatings())
+   // wrapper.append(solarCleaning())
+   // wrapper.append(cleaningRatings())
+   // wrapper.append(repairRatings())
    carouselButtons()
 }
 const solarInstall = () =>{
    const wrapper = document.createElement('section')
    wrapper.classList = 'content-wrapper'
-   solarServicesData.solarServices.forEach( (e, i) =>{
-      const textContent = document.createElement('div')
-      const placeholder = 'images/headshots/placeholder-headshot-300x300.png'
-      textContent.innerHTML = `
-         <h1>${e.title}</h1>
-         <p>${e.description}</p>
-         ${e["advantages"] || e['key-Benefits'] || e["ideal-For"] || e['key-Features'] ? `
-            ${e["advantages"] ? `<ul aria-label = 'Advantages'>${e["advantages"].map(e => `<li>${e}</li>`).join('')}` : ''}
-            ${e['key-Benefits'] ? `<ul aria-label = 'Key Benefits'>${e['key-Benefits'].map(e => `<li>${e}</li>`).join('')}` : ''}
-            ${e["ideal-For"] ? `<ul aria-label = 'Ideal for'>${e["ideal-For"].map(e => `<li>${e}</li>`).join('')}` : ''}
-            ${e['key-Features']  ? `<ul aria-label = 'Key Features'>${e['key-Features'] .map(e => `<li>${e}</li>`).join('')}` : ''}
-         ` : ''}
-      `
-      wrapper.append(serviceSections(i, false, textContent, placeholder))
-   })
+   const gridType =  solarServicesData.solarServices.filter(e => e.category === 'gridType')
+   const defaultCatagory = solarServicesData.solarServices.filter(e => e.category === 'default')
+   wrapper.append(serviceSectionImg(defaultCatagory))
+   wrapper.append(serviceSectiontxt(gridType))
+   wrapper.append(installCTA())
    return wrapper
 }
 
@@ -55,6 +45,10 @@ const installRatings = () =>{
    return wrapper
 }
 
+const installCTA = () =>{
+   const e = solarServicesData.solarServices.filter(e => e.category === 'CTA');
+   return serviceSectionCTA(e);
+}
 const solarCleaning = () =>{
    const wrapper = document.createElement('section')
    wrapper.classList = 'content-wrapper'
