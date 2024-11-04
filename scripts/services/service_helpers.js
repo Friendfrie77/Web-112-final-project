@@ -15,28 +15,62 @@ const serviceStats = (isRandom,maxNum,bottomText) =>{
 }
 
 
+// const serviceSectionImg = (arry) =>{
+//     const mainWrapper = document.createElement('div');
+//     mainWrapper.classList = 'flex-col'
+//     if(arry.length){
+//         arry.forEach((e, i) => {
+//             const wrapper = document.createElement('div');
+//             if(i % 2 === 0){
+//                 wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even'
+//                 wrapper.append(serviceSectionTextLoop(e))
+//                 wrapper.append(serviceSectionImgLoop(e))
+//             }else{
+//                 wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even img-first'
+//                 wrapper.append(serviceSectionImgLoop(e))
+//                 wrapper.append(serviceSectionTextLoop(e))
+//             }
+//             mainWrapper.append(wrapper)
+//         })
+//     }else{
+//         const wrapper = document.createElement('div');
+//         wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even'
+//         wrapper.append(serviceSectionTextLoop(arry))
+//         wrapper.append(serviceSectionImgLoop(arry))
+//         mainWrapper.append(wrapper)
+//     }
+//     return mainWrapper;
+
+// }
 const serviceSectionImg = (arry) =>{
     const mainWrapper = document.createElement('div');
     mainWrapper.classList = 'flex-col'
-    arry.forEach((e, i) => {
+    if(arry.length){
+        arry.forEach((e, i) => {
+            const wrapper = document.createElement('div');
+            if(i % 2 === 0){
+                wrapper.classList = 'flex-col margin-bottom-large flex-space-even img-first'
+                wrapper.append(serviceSectionTextLoop(e))
+                wrapper.append(serviceSectionImgLoop(e))
+            }else{
+                wrapper.classList = 'flex-col margin-bottom-large flex-space-even img-first'
+                wrapper.append(serviceSectionImgLoop(e))
+                wrapper.append(serviceSectionTextLoop(e))
+            }
+            mainWrapper.append(wrapper)
+        })
+    }else{
         const wrapper = document.createElement('div');
-        if(i % 2 === 0){
-            wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even'
-            wrapper.append(serviceSectionTextLoop(e))
-            wrapper.append(serviceSectionImgLoop(e))
-        }else{
-            wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even img-first'
-            wrapper.append(serviceSectionImgLoop(e))
-            wrapper.append(serviceSectionTextLoop(e))
-        }
+        wrapper.classList = 'flex-row-col margin-bottom-large flex-space-even'
+        wrapper.append(serviceSectionTextLoop(arry))
+        wrapper.append(serviceSectionImgLoop(arry))
         mainWrapper.append(wrapper)
-    })
+    }
     return mainWrapper;
 
 }
 
 const serviceSectiontxt = (arry) => {
-    console.log(arry)
     const wrapper = document.createElement('div');
     wrapper.classList ='flex-row'
     arry.forEach(e => {
@@ -49,7 +83,7 @@ const serviceSectionTextLoop = (e) =>{
     const tempWrapper = document.createElement('div');
     tempWrapper.classList = 'text'
     tempWrapper.innerHTML = `
-        <h1>${e.title}</h1>
+        <h1 class='header'>${e.title}</h1>
         <p>${e.description}</p>
         <ul aria-lable = '${e.ulTitle}'>
             ${e.ulContent.map(e => `<li>${e}</li>`).join('')}
@@ -63,7 +97,7 @@ const serviceSectionImgLoop = (e) =>{
     if(typeof e.img === 'string'){
         tempWrapper.classList = `service-img`
         tempWrapper.innerHTML = `
-            <img src='${e.img}' />
+            <img src='${e.img}'  />
         `
     }else{
         tempWrapper.classList = `service-img-arry`
@@ -79,16 +113,17 @@ const serviceSectionImgLoop = (e) =>{
     return tempWrapper
 }
 
-const serviceSectionCTA = (e) =>{
-    console.log(e)
+const serviceSectionCTA = (e,contact) =>{
     const wrapper = document.createElement('div');
     wrapper.innerHTML = `
     <hr />
-    <h1>${e[0].title}</h1>
+    <h1 class='header'>${e[0].title}</h1>
     <p>${e[0].description}</p>
     `
+    contact ? wrapper.appendChild(contact) : null;
     return wrapper;
 }
+
 const customerRatings = (testimony, service, serviceCTA) =>{
     const filteredTestimony = testimony.filter(e => e.serviceUsed === `${service}`)
     const wrapper = document.createElement('div')

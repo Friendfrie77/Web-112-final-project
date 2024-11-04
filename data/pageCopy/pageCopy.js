@@ -1,4 +1,10 @@
 const solarServicesData = {
+  "header":[
+    {
+      'title': 'Comprehensive Solar Solutions for Maximum Efficiency',
+      'description': "Unlock the full potential of solar energy for your home or business. From expert installation to professional cleaning and reliable repair services, we offer everything you need to ensure maximum efficiency and long-term performance.",
+    }
+  ],
   "solarServices": [
     {
       "title": "Solar Panels Installation",
@@ -9,11 +15,7 @@ const solarServicesData = {
         "Environmentally friendly energy",
         "Increase property value"
       ],
-      "img": [
-        "images/services/solar/installation/installation-thumbnail-1.webp",
-        "images/services/solar/installation/installation-thumbnail-1.webp",
-        "images/services/solar/installation/installation-thumbnail-1.webp"
-      ],
+      "img": "images/services/solar/installation/solar_1.jpg",
       "category": "default"
     },
     {
@@ -64,7 +66,9 @@ const solarServicesData = {
       "Maximize solar energy output",
       "Prolong the lifespan of your panels",
       "Improve system efficiency by removing dirt and debris"
-    ]
+    ],
+    "img": "images/services/solar/installation/solar-bottom-hero.webp",
+    "category": "default"
   },
   "callToAction": "Ready to switch to solar? Contact us today for a free consultation and find the perfect solution for your home or business."
 }

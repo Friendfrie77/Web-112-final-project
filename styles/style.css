@@ -1305,6 +1305,9 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+.img-first {
+  flex-direction: column-reverse;
+}
 @media (max-width: 768px) {
   .img-first {
     flex-direction: column-reverse;
@@ -1313,4 +1316,9 @@ h1, h2, h3, h4, h5 {
 
 .service-img {
   margin: auto;
+  background-color: red;
+}
+
+.header {
+  font-size: var(--fs-header-text);
 }/*# sourceMappingURL=style.css.map */

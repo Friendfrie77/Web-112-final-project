@@ -134,13 +134,14 @@ const maxPrice = (filterdproductList) =>{
 const randomNum = (maxNum) =>{
   return Math.floor(Math.random() * maxNum)
 }
-const heroImgElement = (imgURL, CTA) =>{
+const heroImgElement = (imgURL, CTA, links) =>{
   const heroImg = document.createElement('div');
   heroImg.classList = 'hero-img-wrapper';
   heroImg.innerHTML = `
     <img class='hero-img' src = ${imgURL} />
   `
   CTA ? heroImg.appendChild(CTA) : null
+  links ? heroImg.appendChild(links) : null
   return heroImg
 }
 export {setPageTitle, isNavSticky, getStars, maxPrice, starRating, starRateingEventListner, heroImgElement, randomNum}

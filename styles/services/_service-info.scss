@@ -23,10 +23,15 @@
 }
 
 .img-first {
+    flex-direction: column-reverse;
     @include for-size(tablet-only){
         flex-direction: column-reverse;
     }
 }
 .service-img{
     margin: auto;
+    background-color: red;
+}
+.header {
+    font-size: var( --fs-header-text);
 }

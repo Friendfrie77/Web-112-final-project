@@ -22,7 +22,7 @@ const createCategories = (id) =>{
     <legend>Categories</legend>
      ${Object.entries(categoryList).map(([key, value]) =>
       `<div>
-        <input type='checkbox' id=${key} name='categories' value=${key}/>
+        <input type='checkbox' id=${key} name='categories' value=${key}>
         <lable for=${key}>${value}</lable>
       </div>`
      ).join('')}
@@ -51,22 +51,43 @@ const createPriceRange = () =>{
 
 const createManufacture = (filteredProducts) =>{
     const wrapper = document.querySelector('#brand-controls') ? document.querySelector('#brand-controls') : createFieldSet('brand-controls');
-    let manufactureList = filteredProducts.map(product => product.brand)
-    manufactureList = [...new Set(manufactureList)]
-    wrapper.innerHTML = `
-    <legend>Manufacture</legend>
-    <div class='flex-col brand-container' id='brand-div'>
-        ${manufactureList.map(brand =>
+    let manufactureList = filteredProducts.map(product => ({brand: product.brand, category:product.category}))
+    const uniqueBrands = new Set();
+    const test = manufactureList.filter(product =>{
+        if(uniqueBrands.has(product.brand)) return false;
+        uniqueBrands.add(product.brand);
+    })
+    // manufactureList = Array.from(new Set(manufactureList.map(item => JSON.stringify(item)))).map(item => JSON.parse(item))
+    console.log(manufactureList)
+    console.log(uniqueBrands)
+    wrapper.innerHTML =`
+        <legend>Manufacture</legend>
+        ${Object.entries(categoryList).map(([k,v]) =>
             `
-            <div class='flex-row'>
-                <input type='checkbox' name='brand' value='${brand}'/>
-                <lable>${brand}</lable>       
+            <div id = 'cat-${k}'>
+                <h1>${v}</h1>
             </div>
             `
         ).join('')}
-    </div>
-    <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
     `
+    console.log(manufactureList)
+    // manufactureList.map((brand, cat) =>
+    //     console.log(cat)
+    // )
+    // wrapper.innerHTML = `
+    // <legend>Manufacture</legend>
+    // <div class='flex-col brand-container' id='brand-div'>
+    //     ${manufactureList.map(brand =>
+    //         `
+    //         <div class='flex-row'>
+    //             <input type='checkbox' name='brand' value='${brand}'/>
+    //             <lable>${brand}</lable>       
+    //         </div>
+    //         `
+    //     ).join('')}
+    // </div>
+    // <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
+    // `
     return wrapper;
 }
 
@@ -84,7 +105,7 @@ const expandRegionList = () =>{
     button.innerHTML = button.innerHTML.includes(`See more`) ? `&#8896<span>Close</span>` : `&#8897<span>See more</span>`
 }
 const expandEventListener = () =>{
-    document.querySelector('#brand-div-button').addEventListener('click', expandBrandList)
+    // document.querySelector('#brand-div-button').addEventListener('click', expandBrandList)
     document.querySelector('#region-div-button').addEventListener('click', expandRegionList)
 }
 const createAvgCustomerReview = () =>{
@@ -147,30 +168,9 @@ const filterBrands = (filteredProducts) =>{
 }
 
 const updateMenuForFilters = (filteredProducts, divID) =>{
-    console.log(filteredProducts)
-    // const menuToChange = document.querySelector(`#${divID}`);
-    // menuToChange.innerHTML = ``;
-    // let filterList;
-    // let name;
-    // if(divID === 'region-div'){
-    //     filteredList = filteredProducts.filter(product => product.category === 1).map(product => product.region);
-    //     filteredList = [...new Set(filteredList)];
-    //     name = 'region'
-    // }else if(divID === 'brand-div'){
-    //     filterList = filteredProducts.map(product => product.brand);
-    //     filterList = [...new Set(manufactureList)];
-    //     name = 'brand'
-    // }
-    // menuToChange.innerHTML = `
-    // ${filteredList.map( change =>
-    //     `
-    //     <div class='flex-row'>
-    //         <input type='checkbox' name=${name} value=${change} />
-    //         <lable for='region'>${change}</lable>
-    //     </div>
-    //     `
-    // ).join(' ')}
-    // `;
+    console.log('aaaa')
+    
+    console.log(document.getElementById('cat-1'))
 }
 
 const createStoreControls = () =>{

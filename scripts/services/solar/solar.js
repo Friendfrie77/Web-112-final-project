@@ -13,17 +13,29 @@ const solarHero = () =>{
    heroCTA.innerHTML = `
       <h1 class='hero-text'>Solar Services</h1>
    `
+   const heroLinks = document.createElement('div')
+   heroLinks.classList = 'quick-links'
+
    return heroImgElement(heroImgLink, heroCTA)
 }
 const createSolarPage = () =>{
    const wrapper = document.querySelector('#mainContent');
    wrapper.append(solarHero())
+   wrapper.append(solarHeader())
    wrapper.append(solarInstall())
    wrapper.append(installRatings())
-   // wrapper.append(solarCleaning())
-   // wrapper.append(cleaningRatings())
+   wrapper.append(solarCleaning())
+   wrapper.append(cleaningRatings())
    // wrapper.append(repairRatings())
    carouselButtons()
+}
+
+const solarHeader = () =>{
+   const wrapper = document.createElement('section')
+   wrapper.classList = 'content-wrapper'
+   // console.log(solarServicesData.header)
+   wrapper.append(serviceSectionCTA(solarServicesData.header))
+   return wrapper
 }
 const solarInstall = () =>{
    const wrapper = document.createElement('section')
@@ -41,28 +53,20 @@ const installRatings = () =>{
    const stats = wrapper.querySelector('.company-stats')
    stats.append(serviceStats(false, 3, 'Years of Install'))
    stats.append(serviceStats(true, 450, 'Homes worth of Pannels Installed'))
-   
    return wrapper
 }
 
 const installCTA = () =>{
    const e = solarServicesData.solarServices.filter(e => e.category === 'CTA');
+   const contactButton = document.createElement('div')
+
    return serviceSectionCTA(e);
 }
 const solarCleaning = () =>{
    const wrapper = document.createElement('section')
    wrapper.classList = 'content-wrapper'
-   const solarCleaning =  solarServicesData.solarCleaning
-   const placeholder = 'images/headshots/placeholder-headshot-300x300.png'
-   const textContent = document.createElement('div')
-   textContent.innerHTML = `
-         <h1>${solarCleaning.title}</h1>
-         <p>${solarCleaning.description}</p>
-         ${solarCleaning['key-Benefits'] ? `<ul aria-label = 'Key Benefits'>${solarCleaning['key-Benefits'].map(e => `<li>${e}</li>`).join('')}` : ''}
-
-      `
-   wrapper.append(serviceSections(2, false, textContent, placeholder))
-
+   // const content = solarServicesData.solarCleaning.filter(e =>e.category === 'default')
+   wrapper.append(serviceSectionImg(solarServicesData.solarCleaning))
    return wrapper
 }
 
