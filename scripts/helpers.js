@@ -116,7 +116,7 @@ const starRatingButtonOnClick = (id) =>{
 const maxPrice = (filterdproductList) =>{
   let maxPrice = 0;
   if(filterdproductList){
-    console.log(filterdproductList)
+    // console.log(filterdproductList)
     if(filterdproductList.categories.length != 0){
       filterdproductList.forEach(product =>{
         maxPrice = product.price > maxPrice ? product.price : maxPrice;

@@ -2,10 +2,10 @@
 import { createNav } from "../nav.js";
 import { setPageTitle, isNavSticky, getStars, maxPrice} from "../helpers.js";
 import {createStoreControls, expandEventListener, updateMenuForFilters} from "./shopControls.js";
-import { updateRangeLables } from "./priceSliderDisplayTag.js";
+import { updateRangeLables} from "./priceSliderDisplayTag.js";
 import {reviewCount} from "../../data/productInfo/productReviews.js";
 import {productList, categoryList} from '../../data/productInfo/productInfo.js'
-import { addToCart, purchaseAmountIncrease, purchaseAmountDecrease, checkButtonState, inputMaxMin} from "../cart/cartHelpers.js";
+import { addToCart, purchaseAmountIncrease, purchaseAmountDecrease, checkButtonState, inputMaxMin, storePageAddToCart} from "../cart/cartHelpers.js";
 
 let checkedFilters = {
   categories: [],
@@ -22,6 +22,7 @@ const createCategories = (id) =>{
   if(!document.querySelector('.content-wrapper')){
     const index = document.createElement('section');
     index.className = 'content-wrapper store-wrapper';
+    index.setAttribute('id', 'topOfPage')
     index.append(createStoreControls());
     const storeWrapper = document.createElement('div')
     Object.entries(categoryList).forEach(([key, value]) => {
@@ -65,7 +66,7 @@ const addAdditionalControls = () =>{
   //adding in controls based off what categories are selected
 }
 
-const displayProducts=(filteredProducts) =>{
+const displayProducts = (filteredProducts) =>{
   Object.values(categoryList).forEach(category => {
     const tempWrapper = document.getElementById(category);
     tempWrapper.innerHTML = '';
@@ -96,7 +97,7 @@ const displayProducts=(filteredProducts) =>{
                           <button class='purchase-amount-button' id='purchase-amount-increase-${product.id}'><i class="fa-solid fa-plus"></i></button>
                         </div>
                         ${product.stock != 0
-                          ? `<button class='product-button'>Add to Cart</button>`
+                          ? `<button class='product-button' id='product-${product.id}'>Add to Cart</button>`
                           : `<button class='product-button no-stock' disabled>Out of Stock</button>`
                         }
 
@@ -115,7 +116,17 @@ const displayProducts=(filteredProducts) =>{
       checkButtonState(productAmount)
   })
 }
-
+const returnToTop = () =>{
+  const categories = document.querySelectorAll('.store-box');
+  categories.forEach(cat =>{
+    const returnTop = document.createElement('span')
+    returnTop.classList = 'margin-center'
+    returnTop.innerHTML = `
+    <a href='#topOfPage' class='returnToTopLink margin-center'>Return To Top</a>
+    `
+    cat.append(returnTop) 
+})
+}
 const priceSlider = () =>{
   const slider = document.querySelectorAll('.price-input')
   slider.forEach(slide =>{
@@ -196,6 +207,8 @@ const onPageLoad = () =>{
         priceSlider();
         updateRangeLables();
         expandEventListener();
+        returnToTop()
+        storePageAddToCart()
     })
 }
 

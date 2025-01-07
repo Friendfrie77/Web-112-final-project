@@ -1,5 +1,6 @@
 "use strict";
 import { maxPrice} from "../helpers.js";
+
 const updateRangeLables = (filteredPrice) =>{
     let price;
     const minSlider = document.querySelector('#min');
@@ -14,7 +15,7 @@ const updateRangeLables = (filteredPrice) =>{
         maxVal = price;
         minVal = 0
     }else{
-        console.log(filteredPrice)
+        // console.log(filteredPrice)
         price = maxPrice(filteredPrice)
         maxVal = parseInt(price);
         minVal = parseInt(filteredPrice.priceRangeMin);
@@ -37,5 +38,4 @@ const updateRangeLables = (filteredPrice) =>{
     maxLable.style.left = percentMax + '%';
     return {minVal, maxVal}
 }
-
 export {updateRangeLables}

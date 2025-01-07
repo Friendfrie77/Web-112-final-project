@@ -23,7 +23,7 @@ const createCategories = (id) =>{
      ${Object.entries(categoryList).map(([key, value]) =>
       `<div>
         <input type='checkbox' id=${key} name='categories' value=${key}>
-        <lable for=${key}>${value}</lable>
+        <lable for=${key}><a href='#${value}'>${value}</a></lable>
       </div>`
      ).join('')}
     `
@@ -34,7 +34,7 @@ const createPriceRange = () =>{
     const wrapper = createFieldSet();
     wrapper.style.marginBottom = '10px'
     wrapper.innerHTML = `
-    <legend style = 'margin-bottom:10px;'>Price Range</legend>
+    <legend style = 'margin-bottom:10px;'>Price Range: <span class='price-lable' id='lable-min'></span> - <span class='price-lable' id='lable-max'></span></legend>
     <div class='slider-container'>
         <div class='price-slider'>
         </div>
@@ -43,53 +43,83 @@ const createPriceRange = () =>{
         <input id='min' class='price-input' type = 'range' min = '0' max='${maxPrice()}' step ='1' value ='0' />
         <input id='max' class='price-input' type = 'range' min = '0' max='${maxPrice()}' step ='1' value ='${maxPrice()}' />
     </div>
-    <span class='price-lable' id='lable-min'>test</span>
-    <span class='price-lable' id='lable-max'>test</span>
     `
     return wrapper
+
 }
 
-const createManufacture = (filteredProducts) =>{
+const createManufacture = (filteredProducts) => {
     const wrapper = document.querySelector('#brand-controls') ? document.querySelector('#brand-controls') : createFieldSet('brand-controls');
-    let manufactureList = filteredProducts.map(product => ({brand: product.brand, category:product.category}))
-    const uniqueBrands = new Set();
-    const test = manufactureList.filter(product =>{
-        if(uniqueBrands.has(product.brand)) return false;
-        uniqueBrands.add(product.brand);
-    })
-    // manufactureList = Array.from(new Set(manufactureList.map(item => JSON.stringify(item)))).map(item => JSON.parse(item))
-    console.log(manufactureList)
-    console.log(uniqueBrands)
-    wrapper.innerHTML =`
+    console.log(categoryList)
+    wrapper.innerHTML = `
         <legend>Manufacture</legend>
         ${Object.entries(categoryList).map(([k,v]) =>
             `
-            <div id = 'cat-${k}'>
+            <div id='cat-${k}'>
                 <h1>${v}</h1>
-            </div>
+            <div>
+            <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
             `
         ).join('')}
     `
-    console.log(manufactureList)
-    // manufactureList.map((brand, cat) =>
-    //     console.log(cat)
-    // )
-    // wrapper.innerHTML = `
-    // <legend>Manufacture</legend>
-    // <div class='flex-col brand-container' id='brand-div'>
-    //     ${manufactureList.map(brand =>
-    //         `
-    //         <div class='flex-row'>
-    //             <input type='checkbox' name='brand' value='${brand}'/>
-    //             <lable>${brand}</lable>       
-    //         </div>
-    //         `
-    //     ).join('')}
-    // </div>
-    // <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
-    // `
-    return wrapper;
+    let manufactureList = Object.keys(categoryList).reduce((acum , key) =>{
+        acum[key] = []
+        return acum
+    }, {})
+
+    filteredProducts.forEach(p =>{
+        if(!manufactureList[p.category].includes(p.brand)){
+            manufactureList[p.category].push(p.brand)
+        }
+    })
+    
+    // for(i = 0; i <= categoryList.length; i++){
+
+    // }
+    return wrapper
 }
+
+// const createManufacture = (filteredProducts) =>{
+//     const wrapper = document.querySelector('#brand-controls') ? document.querySelector('#brand-controls') : createFieldSet('brand-controls');
+//     let manufactureList = filteredProducts.map(product => ({brand: product.brand, category:product.category}))
+//     const uniqueBrands = new Set();
+//     const test = manufactureList.filter(product =>{
+//         if(uniqueBrands.has(product.brand)) return false;
+//         uniqueBrands.add(product.brand);
+//     })
+//     manufactureList = Array.from(new Set(manufactureList.map(item => JSON.stringify(item)))).map(item => JSON.parse(item))
+//     console.log(manufactureList)
+//     console.log(uniqueBrands)
+//     wrapper.innerHTML =`
+//         <legend>Manufacture</legend>
+//         ${Object.entries(categoryList).map(([k,v]) =>
+//             `
+//             <div id = 'cat-${k}'>
+//                 <h1>${v}</h1>
+//             </div>
+//             `
+//         ).join('')}
+//     `
+//     console.log(manufactureList)
+//     manufactureList.map((brand, cat) =>
+//         console.log(cat)
+//     )
+//     wrapper.innerHTML = `
+//     <legend>Manufacture</legend>
+//     <div class='flex-col brand-container' id='brand-div'>
+//         ${manufactureList.map(brand =>
+//             `
+//             <div class='flex-row'>
+//                 <input type='checkbox' name='brand' value='${brand}'/>
+//                 <lable>${brand}</lable>       
+//             </div>
+//             `
+//         ).join('')}
+//     </div>
+//     <a class='expand-div-button' id='brand-div-button'>&#8897<span>See more</span></a>
+//     `
+//     return wrapper;
+// }
 
 const expandBrandList = () =>{
     const div = document.querySelector('#brand-div');
@@ -104,10 +134,38 @@ const expandRegionList = () =>{
     div.style.height = div.style.height ==='' ? '100%' : ''
     button.innerHTML = button.innerHTML.includes(`See more`) ? `&#8896<span>Close</span>` : `&#8897<span>See more</span>`
 }
+
 const expandEventListener = () =>{
     // document.querySelector('#brand-div-button').addEventListener('click', expandBrandList)
     document.querySelector('#region-div-button').addEventListener('click', expandRegionList)
 }
+
+const onPriceValChange = () =>{
+    const min = document.querySelector('#min');
+    const max = document.querySelector('#max');
+    const lableMin = document.querySelector('#lable-min');
+    const lableMax = document.querySelector('#lable-max');
+    min.value == 0 ? lableMin.style.transform = 'translate(50%, -100%)' : null;
+    min.addEventListener('change',  (v) => {
+        if(max.value - min.value <= 200){
+            lableMin.style.transform = 'translate(-100%, -100%)'
+        }else if(min.value == 0){
+            lableMin.style.transform = 'translate(50%, -100%)'
+        }else{
+            lableMin.style.transform = 'translate(-50%, -100%)'
+        }
+    })
+    max.addEventListener('change',  (v) => {
+        if(max.value - min.value <= 200){
+          lableMin.style.transform = 'translate(-100%, -100%)'
+        }else if(min.value == 0){
+            lableMax.style.transform = 'translate(-50%, -100%)'
+        }else{
+            // lableMax.style.transform = 'translate(-50%, -100%)'
+        }
+    })
+}
+
 const createAvgCustomerReview = () =>{
     const wrapper = createFieldSet();
     wrapper.innerHTML = `
@@ -168,9 +226,6 @@ const filterBrands = (filteredProducts) =>{
 }
 
 const updateMenuForFilters = (filteredProducts, divID) =>{
-    console.log('aaaa')
-    
-    console.log(document.getElementById('cat-1'))
 }
 
 const createStoreControls = () =>{

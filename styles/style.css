@@ -88,6 +88,7 @@ select {
   --fs-body-text: 1.5rem;
   --fs-header-text: clamp(2rem, calc(5vw + 2rem), 3rem);
   --fs-mid-page-header: clamp(1.5rem, calc(3vw + .5rem), 3rem);
+  --fs-text-link: clamp(1rem, calc(1vw + .5rem), 1.5rem);
   --fs-footer-header: clamp(1rem, calc(3vw + 0.5rem), 2.5rem);
   --fs-icons: clamp(3rem, calc(6vw + 1rem), 5.8rem);
 }
@@ -617,6 +618,10 @@ h1, h2, h3, h4, h5 {
   background-color: red;
 }
 
+.margin-center {
+  margin: auto;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -727,6 +732,10 @@ h1, h2, h3, h4, h5 {
   color: white;
 }
 
+.upArrow {
+  color: black;
+}
+
 .content-wrapper {
   max-width: 1440px;
   grid-area: "content";
@@ -793,6 +802,11 @@ h1, h2, h3, h4, h5 {
   justify-content: space-evenly;
 }
 
+.store-box {
+  display: flex;
+  flex-direction: column;
+}
+
 .purchase-amount-wrapper {
   padding: 5px;
   border: 0.5px #5B8266 solid;
@@ -837,6 +851,15 @@ h1, h2, h3, h4, h5 {
 }
 .purchase-amount-button:disabled i {
   color: rgba(91, 130, 102, 0.5);
+}
+
+.returnToTopLink {
+  color: #31572C;
+  font-weight: bold;
+  font-size: var(--fs-text-link);
+}
+.returnToTopLink:hover {
+  color: #56B356;
 }
 
 .store-product-flex {
@@ -960,11 +983,6 @@ h1, h2, h3, h4, h5 {
   pointer-events: all;
   position: relative;
   z-index: 2;
-}
-
-.price-lable {
-  position: absolute;
-  transform: translate(-50%, -100%);
 }
 
 .brand-container {

@@ -20,6 +20,9 @@
 .red-background{
     background-color: red;
 }
+.margin-center{
+    margin: auto;
+}
 .flex-col{
     display: flex;
     flex-direction: column;
@@ -103,4 +106,8 @@
 .hr-maxWidth{
     width: 100%;
     color: white;
+}
+
+.upArrow{
+    color: black;
 }

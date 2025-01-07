@@ -1,4 +1,3 @@
-
 .product-grid{
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +5,10 @@
     gap: 10px;
     justify-content: space-evenly;
 }
-
+.store-box{
+    display: flex;
+    flex-direction: column;
+}
 .purchase-amount-wrapper{
     padding: 5px;
     border: .5px $button-color solid;
@@ -48,5 +50,14 @@
         i{
             color:rgba(91, 130, 102, .5);
         }
+    }
+}
+
+.returnToTopLink{
+    color: $header-footer-color;
+    font-weight: bold;
+    font-size: var(--fs-text-link);
+    &:hover{
+        color: $light-green;
     }
 }

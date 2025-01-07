@@ -171,5 +171,16 @@ const uncheckAll = (checked) =>{
     selectAllInputListener()
 }
 
-
-export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents, getSaveForLater, removeFromCart}
+const storePageAddToCart = () =>{
+    const button = document.querySelectorAll('.product-button')
+    button.forEach(b =>{
+        if(!b.disabled){
+            const id = b.id.split('-')[1]
+            b.addEventListener('click', () =>{
+                const val = document.querySelector(`#purchase-amount-${id}`).value
+                addToCart(id, val)
+            })
+        }
+    })
+}
+export {addToCart, checkButtonState, purchaseAmountIncrease, purchaseAmountDecrease, inputMaxMin, updateTotalPrice, shoppingCartHeader, uncheckAll, getCartContents, getSaveForLater, removeFromCart, storePageAddToCart}
